@@ -1,0 +1,76 @@
+import { Link } from "react-router-dom";
+import gtFootball from "@/assets/gt-football-logo.jpg";
+import reelAnalytics from "@/assets/reel-analytics-logo.png";
+import sbc from "@/assets/sbc-logo.png";
+import sigmaNu from "@/assets/sigma-nu-logo.png";
+import rhLogo from "@/assets/rh-logo.png";
+
+const Work = () => {
+  const organizations = [
+    {
+      name: "Georgia Tech Football",
+      logo: gtFootball,
+      path: "/work/gt-football",
+      description: "Student Equipment Manager",
+    },
+    {
+      name: "Reel Analytics",
+      logo: reelAnalytics,
+      path: "/work/reel-analytics",
+      description: "Scouting & Analytics Intern",
+    },
+    {
+      name: "GT Sports Business Club",
+      logo: sbc,
+      path: "/work/sbc",
+      description: "Atlanta Hawks Marketing Team Lead",
+    },
+    {
+      name: "Sigma Nu Fraternity",
+      logo: sigmaNu,
+      path: "/work/sigma-nu",
+      description: "Rush Chairman & Athletics Chairman",
+    },
+    {
+      name: "Personal Projects",
+      logo: rhLogo,
+      path: "/work/personal",
+      description: "Design & Photography",
+    },
+  ];
+
+  return (
+    <section id="work" className="py-20 px-4 bg-muted/30">
+      <div className="container mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-4">Work & Collaborations</h2>
+        <div className="h-1 w-24 bg-gold mx-auto mb-12"></div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {organizations.map((org, index) => (
+            <Link
+              key={index}
+              to={org.path}
+              className="group"
+            >
+              <div className="bg-card rounded-lg p-6 shadow-lg hover-lift border border-border transition-all hover:border-gold">
+                <img
+                  src={org.logo}
+                  alt={org.name}
+                  className="w-full h-32 object-contain mb-4"
+                />
+                <h3 className="text-sm font-semibold text-center mb-2 group-hover:text-gold transition-colors">
+                  {org.name}
+                </h3>
+                <p className="text-xs text-muted-foreground text-center">
+                  {org.description}
+                </p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Work;

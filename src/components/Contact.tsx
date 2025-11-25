@@ -80,7 +80,7 @@ const Contact = () => {
                     <Linkedin className="text-primary-foreground" size={24} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/ryan.halligan/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-colors hover-scale"
@@ -88,7 +88,7 @@ const Contact = () => {
                     <Instagram className="text-primary-foreground" size={24} />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.strava.com/athletes/137518273"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-colors hover-scale"

@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import sbc from "@/assets/sbc-logo.png";
+import sbcLogo from "@/assets/sbc-logo.png";
 
 const SBC = () => {
   return (
@@ -9,7 +9,7 @@ const SBC = () => {
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
-            <img src={sbc} alt="GT Sports Business Club" className="w-48 h-48 object-contain mx-auto mb-6" />
+            <img src={sbcLogo} alt="GT Sports Business Club" className="w-48 h-48 object-contain mx-auto mb-6" />
             <h1 className="text-5xl font-bold mb-4">GT Sports Business Club</h1>
             <div className="h-1 w-24 bg-gold mx-auto mb-4"></div>
             <p className="text-xl text-muted-foreground">Atlanta Hawks Marketing Team Lead</p>

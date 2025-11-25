@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import gtFootball from "@/assets/gt-football-logo.jpg";
+import gtFootball from "@/assets/gt-football-logo.png";
 import reelAnalytics from "@/assets/reel-analytics-logo.png";
 import sbc from "@/assets/sbc-logo.png";
 import sigmaNu from "@/assets/sigma-nu-logo.png";
 import rhLogo from "@/assets/rh-logo.png";
+import vipLogo from "@/assets/vip-logo.png";
 
 const Work = () => {
   const organizations = [
@@ -33,7 +34,7 @@ const Work = () => {
     },
     {
       name: "Vertically Integrated Projects",
-      logo: gtFootball,
+      logo: vipLogo,
       path: "/work/vip",
       description: "Sports Valuation & Analytics Team",
     },

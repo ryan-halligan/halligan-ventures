@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import gtFootball from "@/assets/gt-football-logo.jpg";
+import gtFootball from "@/assets/gt-football-logo.png";
 
 const GTFootball = () => {
   return (

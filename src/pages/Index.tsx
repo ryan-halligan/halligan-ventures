@@ -14,7 +14,6 @@ const Index = () => {
       <Navigation />
       <Hero />
       <About />
-      <Skills />
       
       {/* Experience & Education Navigation */}
       <section className="py-16 px-4 bg-background">
@@ -49,6 +48,7 @@ const Index = () => {
         </div>
       </section>
       
+      <Skills />
       <Work />
       <Contact />
       

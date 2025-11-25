@@ -10,6 +10,7 @@ import GTFootball from "./pages/work/GTFootball";
 import ReelAnalytics from "./pages/work/ReelAnalytics";
 import SBC from "./pages/work/SBC";
 import SigmaNu from "./pages/work/SigmaNu";
+import VIP from "./pages/work/VIP";
 import Personal from "./pages/work/Personal";
 import NotFound from "./pages/NotFound";
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="/work/reel-analytics" element={<ReelAnalytics />} />
           <Route path="/work/sbc" element={<SBC />} />
           <Route path="/work/sigma-nu" element={<SigmaNu />} />
+          <Route path="/work/vip" element={<VIP />} />
           <Route path="/work/personal" element={<Personal />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

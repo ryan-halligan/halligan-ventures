@@ -32,6 +32,12 @@ const Work = () => {
       description: "Rush Chairman & Athletics Chairman",
     },
     {
+      name: "Vertically Integrated Projects",
+      logo: gtFootball,
+      path: "/work/vip",
+      description: "Sports Valuation & Analytics Team",
+    },
+    {
       name: "Personal Projects",
       logo: rhLogo,
       path: "/work/personal",
@@ -45,7 +51,7 @@ const Work = () => {
         <h2 className="text-4xl font-bold text-center mb-4">Work & Collaborations</h2>
         <div className="h-1 w-24 bg-gold mx-auto mb-12"></div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {organizations.map((org, index) => (
             <Link
               key={index}

@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, TrendingUp } from "lucide-react";
+import vipLogo from "@/assets/vip-logo.png";
+import vipPoster from "@/assets/vip-poster.jpg";
 
 const VIP = () => {
   return (
@@ -8,10 +10,12 @@ const VIP = () => {
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl font-bold mb-4">Vertically Integrated Projects</h1>
-          <p className="text-xl text-muted-foreground mb-2">Sports Valuation & Analytics Team</p>
-          <p className="text-lg text-muted-foreground mb-4">Georgia Institute of Technology</p>
-          <div className="h-1 w-24 bg-gold mb-12"></div>
+          <div className="text-center mb-12">
+            <img src={vipLogo} alt="Vertically Integrated Projects" className="w-48 h-48 object-contain mx-auto mb-6" />
+            <h1 className="text-5xl font-bold mb-4">Vertically Integrated Projects</h1>
+            <div className="h-1 w-24 bg-gold mx-auto mb-4"></div>
+            <p className="text-xl text-muted-foreground">Sports Valuation & Analytics Team</p>
+          </div>
 
           <div className="space-y-8">
             <Card className="border-border">
@@ -30,6 +34,15 @@ const VIP = () => {
                   of collegiate sports economics, particularly examining the impact of NCAA revenue-sharing on 
                   competitive performance and strategic planning.
                 </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border mb-8">
+              <CardHeader>
+                <CardTitle className="text-2xl">Project Poster</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <img src={vipPoster} alt="NCAA Basketball NIL Project Poster" className="w-full rounded-lg" />
               </CardContent>
             </Card>
 

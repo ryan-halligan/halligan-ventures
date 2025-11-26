@@ -13,6 +13,9 @@ import SBC from "./pages/work/SBC";
 import SigmaNu from "./pages/work/SigmaNu";
 import VIP from "./pages/work/VIP";
 import Personal from "./pages/work/Personal";
+import JerseySwaps from "./pages/work/JerseySwaps";
+import Compositions from "./pages/work/Compositions";
+import Posters from "./pages/work/Posters";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +37,9 @@ const App = () => (
           <Route path="/work/sigma-nu" element={<SigmaNu />} />
           <Route path="/work/vip" element={<VIP />} />
           <Route path="/work/personal" element={<Personal />} />
+          <Route path="/work/jersey-swaps" element={<JerseySwaps />} />
+          <Route path="/work/compositions" element={<Compositions />} />
+          <Route path="/work/posters" element={<Posters />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

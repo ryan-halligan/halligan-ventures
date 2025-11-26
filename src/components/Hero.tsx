@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import ryanProfessional from "@/assets/ryan-professional.jpg";
+import atlantaSkyline from "@/assets/atlanta-skyline.jpeg";
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -9,8 +10,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-20 px-4">
-      <div className="container mx-auto">
+    <section className="min-h-screen flex items-center justify-center pt-20 px-4 relative">
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-[0.08] pointer-events-none"
+        style={{ backgroundImage: `url(${atlantaSkyline})` }}
+      />
+      <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight">

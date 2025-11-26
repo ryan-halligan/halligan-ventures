@@ -16,7 +16,7 @@ const Skills = () => {
     {
       icon: <Laptop className="w-8 h-8 text-gold" />,
       title: "Technical",
-      skills: ["Python", "SQL", "Excel", "Adobe Creative Suite", "Project Management"],
+      skills: ["Python", "SQL", "Excel", "Adobe Photoshop", "Project Management"],
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-gold" />,

@@ -46,7 +46,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
-            <img src={rhLogo} alt="RH Logo" className="h-12 w-12 hover-scale" />
+            <img src={rhLogo} alt="RH Logo" className="h-16 w-16 hover-scale" />
           </Link>
 
           {/* Desktop Navigation */}

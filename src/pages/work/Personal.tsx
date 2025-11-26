@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { ExternalLink, Dumbbell } from "lucide-react";
+import { useState } from "react";
 import rhxHalloween from "@/assets/rhxvisuals-halloween.jpg";
 import rhxBulls from "@/assets/rhxvisuals-bulls.jpg";
 import rhxSteelers from "@/assets/rhxvisuals-steelers.jpg";
@@ -10,8 +12,46 @@ import rhxFalcons from "@/assets/rhxvisuals-falcons.jpg";
 import rhxShelton from "@/assets/rhxvisuals-shelton.jpg";
 import rhxLebron from "@/assets/rhxvisuals-lebron.jpg";
 import rhxOssai from "@/assets/rhxvisuals-ossai.jpg";
+import rhxBijan from "@/assets/rhxvisuals-bijan.jpg";
+import rhxDadSuperbowl from "@/assets/rhxvisuals-dad-superbowl.jpg";
+import rhxKrips from "@/assets/rhxvisuals-krips.jpg";
+import rhxSaintJoseph from "@/assets/rhxvisuals-saint-joseph.jpg";
+import rhxSamHartman from "@/assets/rhxvisuals-sam-hartman.jpg";
+import rhxScottRigsby from "@/assets/rhxvisuals-scott-rigsby.jpg";
+
+interface Design {
+  src: string;
+  alt: string;
+  description: string;
+}
 
 const Personal = () => {
+  const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
+
+  const jerseySwaps: Design[] = [
+    { src: rhxOssai, alt: "Joseph Ossai Bengals jersey swap", description: "Joseph Ossai Bengals jersey swap design" },
+    { src: rhxBulls, alt: "Obi Toppin Bulls jersey swap", description: "Obi Toppin Chicago Bulls jersey swap design" },
+    { src: rhxTimberwolves, alt: "Anthony Edwards Timberwolves jersey swap", description: "Anthony Edwards Minnesota Timberwolves jersey swap design" },
+    { src: rhxDadSuperbowl, alt: "Dad Super Bowl trophy", description: "Custom Super Bowl champion celebration design" },
+  ];
+
+  const compositions: Design[] = [
+    { src: rhxFalcons, alt: "Atlanta Falcons composition", description: "Atlanta Falcons Super Bowl championship composition" },
+    { src: rhxSteelers, alt: "Pittsburgh Steelers composition", description: "Pittsburgh Steelers dynamic composition design" },
+    { src: rhxHalloween, alt: "Halloween themed sports design", description: "Halloween themed sports composition" },
+    { src: rhxShelton, alt: "Ben Shelton tennis design", description: "Ben Shelton 'Dialed In' tennis composition" },
+    { src: rhxTexans, alt: "JJ Watt Houston Texans design", description: "JJ Watt Houston Texans composition design" },
+  ];
+
+  const posters: Design[] = [
+    { src: rhxLebron, alt: "LeBron James Lakers poster", description: "'Gimme A Bang' LeBron James Lakers poster design" },
+    { src: rhxSaintJoseph, alt: "Saint Joseph of Cupertino", description: "Saint Joseph of Cupertino inspirational poster" },
+    { src: rhxSamHartman, alt: "Sam Hartman Notre Dame poster", description: "Sam Hartman Notre Dame quarterback poster design" },
+    { src: rhxScottRigsby, alt: "Scott Rigsby Ironman poster", description: "'Do The Unthinkable' Scott Rigsby Ironman inspirational poster" },
+    { src: rhxKrips, alt: "KRIPS basketball gameday poster", description: "KRIPS vs Steele gameday basketball poster" },
+    { src: rhxBijan, alt: "Bijan Robinson poster", description: "Bijan Robinson artistic poster design" },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -33,22 +73,57 @@ const Personal = () => {
                 </div>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-6">
                   Personal portfolio showcasing graphic design work across sports, branding, and digital media. 
                   Creating custom designs using Adobe Photoshop, Lightroom, and Canva.
                 </p>
                 
-                {/* Design Gallery */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
-                  <img src={rhxHalloween} alt="Halloween themed sports design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxBulls} alt="Chicago Bulls design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxSteelers} alt="Pittsburgh Steelers design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxTexans} alt="Houston Texans design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxTimberwolves} alt="Minnesota Timberwolves design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxFalcons} alt="Atlanta Falcons design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxShelton} alt="Ben Shelton tennis design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxLebron} alt="LeBron James Lakers design" className="w-full h-48 object-cover rounded-lg hover-lift" />
-                  <img src={rhxOssai} alt="Joseph Ossai Bengals design" className="w-full h-48 object-cover rounded-lg hover-lift" />
+                {/* Jersey Swaps */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold mb-4">Jersey Swaps</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {jerseySwaps.map((design, index) => (
+                      <img 
+                        key={index}
+                        src={design.src} 
+                        alt={design.alt} 
+                        className="w-full h-auto object-cover rounded-lg hover-lift cursor-pointer"
+                        onClick={() => setSelectedDesign(design)}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Compositions */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold mb-4">Compositions</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {compositions.map((design, index) => (
+                      <img 
+                        key={index}
+                        src={design.src} 
+                        alt={design.alt} 
+                        className="w-full h-auto object-cover rounded-lg hover-lift cursor-pointer"
+                        onClick={() => setSelectedDesign(design)}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Posters */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold mb-4">Posters</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {posters.map((design, index) => (
+                      <img 
+                        key={index}
+                        src={design.src} 
+                        alt={design.alt} 
+                        className="w-full h-auto object-cover rounded-lg hover-lift cursor-pointer"
+                        onClick={() => setSelectedDesign(design)}
+                      />
+                    ))}
+                  </div>
                 </div>
                 
                 <a 
@@ -161,6 +236,25 @@ const Personal = () => {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen Design Modal */}
+      <Dialog open={!!selectedDesign} onOpenChange={() => setSelectedDesign(null)}>
+        <DialogContent className="max-w-4xl w-full p-0">
+          <div className="relative">
+            <img 
+              src={selectedDesign?.src} 
+              alt={selectedDesign?.alt} 
+              className="w-full h-auto"
+            />
+            <div className="p-6">
+              <DialogTitle className="text-xl font-semibold mb-2">{selectedDesign?.alt}</DialogTitle>
+              <DialogDescription className="text-muted-foreground">
+                {selectedDesign?.description}
+              </DialogDescription>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };

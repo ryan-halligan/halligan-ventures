@@ -31,7 +31,7 @@ const Personal = () => {
                     <CardDescription>Personal Design Work</CardDescription>
                   </div>
                 </div>
-                <div className="h-0.5 w-full bg-gold mt-4"></div>
+                <div className="h-1 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 
@@ -45,8 +45,8 @@ const Personal = () => {
                   <Link to="/work/jersey-swaps">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${jerseySwapsBg})` }}
+                        className="absolute inset-0 bg-cover bg-top"
+                        style={{ backgroundImage: `url(${jerseySwapsBg})`, opacity: 0.15 }}
                       />
                       <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Jersey Swaps</h3>
@@ -59,8 +59,8 @@ const Personal = () => {
                   <Link to="/work/compositions">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${benSheltonBg})` }}
+                        className="absolute inset-0 bg-cover bg-top"
+                        style={{ backgroundImage: `url(${benSheltonBg})`, opacity: 0.15 }}
                       />
                       <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Compositions</h3>
@@ -73,8 +73,8 @@ const Personal = () => {
                   <Link to="/work/posters">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${samHartmanBg})` }}
+                        className="absolute inset-0 bg-cover bg-top"
+                        style={{ backgroundImage: `url(${samHartmanBg})`, opacity: 0.15 }}
                       />
                       <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Posters</h3>

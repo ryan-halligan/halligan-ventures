@@ -3,6 +3,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ExternalLink, Dumbbell, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import rhLogo from "@/assets/rh-logo-main.png";
+import jerseySwapsBg from "@/assets/jersey-swaps-bg.jpg";
+import benSheltonBg from "@/assets/rhxvisuals-shelton.jpg";
+import samHartmanBg from "@/assets/rhxvisuals-sam-hartman.jpg";
+import afcLogo from "@/assets/afc-logo.jpg";
+import tgcLogo from "@/assets/tgc-logo.png";
+import gridiron from "@/assets/gridiron-drive-logo.jpg";
+import ironmanLogo from "@/assets/ironman-logo.png";
 
 const Personal = () => {
   return (
@@ -17,18 +24,16 @@ const Personal = () => {
           <div className="space-y-6">
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4 mb-2">
+                  <img src={rhLogo} alt="RH Logo" className="h-12 w-auto" />
                   <div>
                     <CardTitle className="text-2xl">RHxVisuals</CardTitle>
                     <CardDescription>Personal Design Work</CardDescription>
                   </div>
-                  <ExternalLink className="text-gold" size={24} />
                 </div>
+                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
-                <div className="flex items-center justify-center mb-6">
-                  <img src={rhLogo} alt="RH Logo" className="h-20 w-auto" />
-                </div>
                 
                 <p className="text-muted-foreground mb-6">
                   Personal portfolio showcasing graphic design work across sports, branding, and digital media. 
@@ -38,8 +43,12 @@ const Personal = () => {
                 {/* Category Boxes */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <Link to="/work/jersey-swaps">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                      <CardContent className="p-6 text-center">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${jerseySwapsBg})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Jersey Swaps</h3>
                         <p className="text-sm text-muted-foreground mb-4">Professional athlete jersey swap designs</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
@@ -48,8 +57,12 @@ const Personal = () => {
                   </Link>
                   
                   <Link to="/work/compositions">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                      <CardContent className="p-6 text-center">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${benSheltonBg})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Compositions</h3>
                         <p className="text-sm text-muted-foreground mb-4">Dynamic sports composition designs</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
@@ -58,8 +71,12 @@ const Personal = () => {
                   </Link>
                   
                   <Link to="/work/posters">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                      <CardContent className="p-6 text-center">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${samHartmanBg})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Posters</h3>
                         <p className="text-sm text-muted-foreground mb-4">Inspirational & artistic poster designs</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
@@ -81,13 +98,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4 mb-2">
+                  <img src={afcLogo} alt="ATLFalconsCountry Logo" className="h-12 w-auto" />
                   <div>
                     <CardTitle className="text-2xl">ATLFalconsCountry</CardTitle>
                     <CardDescription>Atlanta Falcons Fan Page</CardDescription>
                   </div>
-                  <ExternalLink className="text-gold" size={24} />
                 </div>
+                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
@@ -106,13 +124,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4 mb-2">
+                  <img src={gridiron} alt="Gridiron Drive Logo" className="h-12 w-auto" />
                   <div>
                     <CardTitle className="text-2xl">Gridiron Drive</CardTitle>
                     <CardDescription>NFL Content Page</CardDescription>
                   </div>
-                  <ExternalLink className="text-gold" size={24} />
                 </div>
+                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -123,13 +142,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4 mb-2">
+                  <img src={tgcLogo} alt="TheGRFXCommittee Logo" className="h-12 w-auto" />
                   <div>
                     <CardTitle className="text-2xl">TheGRFXCommittee</CardTitle>
                     <CardDescription>Design Shop & Community</CardDescription>
                   </div>
-                  <ExternalLink className="text-gold" size={24} />
                 </div>
+                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
@@ -149,16 +169,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-center gap-4 mb-2">
+                  <img src={ironmanLogo} alt="Ironman Logo" className="h-12 w-auto" />
                   <div>
-                    <CardTitle className="text-2xl flex items-center gap-2">
-                      <Dumbbell className="text-gold" size={28} />
-                      Ironman 70.3 Augusta Training
-                    </CardTitle>
+                    <CardTitle className="text-2xl">Ironman 70.3 Augusta Training</CardTitle>
                     <CardDescription>Endurance Sports & Athletic Development</CardDescription>
                   </div>
-                  <ExternalLink className="text-gold" size={24} />
                 </div>
+                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">

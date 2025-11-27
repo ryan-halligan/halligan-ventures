@@ -59,12 +59,12 @@ const Posters = () => {
 
       {/* Fullscreen Design Modal */}
       <Dialog open={!!selectedDesign} onOpenChange={() => setSelectedDesign(null)}>
-        <DialogContent className="max-w-4xl w-full p-0">
+        <DialogContent className="max-w-7xl w-[95vw] max-h-[95vh] p-0 overflow-auto">
           <div className="relative">
             <img 
               src={selectedDesign?.src} 
               alt={selectedDesign?.alt} 
-              className="w-full h-auto"
+              className="w-full h-auto object-contain max-h-[80vh]"
             />
             <div className="p-6">
               <DialogTitle className="text-xl font-semibold mb-2">{selectedDesign?.alt}</DialogTitle>

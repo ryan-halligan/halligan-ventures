@@ -24,14 +24,14 @@ const Personal = () => {
           <div className="space-y-6">
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
+                <div className="flex items-center gap-4">
                   <img src={rhLogo} alt="RH Logo" className="h-12 w-auto" />
+                  <div className="w-px h-12 bg-gold"></div>
                   <div>
                     <CardTitle className="text-2xl">RHxVisuals</CardTitle>
                     <CardDescription>Personal Design Work</CardDescription>
                   </div>
                 </div>
-                <div className="h-1 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 
@@ -45,8 +45,8 @@ const Personal = () => {
                   <Link to="/work/jersey-swaps">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-top"
-                        style={{ backgroundImage: `url(${jerseySwapsBg})`, opacity: 0.15 }}
+                        className="absolute inset-0 bg-cover bg-top opacity-15"
+                        style={{ backgroundImage: `url(${jerseySwapsBg})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Jersey Swaps</h3>
@@ -59,8 +59,8 @@ const Personal = () => {
                   <Link to="/work/compositions">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-top"
-                        style={{ backgroundImage: `url(${benSheltonBg})`, opacity: 0.15 }}
+                        className="absolute inset-0 bg-cover bg-top opacity-15"
+                        style={{ backgroundImage: `url(${benSheltonBg})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Compositions</h3>
@@ -73,8 +73,8 @@ const Personal = () => {
                   <Link to="/work/posters">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-top"
-                        style={{ backgroundImage: `url(${samHartmanBg})`, opacity: 0.15 }}
+                        className="absolute inset-0 bg-cover bg-top opacity-15"
+                        style={{ backgroundImage: `url(${samHartmanBg})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10">
                         <h3 className="text-xl font-semibold mb-2">Posters</h3>
@@ -98,14 +98,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
+                <div className="flex items-center gap-4">
                   <img src={afcLogo} alt="ATLFalconsCountry Logo" className="h-12 w-auto" />
+                  <div className="w-px h-12 bg-gold"></div>
                   <div>
                     <CardTitle className="text-2xl">ATLFalconsCountry</CardTitle>
                     <CardDescription>Atlanta Falcons Fan Page</CardDescription>
                   </div>
                 </div>
-                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
@@ -124,14 +124,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
+                <div className="flex items-center gap-4">
                   <img src={gridiron} alt="Gridiron Drive Logo" className="h-12 w-auto" />
+                  <div className="w-px h-12 bg-gold"></div>
                   <div>
                     <CardTitle className="text-2xl">Gridiron Drive</CardTitle>
                     <CardDescription>NFL Content Page</CardDescription>
                   </div>
                 </div>
-                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
@@ -142,14 +142,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
+                <div className="flex items-center gap-4">
                   <img src={tgcLogo} alt="TheGRFXCommittee Logo" className="h-12 w-auto" />
+                  <div className="w-px h-12 bg-gold"></div>
                   <div>
                     <CardTitle className="text-2xl">TheGRFXCommittee</CardTitle>
                     <CardDescription>Design Shop & Community</CardDescription>
                   </div>
                 </div>
-                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
@@ -169,14 +169,14 @@ const Personal = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-center gap-4 mb-2">
+                <div className="flex items-center gap-4">
                   <img src={ironmanLogo} alt="Ironman Logo" className="h-12 w-auto" />
+                  <div className="w-px h-12 bg-gold"></div>
                   <div>
                     <CardTitle className="text-2xl">Ironman 70.3 Augusta Training</CardTitle>
                     <CardDescription>Endurance Sports & Athletic Development</CardDescription>
                   </div>
                 </div>
-                <div className="h-0.5 w-full bg-gold mt-4"></div>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">

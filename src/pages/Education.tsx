@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { GraduationCap, Award, Globe } from "lucide-react";
+import { Award, Globe } from "lucide-react";
+import gtLogo from "@/assets/gt-logo.png";
+import dunwoodyLogo from "@/assets/dunwoody-logo.png";
 
 const Education = () => {
   return (
@@ -21,7 +23,7 @@ const Education = () => {
                       Scheller College of Business
                     </CardDescription>
                   </div>
-                  <GraduationCap className="text-gold" size={48} />
+                  <img src={gtLogo} alt="Georgia Tech Logo" className="h-16 w-auto" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -92,7 +94,7 @@ const Education = () => {
                       Class of 2024
                     </CardDescription>
                   </div>
-                  <GraduationCap className="text-gold" size={48} />
+                  <img src={dunwoodyLogo} alt="Dunwoody Wildcats Logo" className="h-16 w-auto" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -143,7 +145,7 @@ const Education = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <p className="font-semibold mb-2">Varsity Swim (4 years)</p>
-                      <ul className="space-y-1 text-sm text-muted-foreground">
+                      <ul className="space-y-1 text-sm text-foreground">
                         <li className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-gold rounded-full mr-2 mt-1.5"></span>
                           <span>Captain 2023-24</span>
@@ -160,7 +162,7 @@ const Education = () => {
                     </div>
                     <div>
                       <p className="font-semibold mb-2">Water Polo (7 years)</p>
-                      <ul className="space-y-1 text-sm text-muted-foreground">
+                      <ul className="space-y-1 text-sm text-foreground">
                         <li className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-gold rounded-full mr-2 mt-1.5"></span>
                           <span>2023 DI State Runner-Up</span>
@@ -173,7 +175,7 @@ const Education = () => {
                     </div>
                     <div>
                       <p className="font-semibold mb-2">Varsity Tennis (2 years)</p>
-                      <ul className="space-y-1 text-sm text-muted-foreground">
+                      <ul className="space-y-1 text-sm text-foreground">
                         <li className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-gold rounded-full mr-2 mt-1.5"></span>
                           <span>County Champion 2022</span>

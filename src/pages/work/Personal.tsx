@@ -73,7 +73,7 @@ const Personal = () => {
                   <Link to="/work/posters">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
                       <div 
-                        className="absolute inset-0 bg-cover bg-top opacity-15"
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
                         style={{ backgroundImage: `url(${samHartmanBg})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10">

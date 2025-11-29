@@ -16,14 +16,15 @@ const Education = () => {
           <div className="space-y-8">
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-start gap-4">
+                  <img src={gtLogo} alt="Georgia Tech Logo" className="h-16 w-auto flex-shrink-0" />
+                  <div className="h-16 w-1 bg-gold flex-shrink-0"></div>
                   <div>
                     <CardTitle className="text-3xl mb-2">Georgia Institute of Technology</CardTitle>
                     <CardDescription className="text-lg text-navy font-semibold">
                       Scheller College of Business
                     </CardDescription>
                   </div>
-                  <img src={gtLogo} alt="Georgia Tech Logo" className="h-16 w-auto" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -87,14 +88,15 @@ const Education = () => {
 
             <Card className="border-border hover-lift">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-start gap-4">
+                  <img src={dunwoodyLogo} alt="Dunwoody Wildcats Logo" className="h-16 w-auto flex-shrink-0" />
+                  <div className="h-16 w-1 bg-gold flex-shrink-0"></div>
                   <div>
                     <CardTitle className="text-3xl mb-2">Dunwoody High School</CardTitle>
                     <CardDescription className="text-lg text-navy font-semibold">
                       Class of 2024
                     </CardDescription>
                   </div>
-                  <img src={dunwoodyLogo} alt="Dunwoody Wildcats Logo" className="h-16 w-auto" />
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">

@@ -1,6 +1,9 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import gtFootball from "@/assets/gt-football-logo.png";
+import gtBarstoolFeature from "@/assets/gt-barstool-feature.jpg";
+import espnFeature from "@/assets/espn-broadcast-feature.jpg";
+import gtAthleticsFeature from "@/assets/gt-athletics-feature.jpg";
 
 const GTFootball = () => {
   return (
@@ -78,6 +81,47 @@ const GTFootball = () => {
                   </span>
                 ))}
               </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border-border">
+            <CardHeader>
+              <CardTitle className="text-2xl">Industry Recognition & Media Features</CardTitle>
+              <CardDescription>
+                Professional media appearances showcasing behind-the-scenes contributions to collegiate athletics operations
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <img 
+                    src={gtBarstoolFeature} 
+                    alt="Featured on GT Barstool following team victory" 
+                    className="w-full rounded-lg border border-border hover-lift"
+                  />
+                  <p className="text-sm text-muted-foreground">GT Barstool: Behind-the-scenes equipment operations</p>
+                </div>
+                <div className="space-y-2">
+                  <img 
+                    src={espnFeature} 
+                    alt="ESPN broadcast coverage showing sideline operations" 
+                    className="w-full rounded-lg border border-border hover-lift"
+                  />
+                  <p className="text-sm text-muted-foreground">ESPN: Game day operations and team support</p>
+                </div>
+                <div className="space-y-2">
+                  <img 
+                    src={gtAthleticsFeature} 
+                    alt="Georgia Tech Athletics official game day coverage" 
+                    className="w-full rounded-lg border border-border hover-lift"
+                  />
+                  <p className="text-sm text-muted-foreground">GT Athletics: Supporting excellence at Bobby Dodd Stadium</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mt-6 italic">
+                These professional media features demonstrate direct involvement in Division I collegiate athletics operations, 
+                reflecting a commitment to pursuing a career in sports management and athletic operations.
+              </p>
             </CardContent>
           </Card>
         </div>

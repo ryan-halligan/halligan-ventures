@@ -17,8 +17,8 @@ const Education = () => {
             <Card className="border-border hover-lift">
               <CardHeader>
                 <div className="flex items-center gap-4">
-                  <img src={gtLogo} alt="Georgia Tech Logo" className="h-12 w-auto flex-shrink-0" />
-                  <div className="h-12 w-1 bg-gold flex-shrink-0"></div>
+                  <img src={gtLogo} alt="Georgia Tech Logo" className="h-10 w-auto flex-shrink-0" />
+                  <div className="h-10 w-1 bg-gold flex-shrink-0"></div>
                   <div>
                     <CardTitle className="text-3xl mb-2">Georgia Institute of Technology</CardTitle>
                     <CardDescription className="text-lg text-navy font-semibold">

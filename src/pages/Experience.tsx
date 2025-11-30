@@ -1,11 +1,16 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import gtFootball from "@/assets/gt-football-logo.png";
+import reelAnalytics from "@/assets/reel-analytics-logo.png";
+import sbc from "@/assets/sbc-logo.png";
+import sigmaNu from "@/assets/sigma-nu-logo.png";
 
 const Experience = () => {
   const experiences = [
     {
       title: "Student Equipment Manager",
       organization: "Georgia Tech Football Team",
+      logo: gtFootball,
       location: "Atlanta, GA",
       period: "July 2024 - Present",
       responsibilities: [
@@ -17,6 +22,7 @@ const Experience = () => {
     {
       title: "Scouting & Data Analytics Intern",
       organization: "Reel Analytics",
+      logo: reelAnalytics,
       location: "Atlanta, GA",
       period: "January 2025 - Present",
       responsibilities: [
@@ -27,6 +33,7 @@ const Experience = () => {
     {
       title: "Atlanta Hawks Marketing Team – Team Lead",
       organization: "Georgia Tech Sports Business Club",
+      logo: sbc,
       location: "Atlanta, GA",
       period: "January 2025 - Present",
       responsibilities: [
@@ -36,6 +43,7 @@ const Experience = () => {
     {
       title: "Georgia Tech Buzz Bowl Case Competition",
       organization: "Georgia Tech Sports Business Club",
+      logo: sbc,
       location: "Atlanta, GA",
       period: "November 2024",
       responsibilities: [
@@ -57,6 +65,7 @@ const Experience = () => {
     {
       title: "Rush Chairman, Athletics Chairman",
       organization: "Sigma Nu Fraternity — Gamma Alpha Chapter",
+      logo: sigmaNu,
       location: "Georgia Institute of Technology, Atlanta, GA",
       period: "July 2024 - Present",
       responsibilities: [
@@ -109,6 +118,12 @@ const Experience = () => {
                 {experiences.map((exp, index) => (
                   <Card key={index} className="border-border hover-lift">
                     <CardHeader>
+                      {exp.logo && (
+                        <div className="flex items-center gap-4 mb-4">
+                          <img src={exp.logo} alt={exp.organization} className="h-12 w-auto flex-shrink-0" />
+                          <div className="h-12 w-1 bg-gold flex-shrink-0"></div>
+                        </div>
+                      )}
                       <CardTitle className="text-2xl">{exp.title}</CardTitle>
                       <CardDescription className="text-lg">
                         <span className="font-semibold text-navy">{exp.organization}</span>
@@ -139,6 +154,12 @@ const Experience = () => {
                 {leadership.map((exp, index) => (
                   <Card key={index} className="border-border hover-lift">
                     <CardHeader>
+                      {exp.logo && (
+                        <div className="flex items-center gap-4 mb-4">
+                          <img src={exp.logo} alt={exp.organization} className="h-12 w-auto flex-shrink-0" />
+                          <div className="h-12 w-1 bg-gold flex-shrink-0"></div>
+                        </div>
+                      )}
                       <CardTitle className="text-2xl">{exp.title}</CardTitle>
                       <CardDescription className="text-lg">
                         <span className="font-semibold text-navy">{exp.organization}</span>

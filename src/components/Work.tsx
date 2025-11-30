@@ -47,9 +47,9 @@ const Work = () => {
   ];
 
   return (
-    <section id="work" className="py-20 px-4 bg-muted/30">
+    <section id="projects" className="py-20 px-4 bg-muted/30">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4">Work & Collaborations</h2>
+        <h2 className="text-4xl font-bold text-center mb-4">Projects & Collaborations</h2>
         <div className="h-1 w-24 bg-gold mx-auto mb-12"></div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

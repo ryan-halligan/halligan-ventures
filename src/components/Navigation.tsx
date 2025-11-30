@@ -30,11 +30,12 @@ const Navigation = () => {
   const handleNavClick = (path: string) => {
     setIsMobileMenuOpen(false);
     if (path.startsWith("/#")) {
+      const sectionId = path.substring(2); // Remove "/#"
       if (location.pathname !== "/") {
-        // Navigate to home first, then scroll
+        // Navigate to home with hash, which will trigger scroll on load
         window.location.href = path;
       } else {
-        const element = document.querySelector(path.substring(1));
+        const element = document.getElementById(sectionId);
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
         }

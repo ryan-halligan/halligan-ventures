@@ -4,6 +4,11 @@ import gtFootball from "@/assets/gt-football-logo.png";
 import reelAnalytics from "@/assets/reel-analytics-logo.png";
 import sbc from "@/assets/sbc-logo.png";
 import sigmaNu from "@/assets/sigma-nu-logo.png";
+import hawks from "@/assets/hawks-logo.png";
+import swimAtlanta from "@/assets/swim-atlanta-logo.webp";
+import saintJude from "@/assets/saint-jude-logo.png";
+import ymsl from "@/assets/ymsl-logo.png";
+import allSaints from "@/assets/all-saints-logo.png";
 
 const Experience = () => {
   const experiences = [
@@ -33,7 +38,7 @@ const Experience = () => {
     {
       title: "Atlanta Hawks Marketing Team – Team Lead",
       organization: "Georgia Tech Sports Business Club",
-      logo: sbc,
+      logo: hawks,
       location: "Atlanta, GA",
       period: "January 2025 - Present",
       responsibilities: [
@@ -53,6 +58,7 @@ const Experience = () => {
     {
       title: "Pool Manager, Lifeguard",
       organization: "Swim Atlanta Pool Management",
+      logo: swimAtlanta,
       location: "Atlanta, GA",
       period: "June 2021 - August 2024",
       responsibilities: [
@@ -76,6 +82,7 @@ const Experience = () => {
     {
       title: "Master Server Emeritus – Altar Server Guild",
       organization: "Saint Jude The Apostle Catholic Church",
+      logo: saintJude,
       location: "Sandy Springs, GA",
       period: "2016 - Present",
       responsibilities: [
@@ -85,6 +92,7 @@ const Experience = () => {
     {
       title: "Vice President Class of 2024, Philanthropy Chair",
       organization: "Young Men's Service League (YMSL)",
+      logo: ymsl,
       location: "Dunwoody, GA",
       period: "2021 - 2024",
       responsibilities: [
@@ -95,6 +103,7 @@ const Experience = () => {
     {
       title: "Basketball Coach",
       organization: "All Saints Catholic Church",
+      logo: allSaints,
       location: "Dunwoody, GA",
       period: "2021 - 2023",
       responsibilities: [

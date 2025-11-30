@@ -18,7 +18,7 @@ const Education = () => {
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <img src={gtLogo} alt="Georgia Tech Logo" className="h-10 w-auto flex-shrink-0" />
-                  <div className="h-10 w-1 bg-gold flex-shrink-0"></div>
+                  <div className="h-10 w-0.5 bg-gold flex-shrink-0"></div>
                   <div>
                     <CardTitle className="text-3xl mb-2">Georgia Institute of Technology</CardTitle>
                     <CardDescription className="text-lg text-navy font-semibold">
@@ -90,7 +90,7 @@ const Education = () => {
               <CardHeader>
                 <div className="flex items-center gap-4">
                   <img src={dunwoodyLogo} alt="Dunwoody Wildcats Logo" className="h-14 w-auto flex-shrink-0" />
-                  <div className="h-14 w-1 bg-gold flex-shrink-0"></div>
+                  <div className="h-14 w-0.5 bg-gold flex-shrink-0"></div>
                   <div>
                     <CardTitle className="text-3xl mb-2">Dunwoody High School</CardTitle>
                     <CardDescription className="text-lg text-navy font-semibold">

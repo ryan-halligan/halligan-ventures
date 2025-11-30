@@ -23,16 +23,21 @@ const Navigation = () => {
     { name: "Experience", path: "/experience" },
     { name: "Education", path: "/education" },
     { name: "Skills", path: "/#skills" },
-    { name: "Work", path: "/#work" },
+    { name: "Projects", path: "/#projects" },
     { name: "Contact", path: "/#contact" },
   ];
 
   const handleNavClick = (path: string) => {
     setIsMobileMenuOpen(false);
     if (path.startsWith("/#")) {
-      const element = document.querySelector(path.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+      if (location.pathname !== "/") {
+        // Navigate to home first, then scroll
+        window.location.href = path;
+      } else {
+        const element = document.querySelector(path.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }
   };

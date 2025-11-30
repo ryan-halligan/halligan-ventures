@@ -4,6 +4,7 @@ import gtFootball from "@/assets/gt-football-logo.png";
 import gtBarstoolFeature from "@/assets/gt-barstool-feature.jpg";
 import espnFeature from "@/assets/espn-broadcast-feature.jpg";
 import gtAthleticsFeature from "@/assets/gt-athletics-feature.jpg";
+import cbsSportsFeature from "@/assets/cbs-sports-feature.png";
 import atlantaBowlFeature from "@/assets/atlanta-bowl-feature.jpg";
 
 const GTFootball = () => {
@@ -117,6 +118,14 @@ const GTFootball = () => {
                     className="w-full rounded-lg border border-border hover-lift"
                   />
                   <p className="text-sm text-muted-foreground">GT Athletics: Supporting excellence at Bobby Dodd Stadium</p>
+                </div>
+                <div className="space-y-2">
+                  <img 
+                    src={cbsSportsFeature} 
+                    alt="CBS Sports international broadcast coverage in Dublin, Ireland" 
+                    className="w-full rounded-lg border border-border hover-lift"
+                  />
+                  <p className="text-sm text-muted-foreground">CBS Sports: International game operations in Dublin, Ireland</p>
                 </div>
                 <div className="space-y-2">
                   <img 

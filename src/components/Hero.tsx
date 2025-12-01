@@ -13,7 +13,9 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center pt-20 px-4 relative">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-[0.08] pointer-events-none"
-        style={{ backgroundImage: `url(${atlantaSkyline})` }}
+        style={{ 
+          backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%), url(${atlantaSkyline})` 
+        }}
       />
       <div className="container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">

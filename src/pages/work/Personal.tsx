@@ -1,7 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Dumbbell, ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ExternalLink, Dumbbell, ChevronRight } from "lucide-react";
+import { useNavigate, Link } from "react-router-dom";
 import rhLogo from "@/assets/rh-logo-main.png";
 import jerseySwapsBg from "@/assets/jersey-swaps-bg.jpg";
 import benSheltonBg from "@/assets/rhxvisuals-shelton.jpg";
@@ -12,11 +13,21 @@ import gridiron from "@/assets/gridiron-drive-logo.jpg";
 import ironmanLogo from "@/assets/ironman-logo.png";
 
 const Personal = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
+          <Button 
+            variant="ghost" 
+            onClick={() => navigate(-1)}
+            className="mb-6 hover:bg-muted"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
+          </Button>
           <h1 className="text-5xl font-bold mb-4">Personal Projects</h1>
           <p className="text-xl text-muted-foreground mb-4">Design, Content Creation & Athletic Pursuits</p>
           <div className="h-1 w-24 bg-gold mb-12"></div>

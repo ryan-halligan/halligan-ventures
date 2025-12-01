@@ -2,10 +2,12 @@ import ironmanFinish from "@/assets/ryan-ironman.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-muted/30 relative overflow-hidden">
+    <section id="about" className="py-20 px-4 bg-muted/30 relative overflow-hidden mt-8">
       <div 
         className="absolute inset-0 bg-cover bg-center opacity-10"
-        style={{ backgroundImage: `url(${ironmanFinish})` }}
+        style={{ 
+          backgroundImage: `linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, rgba(255,255,255,1) 100%), url(${ironmanFinish})` 
+        }}
       />
       <div className="container mx-auto max-w-4xl relative z-10">
         <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>

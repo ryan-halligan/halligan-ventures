@@ -94,12 +94,13 @@ const GTFootball = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-3 gap-6">
                 <div className="space-y-2">
                   <img 
                     src={gtBarstoolFeature} 
                     alt="Featured on GT Barstool following team victory" 
                     className="w-full rounded-lg border border-border hover-lift"
+                    loading="lazy"
                   />
                   <p className="text-sm text-muted-foreground">GT Barstool: Behind-the-scenes equipment operations</p>
                 </div>
@@ -108,6 +109,7 @@ const GTFootball = () => {
                     src={espnFeature} 
                     alt="ESPN broadcast coverage showing sideline operations" 
                     className="w-full rounded-lg border border-border hover-lift"
+                    loading="lazy"
                   />
                   <p className="text-sm text-muted-foreground">ESPN: Game day operations and team support</p>
                 </div>
@@ -116,6 +118,7 @@ const GTFootball = () => {
                     src={gtAthleticsFeature} 
                     alt="Georgia Tech Athletics official game day coverage" 
                     className="w-full rounded-lg border border-border hover-lift"
+                    loading="lazy"
                   />
                   <p className="text-sm text-muted-foreground">GT Athletics: Supporting excellence at Bobby Dodd Stadium</p>
                 </div>
@@ -124,14 +127,16 @@ const GTFootball = () => {
                     src={cbsSportsFeature} 
                     alt="CBS Sports international broadcast coverage in Dublin, Ireland" 
                     className="w-full rounded-lg border border-border hover-lift"
+                    loading="lazy"
                   />
                   <p className="text-sm text-muted-foreground">CBS Sports: International game operations in Dublin, Ireland</p>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 md:col-span-2 md:w-1/2 md:mx-auto">
                   <img 
                     src={atlantaBowlFeature} 
                     alt="Mercedes-Benz Stadium bowl game experience" 
                     className="w-full rounded-lg border border-border hover-lift"
+                    loading="lazy"
                   />
                   <p className="text-sm text-muted-foreground">Bowl Game: Professional sideline operations at Mercedes-Benz Stadium</p>
                 </div>

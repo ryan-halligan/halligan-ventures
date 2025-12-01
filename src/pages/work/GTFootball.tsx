@@ -94,7 +94,7 @@ const GTFootball = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <img 
                     src={gtBarstoolFeature} 
@@ -131,7 +131,7 @@ const GTFootball = () => {
                   />
                   <p className="text-sm text-muted-foreground">CBS Sports: International game operations in Dublin, Ireland</p>
                 </div>
-                <div className="space-y-2 md:col-span-2 md:w-1/2 md:mx-auto">
+                <div className="space-y-2 md:col-span-2">
                   <img 
                     src={atlantaBowlFeature} 
                     alt="Mercedes-Benz Stadium bowl game experience" 

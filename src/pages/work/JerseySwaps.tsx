@@ -43,6 +43,7 @@ const JerseySwaps = () => {
                   src={design.src} 
                   alt={design.alt} 
                   className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                  loading="lazy"
                 />
                 <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
                   {design.alt}

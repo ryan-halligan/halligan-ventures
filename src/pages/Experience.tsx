@@ -36,26 +36,6 @@ const Experience = () => {
       ],
     },
     {
-      title: "Atlanta Hawks Marketing Team – Team Lead",
-      organization: "Georgia Tech Sports Business Club",
-      logo: hawks,
-      location: "Atlanta, GA",
-      period: "January 2025 - Present",
-      responsibilities: [
-        "Leading team in a data-driven analysis to design and present social media and ticketing strategies to Hawks executives, solidifying interdisciplinary-team leadership and collaboration, while contributing to an increase in revenue, YouTube views, and fan interaction",
-      ],
-    },
-    {
-      title: "Georgia Tech Buzz Bowl Case Competition",
-      organization: "Georgia Tech Sports Business Club",
-      logo: sbc,
-      location: "Atlanta, GA",
-      period: "November 2024",
-      responsibilities: [
-        "Developed a strategic business proposal with the Sports Business Club using market research and data-driven insights to enhance visibility and revenue for Georgia Tech Men's Basketball, earning 3rd place from a panel of judges out of 40+ teams",
-      ],
-    },
-    {
       title: "Pool Manager, Lifeguard",
       organization: "Swim Atlanta Pool Management",
       logo: swimAtlanta,
@@ -77,6 +57,26 @@ const Experience = () => {
       responsibilities: [
         "Elected to lead all fraternity recruitment operations as Rush Chair, after contributing to 40+ quality new members as an assistant",
         "As Athletics Chair, managed 15+ intramural teams and fraternity sporting events, driving competitiveness and brother engagement",
+      ],
+    },
+    {
+      title: "Atlanta Hawks Marketing Team – Team Lead",
+      organization: "Georgia Tech Sports Business Club",
+      logo: hawks,
+      location: "Atlanta, GA",
+      period: "January 2025 - November 2025",
+      responsibilities: [
+        "Leading team in a data-driven analysis to design and present social media and ticketing strategies to Hawks executives, solidifying interdisciplinary-team leadership and collaboration, while contributing to an increase in revenue, YouTube views, and fan interaction",
+      ],
+    },
+    {
+      title: "Georgia Tech Buzz Bowl Case Competition",
+      organization: "Georgia Tech Sports Business Club",
+      logo: sbc,
+      location: "Atlanta, GA",
+      period: "November 2024",
+      responsibilities: [
+        "Developed a strategic business proposal with the Sports Business Club using market research and data-driven insights to enhance visibility and revenue for Georgia Tech Men's Basketball, earning 3rd place from a panel of judges out of 40+ teams",
       ],
     },
     {

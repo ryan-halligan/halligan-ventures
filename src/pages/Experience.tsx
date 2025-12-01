@@ -19,9 +19,9 @@ const Experience = () => {
       location: "Atlanta, GA",
       period: "July 2024 - Present",
       responsibilities: [
-        "Manage daily equipment operations for 200+ players and staff, ensuring gear is readily available for every practice and game",
-        "Collaborate with coaches during practices by managing practice setup and takedown, improving efficiency of on-field drills, spotting footballs for scripted plays, and operating the scoreboard",
-        "Support gameday operations as a ballboy, defensive signs operator",
+        "Managing daily equipment operations for 200+ players and staff, ensuring gear is readily available for every practice and game",
+        "Collaborating with coaches during practices by managing practice setup and takedown, improving efficiency of on-field drills, spotting footballs for scripted plays, and operating the scoreboard",
+        "Supporting gameday operations as a ballboy, defensive signs operator",
       ],
     },
     {
@@ -31,8 +31,8 @@ const Experience = () => {
       location: "Atlanta, GA",
       period: "January 2025 - Present",
       responsibilities: [
-        "Evaluated 250+ NFL Draft prospects by analyzing HUDL film, position specific metrics, PFF Grades, and personal information to create 200+ player profiles with NFL comparisons, predictive analytics, and data visualization for an NFL Draft Guide",
-        "Support the University of Colorado's game planning by producing weekly, data-driven advanced scouting reports on future opponents, using Reel Analytics' IGA® score and PFF data to identify insightful player tendencies, strengths, and weaknesses",
+        "Evaluating 250+ NFL Draft prospects by analyzing HUDL film, position specific metrics, PFF Grades, and personal information to create 200+ player profiles with NFL comparisons, predictive analytics, and data visualization for an NFL Draft Guide",
+        "Supporting the University of Colorado's game planning by producing weekly, data-driven advanced scouting reports on future opponents, using Reel Analytics' IGA® score and PFF data to identify insightful player tendencies, strengths, and weaknesses",
       ],
     },
     {
@@ -55,8 +55,8 @@ const Experience = () => {
       location: "Georgia Institute of Technology, Atlanta, GA",
       period: "July 2024 - Present",
       responsibilities: [
-        "Elected to lead all fraternity recruitment operations as Rush Chair, after contributing to 40+ quality new members as an assistant",
-        "As Athletics Chair, managed 15+ intramural teams and fraternity sporting events, driving competitiveness and brother engagement",
+        "Leading all fraternity recruitment operations as Rush Chair, after contributing to 40+ quality new members as an assistant",
+        "As Athletics Chair, managing 15+ intramural teams and fraternity sporting events, driving competitiveness and brother engagement",
       ],
     },
     {
@@ -86,7 +86,7 @@ const Experience = () => {
       location: "Sandy Springs, GA",
       period: "2016 - Present",
       responsibilities: [
-        "Assist priests and deacons by leading a team of 5-8 servers on the altar during mass, contributing 300+ volunteer hours",
+        "Assisting priests and deacons by leading a team of 5-8 servers on the altar during mass, contributing 300+ volunteer hours",
       ],
     },
     {

@@ -1,13 +1,26 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import sbcLogo from "@/assets/sbc-logo.png";
 
 const SBC = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
+          <Button 
+            variant="ghost" 
+            onClick={() => navigate(-1)}
+            className="mb-6 hover:bg-muted"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
+          </Button>
           <div className="text-center mb-12">
             <img src={sbcLogo} alt="GT Sports Business Club" className="w-48 h-48 object-contain mx-auto mb-6" />
             <h1 className="text-5xl font-bold mb-4">GT Sports Business Club</h1>

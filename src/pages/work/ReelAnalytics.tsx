@@ -1,15 +1,28 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import reelAnalytics from "@/assets/reel-analytics-logo.png";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import reelAnalyticsLogo from "@/assets/reel-analytics-logo.png";
 
 const ReelAnalytics = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen">
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
+          <Button 
+            variant="ghost" 
+            onClick={() => navigate(-1)}
+            className="mb-6 hover:bg-muted"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
+          </Button>
           <div className="text-center mb-12">
-            <img src={reelAnalytics} alt="Reel Analytics" className="w-64 h-32 object-contain mx-auto mb-6" />
+            <img src={reelAnalyticsLogo} alt="Reel Analytics" className="w-64 h-32 object-contain mx-auto mb-6" />
             <h1 className="text-5xl font-bold mb-4">Reel Analytics</h1>
             <div className="h-1 w-24 bg-gold mx-auto mb-4"></div>
             <p className="text-xl text-muted-foreground">Scouting & Data Analytics Intern</p>

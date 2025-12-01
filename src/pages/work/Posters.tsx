@@ -1,5 +1,8 @@
 import Navigation from "@/components/Navigation";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import rhxLebron from "@/assets/rhxvisuals-lebron.jpg";
 import rhxSaintJoseph from "@/assets/rhxvisuals-saint-joseph.jpg";
@@ -16,6 +19,7 @@ interface Design {
 }
 
 const Posters = () => {
+  const navigate = useNavigate();
   const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
 
   const posters: Design[] = [
@@ -32,6 +36,14 @@ const Posters = () => {
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-6xl">
+          <Button 
+            variant="ghost" 
+            onClick={() => navigate(-1)}
+            className="mb-6 hover:bg-muted"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
+          </Button>
           <div className="flex items-center justify-center mb-8">
             <img src={rhLogo} alt="RH Logo" className="h-24 w-auto" />
           </div>

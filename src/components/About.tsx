@@ -1,7 +1,13 @@
+import ironmanFinish from "@/assets/ryan-ironman.jpg";
+
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto max-w-4xl">
+    <section id="about" className="py-20 px-4 bg-muted/30 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10"
+        style={{ backgroundImage: `url(${ironmanFinish})` }}
+      />
+      <div className="container mx-auto max-w-4xl relative z-10">
         <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
         <div className="h-1 w-24 bg-gold mx-auto mb-12"></div>
         

@@ -127,20 +127,24 @@ const Experience = () => {
                 {experiences.map((exp, index) => (
                   <Card key={index} className="border-border hover-lift">
                     <CardHeader>
-                      {exp.logo && (
-                        <div className="flex items-center gap-4 mb-4">
-                          <img src={exp.logo} alt={exp.organization} className="h-12 w-auto flex-shrink-0" />
-                          <div className="h-12 w-1 bg-gold flex-shrink-0"></div>
+                      <div className="flex items-center gap-4 mb-4">
+                        {exp.logo && (
+                          <>
+                            <img src={exp.logo} alt={exp.organization} className="h-12 w-auto flex-shrink-0" />
+                            <div className="h-12 w-0.5 bg-gold flex-shrink-0"></div>
+                          </>
+                        )}
+                        <div className="flex-1">
+                          <CardTitle className="text-2xl mb-2">{exp.title}</CardTitle>
+                          <CardDescription className="text-lg">
+                            <span className="font-semibold text-navy">{exp.organization}</span>
+                            <span className="mx-2">•</span>
+                            <span>{exp.location}</span>
+                            <span className="mx-2">•</span>
+                            <span>{exp.period}</span>
+                          </CardDescription>
                         </div>
-                      )}
-                      <CardTitle className="text-2xl">{exp.title}</CardTitle>
-                      <CardDescription className="text-lg">
-                        <span className="font-semibold text-navy">{exp.organization}</span>
-                        <span className="mx-2">•</span>
-                        <span>{exp.location}</span>
-                        <span className="mx-2">•</span>
-                        <span>{exp.period}</span>
-                      </CardDescription>
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2">
@@ -163,20 +167,24 @@ const Experience = () => {
                 {leadership.map((exp, index) => (
                   <Card key={index} className="border-border hover-lift">
                     <CardHeader>
-                      {exp.logo && (
-                        <div className="flex items-center gap-4 mb-4">
-                          <img src={exp.logo} alt={exp.organization} className="h-12 w-auto flex-shrink-0" />
-                          <div className="h-12 w-1 bg-gold flex-shrink-0"></div>
+                      <div className="flex items-center gap-4 mb-4">
+                        {exp.logo && (
+                          <>
+                            <img src={exp.logo} alt={exp.organization} className="h-12 w-auto flex-shrink-0" />
+                            <div className="h-12 w-0.5 bg-gold flex-shrink-0"></div>
+                          </>
+                        )}
+                        <div className="flex-1">
+                          <CardTitle className="text-2xl mb-2">{exp.title}</CardTitle>
+                          <CardDescription className="text-lg">
+                            <span className="font-semibold text-navy">{exp.organization}</span>
+                            <span className="mx-2">•</span>
+                            <span>{exp.location}</span>
+                            <span className="mx-2">•</span>
+                            <span>{exp.period}</span>
+                          </CardDescription>
                         </div>
-                      )}
-                      <CardTitle className="text-2xl">{exp.title}</CardTitle>
-                      <CardDescription className="text-lg">
-                        <span className="font-semibold text-navy">{exp.organization}</span>
-                        <span className="mx-2">•</span>
-                        <span>{exp.location}</span>
-                        <span className="mx-2">•</span>
-                        <span>{exp.period}</span>
-                      </CardDescription>
+                      </div>
                     </CardHeader>
                     <CardContent>
                       <ul className="space-y-2">

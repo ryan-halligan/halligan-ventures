@@ -14,8 +14,21 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener("scroll", handleScroll);
+    
+    // Check if we need to scroll to a section after navigation
+    const sectionToScroll = sessionStorage.getItem('scrollToSection');
+    if (sectionToScroll && location.pathname === "/") {
+      sessionStorage.removeItem('scrollToSection');
+      setTimeout(() => {
+        const element = document.getElementById(sectionToScroll);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+    
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -27,13 +40,16 @@ const Navigation = () => {
     { name: "Contact", path: "/#contact" },
   ];
 
-  const handleNavClick = (path: string) => {
+  const handleNavClick = (path: string, e?: React.MouseEvent) => {
     setIsMobileMenuOpen(false);
     if (path.startsWith("/#")) {
+      e?.preventDefault();
       const sectionId = path.substring(2); // Remove "/#"
+      
       if (location.pathname !== "/") {
-        // Navigate to home with hash, which will trigger scroll on load
-        window.location.href = path;
+        // Store section to scroll to, navigate to home
+        sessionStorage.setItem('scrollToSection', sectionId);
+        window.location.href = "/";
       } else {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -61,7 +77,7 @@ const Navigation = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                onClick={() => handleNavClick(link.path)}
+                onClick={(e) => handleNavClick(link.path, e)}
                 className={`text-sm font-medium transition-colors hover:text-gold ${
                   location.pathname === link.path ? "text-gold" : "text-foreground"
                 }`}
@@ -89,7 +105,7 @@ const Navigation = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                onClick={() => handleNavClick(link.path)}
+                onClick={(e) => handleNavClick(link.path, e)}
                 className={`block py-2 text-sm font-medium transition-colors hover:text-gold ${
                   location.pathname === link.path ? "text-gold" : "text-foreground"
                 }`}

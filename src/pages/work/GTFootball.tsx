@@ -107,48 +107,48 @@ const GTFootball = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="space-y-2">
+              <div className="columns-2 gap-4 space-y-4">
+                <div className="break-inside-avoid space-y-2">
                   <img 
                     src={gtBarstoolFeature} 
                     alt="Featured on GT Barstool following team victory" 
-                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
+                    className="w-full rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground">GT Barstool</p>
                 </div>
-                <div className="space-y-2">
+                <div className="break-inside-avoid space-y-2">
                   <img 
                     src={espnFeature} 
                     alt="ESPN broadcast coverage showing sideline operations" 
-                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
+                    className="w-full rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground">ESPN</p>
                 </div>
-                <div className="space-y-2">
+                <div className="break-inside-avoid space-y-2">
                   <img 
                     src={cbsSportsFeature} 
                     alt="CBS Sports international broadcast coverage in Dublin, Ireland" 
-                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
+                    className="w-full rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground">CBS Sports: Dublin</p>
                 </div>
-                <div className="space-y-2">
+                <div className="break-inside-avoid space-y-2">
                   <img 
                     src={gtAthleticsFeature} 
                     alt="Georgia Tech Athletics official game day coverage" 
-                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
+                    className="w-full rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground">GT Athletics</p>
                 </div>
-                <div className="space-y-2 col-span-2">
+                <div className="break-inside-avoid space-y-2">
                   <img 
                     src={atlantaBowlFeature} 
                     alt="Mercedes-Benz Stadium bowl game experience" 
-                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
+                    className="w-full rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
                   <p className="text-xs text-muted-foreground">Bowl Game: Mercedes-Benz Stadium</p>

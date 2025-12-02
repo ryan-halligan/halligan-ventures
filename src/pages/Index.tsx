@@ -24,7 +24,7 @@ const Index = () => {
             <Link to="/experience" className="group">
               <div className="relative bg-card border border-border rounded-lg p-8 hover-lift transition-all hover:border-gold overflow-hidden">
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
+                  className="absolute inset-0 bg-cover bg-center opacity-[0.06]"
                   style={{ backgroundImage: `url(${ryanSidelineCrowd})` }}
                 />
                 <div className="relative z-10">
@@ -43,7 +43,7 @@ const Index = () => {
             <Link to="/education" className="group">
               <div className="relative bg-card border border-border rounded-lg p-8 hover-lift transition-all hover:border-gold overflow-hidden">
                 <div 
-                  className="absolute inset-0 bg-cover bg-center opacity-[0.08]"
+                  className="absolute inset-0 bg-cover bg-center opacity-[0.06]"
                   style={{ backgroundImage: `url(${techTower})` }}
                 />
                 <div className="relative z-10">

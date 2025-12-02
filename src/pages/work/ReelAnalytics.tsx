@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, FileText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import reelAnalyticsLogo from "@/assets/reel-analytics-logo.png";
+import nflDraftCard from "@/assets/nfl-draft-card.png";
 
 const ReelAnalytics = () => {
   const navigate = useNavigate();
@@ -47,30 +48,61 @@ const ReelAnalytics = () => {
               <CardTitle className="text-2xl">Key Projects</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <p className="font-semibold text-lg">NFL Draft Guide Development</p>
-                    <p className="text-muted-foreground mt-1">
-                      Evaluated 250+ NFL Draft prospects by analyzing HUDL film, position-specific 
-                      metrics, PFF Grades, and personal information. Created 200+ comprehensive player 
-                      profiles featuring NFL comparisons, predictive analytics, and data visualizations.
-                    </p>
+              <div className="space-y-8">
+                <div>
+                  <div className="flex items-start mb-4">
+                    <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                    <div>
+                      <p className="font-semibold text-lg">NFL Draft Guide Development</p>
+                      <p className="text-muted-foreground mt-1">
+                        Evaluated 250+ NFL Draft prospects by analyzing HUDL film, position-specific 
+                        metrics, PFF Grades, and personal information. Created 200+ comprehensive player 
+                        profiles featuring NFL comparisons, predictive analytics, and data visualizations.
+                      </p>
+                    </div>
                   </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
-                  <div>
-                    <p className="font-semibold text-lg">University of Colorado Game Planning Support</p>
-                    <p className="text-muted-foreground mt-1">
-                      Produce weekly, data-driven advanced scouting reports on future opponents using 
-                      Reel Analytics' IGA® score and PFF data. Identify key player tendencies, strengths, 
-                      and weaknesses to inform strategic game planning.
-                    </p>
+                  <img 
+                    src={nflDraftCard} 
+                    alt="NFL Draft Player Card - Lando Brown Analysis" 
+                    className="w-full max-w-2xl mx-auto rounded-lg border border-border shadow-md"
+                  />
+                </div>
+                
+                <div>
+                  <div className="flex items-start mb-4">
+                    <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                    <div>
+                      <p className="font-semibold text-lg">University of Colorado Game Planning Support</p>
+                      <p className="text-muted-foreground mt-1">
+                        Produce weekly, data-driven advanced scouting reports on future opponents using 
+                        Reel Analytics' IGA® score and PFF data. Identify key player tendencies, strengths, 
+                        and weaknesses to inform strategic game planning.
+                      </p>
+                    </div>
                   </div>
-                </li>
-              </ul>
+                  <a 
+                    href="/documents/colorado-scouting-report.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full max-w-md mx-auto group"
+                  >
+                    <div className="bg-muted border border-border rounded-lg p-6 hover:border-gold transition-colors group-hover:shadow-md">
+                      <div className="flex items-center gap-4">
+                        <div className="bg-gold/10 p-3 rounded-lg">
+                          <FileText className="w-8 h-8 text-gold" />
+                        </div>
+                        <div className="flex-1">
+                          <p className="font-semibold text-foreground group-hover:text-gold transition-colors">
+                            Advanced Scouting Report
+                          </p>
+                          <p className="text-sm text-muted-foreground">Colorado vs BYU - Game 5</p>
+                        </div>
+                        <span className="text-xs text-muted-foreground uppercase tracking-wide">PDF</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </CardContent>
           </Card>
 

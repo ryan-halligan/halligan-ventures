@@ -107,51 +107,51 @@ const GTFootball = () => {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <div className="space-y-2">
                   <img 
                     src={gtBarstoolFeature} 
                     alt="Featured on GT Barstool following team victory" 
-                    className="w-full rounded-lg border border-border hover-lift"
+                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
-                  <p className="text-sm text-muted-foreground">GT Barstool: Behind-the-scenes equipment operations</p>
+                  <p className="text-xs text-muted-foreground">GT Barstool</p>
                 </div>
                 <div className="space-y-2">
                   <img 
                     src={espnFeature} 
                     alt="ESPN broadcast coverage showing sideline operations" 
-                    className="w-full rounded-lg border border-border hover-lift"
+                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
-                  <p className="text-sm text-muted-foreground">ESPN: Game day operations and team support</p>
-                </div>
-                <div className="space-y-2">
-                  <img 
-                    src={gtAthleticsFeature} 
-                    alt="Georgia Tech Athletics official game day coverage" 
-                    className="w-full rounded-lg border border-border hover-lift"
-                    loading="lazy"
-                  />
-                  <p className="text-sm text-muted-foreground">GT Athletics: Supporting excellence at Bobby Dodd Stadium</p>
+                  <p className="text-xs text-muted-foreground">ESPN</p>
                 </div>
                 <div className="space-y-2">
                   <img 
                     src={cbsSportsFeature} 
                     alt="CBS Sports international broadcast coverage in Dublin, Ireland" 
-                    className="w-full rounded-lg border border-border hover-lift"
+                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
-                  <p className="text-sm text-muted-foreground">CBS Sports: International game operations in Dublin, Ireland</p>
+                  <p className="text-xs text-muted-foreground">CBS Sports: Dublin</p>
                 </div>
-                <div className="space-y-2 md:col-span-2">
+                <div className="space-y-2">
+                  <img 
+                    src={gtAthleticsFeature} 
+                    alt="Georgia Tech Athletics official game day coverage" 
+                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
+                    loading="lazy"
+                  />
+                  <p className="text-xs text-muted-foreground">GT Athletics</p>
+                </div>
+                <div className="space-y-2 col-span-2">
                   <img 
                     src={atlantaBowlFeature} 
                     alt="Mercedes-Benz Stadium bowl game experience" 
-                    className="w-full rounded-lg border border-border hover-lift"
+                    className="w-full h-40 object-cover rounded-lg border border-border hover-lift"
                     loading="lazy"
                   />
-                  <p className="text-sm text-muted-foreground">Bowl Game: Professional sideline operations at Mercedes-Benz Stadium</p>
+                  <p className="text-xs text-muted-foreground">Bowl Game: Mercedes-Benz Stadium</p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mt-6 italic">

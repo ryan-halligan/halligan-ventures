@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import reelAnalyticsLogo from "@/assets/reel-analytics-logo.png";
-import reelAnalyticsProjects from "@/assets/reel-analytics-projects.png";
+import nflDraftCard from "@/assets/nfl-draft-card.png";
 
 const ReelAnalytics = () => {
   const navigate = useNavigate();
@@ -73,11 +73,31 @@ const ReelAnalytics = () => {
                   </div>
                 </div>
 
-                <img 
-                  src={reelAnalyticsProjects} 
-                  alt="NFL Draft Player Card and Advanced Scouting Report samples" 
-                  className="w-full rounded-lg border border-border shadow-md mt-6"
-                />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="rounded-lg overflow-hidden border border-border hover:border-gold transition-colors">
+                    <img 
+                      src={nflDraftCard} 
+                      alt="NFL Draft Player Card" 
+                      className="w-full h-auto"
+                    />
+                    <p className="text-center text-sm text-muted-foreground py-2">NFL Draft Guide</p>
+                  </div>
+                  <a 
+                    href="/documents/colorado-scouting-report.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"
+                  >
+                    <div className="bg-muted flex items-center justify-center aspect-[4/3] p-4">
+                      <div className="text-center">
+                        <p className="font-semibold text-lg mb-2">Advanced Scouting Report</p>
+                        <p className="text-sm text-muted-foreground">University of Colorado - BYU</p>
+                        <p className="text-xs text-gold mt-2">Click to view PDF</p>
+                      </div>
+                    </div>
+                    <p className="text-center text-sm text-muted-foreground py-2">Advanced Scouting Report</p>
+                  </a>
+                </div>
               </div>
             </CardContent>
           </Card>

@@ -1,5 +1,9 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, Users, Laptop, MessageSquare } from "lucide-react";
+import skillDataAnalysis from "@/assets/skill-data-analysis.png";
+import skillLeadership from "@/assets/skill-leadership.png";
+import skillTechnical from "@/assets/skill-technical.png";
+import skillInterpersonal from "@/assets/skill-interpersonal.png";
 
 const Skills = () => {
   const skillCategories = [
@@ -7,21 +11,25 @@ const Skills = () => {
       icon: <BarChart3 className="w-8 h-8 text-gold" />,
       title: "Data Analysis",
       skills: ["Regression Analysis", "Data Visualization", "Player Evaluation", "Statistical Modeling"],
+      backgroundImage: skillDataAnalysis,
     },
     {
       icon: <Users className="w-8 h-8 text-gold" />,
       title: "Leadership",
       skills: ["Team Management", "Scheduling", "Operations", "Strategic Planning"],
+      backgroundImage: skillLeadership,
     },
     {
       icon: <Laptop className="w-8 h-8 text-gold" />,
       title: "Technical",
       skills: ["Python", "SQL", "Excel", "Adobe Photoshop", "Project Management"],
+      backgroundImage: skillTechnical,
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-gold" />,
       title: "Interpersonal",
       skills: ["Communication", "Problem-Solving", "Teamwork", "Adaptability"],
+      backgroundImage: skillInterpersonal,
     },
   ];
 
@@ -33,12 +41,19 @@ const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="hover-lift border-border">
-              <CardHeader>
+            <Card 
+              key={index} 
+              className="hover-lift border-border relative overflow-hidden"
+            >
+              <div 
+                className="absolute inset-0 bg-cover bg-center opacity-5"
+                style={{ backgroundImage: `url(${category.backgroundImage})` }}
+              />
+              <CardHeader className="relative z-10">
                 <div className="mb-4">{category.icon}</div>
                 <CardTitle className="text-xl">{category.title}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="relative z-10">
                 <ul className="space-y-2">
                   {category.skills.map((skill, idx) => (
                     <li key={idx} className="text-muted-foreground flex items-center">

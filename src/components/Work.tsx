@@ -5,6 +5,7 @@ import sbc from "@/assets/sbc-logo.png";
 import sigmaNu from "@/assets/sigma-nu-logo.png";
 import rhLogo from "@/assets/rh-logo.png";
 import vipLogo from "@/assets/vip-logo.png";
+import projectsBg from "@/assets/projects-bg.png";
 
 const Work = () => {
   const organizations = [
@@ -47,8 +48,12 @@ const Work = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-muted/30">
-      <div className="container mx-auto">
+    <section id="projects" className="py-20 px-4 bg-muted/30 relative overflow-hidden">
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.08 }}
+      />
+      <div className="container mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-center mb-4">Projects & Collaborations</h2>
         <div className="h-1 w-24 bg-gold mx-auto mb-12"></div>
 

@@ -5,6 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import reelAnalyticsLogo from "@/assets/reel-analytics-logo.png";
 import nflDraftCard from "@/assets/nfl-draft-card.png";
+import scoutingReportPreview from "@/assets/scouting-report-preview.jpg";
 
 const ReelAnalytics = () => {
   const navigate = useNavigate();
@@ -73,12 +74,12 @@ const ReelAnalytics = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div className="grid grid-cols-2 gap-4 mt-6">
                   <div className="rounded-lg overflow-hidden border border-border hover:border-gold transition-colors">
                     <img 
                       src={nflDraftCard} 
                       alt="NFL Draft Player Card" 
-                      className="w-full h-auto"
+                      className="w-full h-auto object-cover aspect-[4/3]"
                     />
                     <p className="text-center text-sm text-muted-foreground py-2">NFL Draft Guide</p>
                   </div>
@@ -88,13 +89,11 @@ const ReelAnalytics = () => {
                     rel="noopener noreferrer"
                     className="block rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"
                   >
-                    <div className="bg-muted flex items-center justify-center aspect-[4/3] p-4">
-                      <div className="text-center">
-                        <p className="font-semibold text-lg mb-2">Advanced Scouting Report</p>
-                        <p className="text-sm text-muted-foreground">University of Colorado - BYU</p>
-                        <p className="text-xs text-gold mt-2">Click to view PDF</p>
-                      </div>
-                    </div>
+                    <img 
+                      src={scoutingReportPreview} 
+                      alt="Advanced Scouting Report Preview" 
+                      className="w-full h-auto object-cover aspect-[4/3]"
+                    />
                     <p className="text-center text-sm text-muted-foreground py-2">Advanced Scouting Report</p>
                   </a>
                 </div>

@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import sbcLogo from "@/assets/sbc-logo.png";
+import hawksCasePreview from "@/assets/hawks-case-preview.jpg";
+import buzzbowlSlide from "@/assets/buzzbowl-slide.png";
 
 const SBC = () => {
   const navigate = useNavigate();
@@ -72,6 +74,30 @@ const SBC = () => {
                   </div>
                 </li>
               </ul>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <a 
+                  href="/documents/hawks-case-competition.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"
+                >
+                  <img 
+                    src={hawksCasePreview} 
+                    alt="Hawks Case Competition Presentation" 
+                    className="w-full h-auto"
+                  />
+                  <p className="text-center text-sm text-muted-foreground py-2">Hawks Case Competition (Click to view)</p>
+                </a>
+                <div className="rounded-lg overflow-hidden border border-border">
+                  <img 
+                    src={buzzbowlSlide} 
+                    alt="Buzz Bowl City Edition Jerseys Slide" 
+                    className="w-full h-auto"
+                  />
+                  <p className="text-center text-sm text-muted-foreground py-2">Buzz Bowl Case Competition</p>
+                </div>
+              </div>
             </CardContent>
           </Card>
 

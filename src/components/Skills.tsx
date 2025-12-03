@@ -46,8 +46,8 @@ const Skills = () => {
               className="hover-lift border-border relative overflow-hidden"
             >
               <div 
-                className="absolute inset-0 bg-cover bg-center opacity-5"
-                style={{ backgroundImage: `url(${category.backgroundImage})` }}
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${category.backgroundImage})`, opacity: 0.035 }}
               />
               <CardHeader className="relative z-10">
                 <div className="mb-4">{category.icon}</div>

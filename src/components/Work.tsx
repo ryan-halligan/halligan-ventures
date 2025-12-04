@@ -51,7 +51,7 @@ const Work = () => {
     <section id="projects" className="py-20 px-4 bg-muted/30 relative overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.08 }}
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.20 }}
       />
       <div className="container mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-center mb-4">Projects & Collaborations</h2>

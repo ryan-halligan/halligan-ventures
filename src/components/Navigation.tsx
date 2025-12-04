@@ -100,7 +100,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+          <div className="md:hidden py-4 border-t border-border bg-gradient-to-b from-background via-background to-background/95">
             {navLinks.map((link) => (
               <Link
                 key={link.name}

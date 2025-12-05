@@ -79,7 +79,7 @@ const ReelAnalytics = () => {
                     <img 
                       src={nflDraftCard} 
                       alt="NFL Draft Player Card" 
-                      className="w-full h-auto object-cover aspect-[4/3]"
+                      className="w-full h-auto object-contain"
                     />
                     <p className="text-center text-sm text-muted-foreground py-2">NFL Draft Guide</p>
                   </div>
@@ -92,7 +92,7 @@ const ReelAnalytics = () => {
                     <img 
                       src={scoutingReportPreview} 
                       alt="Advanced Scouting Report Preview" 
-                      className="w-full h-auto object-cover aspect-[4/3]"
+                      className="w-full h-auto object-contain"
                     />
                     <p className="text-center text-sm text-muted-foreground py-2">Advanced Scouting Report</p>
                   </a>

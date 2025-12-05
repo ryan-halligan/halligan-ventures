@@ -11,6 +11,8 @@ import afcLogo from "@/assets/afc-logo.jpg";
 import tgcLogo from "@/assets/tgc-logo.png";
 import gridiron from "@/assets/gridiron-drive-logo.jpg";
 import ironmanLogo from "@/assets/ironman-logo.png";
+import tgcUltimatePack from "@/assets/tgc-ultimate-pack.jpg";
+import tgcGiveawayV7 from "@/assets/tgc-giveaway-v7.png";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -125,19 +127,33 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Graphics Packages</h3>
-                      <p className="text-sm text-muted-foreground">Complete visual packages built around themes, campaigns, or multi-post storylines designed for consistent branding.</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/tgc-graphics-packs">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${tgcUltimatePack})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10">
+                        <h3 className="text-xl font-semibold mb-2">Graphics Packages</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Complete visual packages built around themes, campaigns, or multi-post storylines designed for consistent branding.</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Giveaways</h3>
-                      <p className="text-sm text-muted-foreground">Free wallpapers, templates, and fan-focused assets released to drive engagement and community growth.</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/tgc-giveaways">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${tgcGiveawayV7})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10">
+                        <h3 className="text-xl font-semibold mb-2">Giveaways</h3>
+                        <p className="text-sm text-muted-foreground mb-4">Free wallpapers, templates, and fan-focused assets released to drive engagement and community growth.</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
                     <CardContent className="p-6 text-center">

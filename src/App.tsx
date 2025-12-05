@@ -16,6 +16,8 @@ import Personal from "./pages/work/Personal";
 import JerseySwaps from "./pages/work/JerseySwaps";
 import Compositions from "./pages/work/Compositions";
 import Posters from "./pages/work/Posters";
+import TGCGraphicsPacks from "./pages/work/TGCGraphicsPacks";
+import TGCGiveaways from "./pages/work/TGCGiveaways";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,6 +42,8 @@ const App = () => (
           <Route path="/work/jersey-swaps" element={<JerseySwaps />} />
           <Route path="/work/compositions" element={<Compositions />} />
           <Route path="/work/posters" element={<Posters />} />
+          <Route path="/work/tgc-graphics-packs" element={<TGCGraphicsPacks />} />
+          <Route path="/work/tgc-giveaways" element={<TGCGiveaways />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

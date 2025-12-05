@@ -9,6 +9,8 @@ import tgcPackV6 from "@/assets/tgc-pack-v6.png";
 import tgcPackV5 from "@/assets/tgc-pack-v5.png";
 import tgcFreeTemplate from "@/assets/tgc-free-template.png";
 import tgcGiveawayV3 from "@/assets/tgc-giveaway-v3.png";
+import tgcPackV2 from "@/assets/tgc-pack-v2.png";
+import tgcDebutPack from "@/assets/tgc-debut-pack.png";
 
 const TGCGiveaways = () => {
   const navigate = useNavigate();
@@ -20,6 +22,8 @@ const TGCGiveaways = () => {
     { src: tgcPackV5, title: "TGC V5 Pack" },
     { src: tgcFreeTemplate, title: "Free Template Pack" },
     { src: tgcGiveawayV3, title: "Giveaway V3" },
+    { src: tgcPackV2, title: "TGC Pack V2" },
+    { src: tgcDebutPack, title: "TGC Debut Pack" },
   ];
 
   return (

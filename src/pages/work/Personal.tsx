@@ -13,6 +13,7 @@ import gridiron from "@/assets/gridiron-drive-logo.jpg";
 import ironmanLogo from "@/assets/ironman-logo.png";
 import tgcUltimatePack from "@/assets/tgc-ultimate-pack.jpg";
 import tgcGiveawayV7 from "@/assets/tgc-giveaway-v7.png";
+import tgcTemplateLonzopage from "@/assets/tgc-template-lonzopage-quote.jpg";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -55,42 +56,42 @@ const Personal = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <Link to="/work/jersey-swaps">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-top opacity-15"
                         style={{ backgroundImage: `url(${jerseySwapsBg})` }}
                       />
-                      <CardContent className="p-6 text-center relative z-10">
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Jersey Swaps</h3>
-                        <p className="text-sm text-muted-foreground mb-4">Professional athlete jersey swap designs</p>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Professional athlete jersey swap designs</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>
                   </Link>
                   
                   <Link to="/work/compositions">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-top opacity-15"
                         style={{ backgroundImage: `url(${benSheltonBg})` }}
                       />
-                      <CardContent className="p-6 text-center relative z-10">
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Compositions</h3>
-                        <p className="text-sm text-muted-foreground mb-4">Dynamic sports composition designs</p>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Dynamic sports composition designs</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>
                   </Link>
                   
                   <Link to="/work/posters">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-15"
                         style={{ backgroundImage: `url(${samHartmanBg})` }}
                       />
-                      <CardContent className="p-6 text-center relative z-10">
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Posters</h3>
-                        <p className="text-sm text-muted-foreground mb-4">Inspirational & artistic poster designs</p>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Inspirational & artistic poster designs</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>
@@ -128,39 +129,46 @@ const Personal = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <Link to="/work/tgc-graphics-packs">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-15"
                         style={{ backgroundImage: `url(${tgcUltimatePack})` }}
                       />
-                      <CardContent className="p-6 text-center relative z-10">
-                        <h3 className="text-xl font-semibold mb-2">Graphics Packages</h3>
-                        <p className="text-sm text-muted-foreground mb-4">Complete visual packages built around themes, campaigns, or multi-post storylines designed for consistent branding.</p>
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Graphics Packs</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Complete visual packages for consistent branding</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>
                   </Link>
                   
                   <Link to="/work/tgc-giveaways">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-15"
                         style={{ backgroundImage: `url(${tgcGiveawayV7})` }}
                       />
-                      <CardContent className="p-6 text-center relative z-10">
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Giveaways</h3>
-                        <p className="text-sm text-muted-foreground mb-4">Free wallpapers, templates, and fan-focused assets released to drive engagement and community growth.</p>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Free templates and assets for community growth</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>
                   </Link>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Custom Work</h3>
-                      <p className="text-sm text-muted-foreground">One-off commissioned pieces tailored to teams, athletes, and creators looking for something unique.</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/tgc-custom-work">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${tgcTemplateLonzopage})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Custom Work</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Commissioned pieces for teams and creators</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </div>
                 
                 <a 
@@ -192,24 +200,24 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">News</h3>
-                      <p className="text-sm text-muted-foreground">Fast, accurate coverage of roster moves, injuries, game recaps, and major Falcons updates.</p>
+                      <p className="text-sm text-muted-foreground flex-grow">Coverage of roster moves, injuries, and game recaps</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">Designs</h3>
-                      <p className="text-sm text-muted-foreground">High-quality graphics, edits, and visual pieces crafted to elevate storytelling around the team.</p>
+                      <p className="text-sm text-muted-foreground flex-grow">Graphics and visuals to elevate team storytelling</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Analysis & Engagement</h3>
-                      <p className="text-sm text-muted-foreground">Film notes, stat breakdowns, predictions, polls, and interactive content that keep fans locked in.</p>
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                      <h3 className="text-xl font-semibold mb-2">Fan Engagement</h3>
+                      <p className="text-sm text-muted-foreground flex-grow">Polls, predictions, and interactive content</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -243,24 +251,24 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">News</h3>
-                      <p className="text-sm text-muted-foreground">Coverage across college and pro football, including recruiting, draft notes, and team developments.</p>
+                      <p className="text-sm text-muted-foreground flex-grow">College and pro football coverage and updates</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">Designs</h3>
-                      <p className="text-sm text-muted-foreground">Eye-catching graphics and visual content built to strengthen brand identity and fan appeal.</p>
+                      <p className="text-sm text-muted-foreground flex-grow">Graphics built to strengthen brand identity</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Analysis & Features</h3>
-                      <p className="text-sm text-muted-foreground">Deep-dive breakdowns, player evaluations, and long-form football pieces that highlight on-field trends and storylines.</p>
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                      <h3 className="text-xl font-semibold mb-2">Analysis</h3>
+                      <p className="text-sm text-muted-foreground flex-grow">Deep-dive breakdowns and player evaluations</p>
                     </CardContent>
                   </Card>
                 </div>
@@ -286,24 +294,24 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Athletic Journey</h3>
-                      <p className="text-sm text-muted-foreground">Swim background, early triathlons, Ironman story, and how I got here.</p>
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                      <h3 className="text-xl font-semibold mb-2">Journey</h3>
+                      <p className="text-sm text-muted-foreground flex-grow">Swim background, triathlons, and Ironman story</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Performance & Training</h3>
-                      <p className="text-sm text-muted-foreground">PRs, metrics, race results, gear, and current training focus.</p>
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                      <h3 className="text-xl font-semibold mb-2">Training</h3>
+                      <p className="text-sm text-muted-foreground flex-grow">PRs, metrics, race results, and current focus</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold">
-                    <CardContent className="p-6 text-center">
-                      <h3 className="text-xl font-semibold mb-2">Highlights & Goals</h3>
-                      <p className="text-sm text-muted-foreground">Photos, achievements, breakthroughs, and what I'm chasing next.</p>
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                      <h3 className="text-xl font-semibold mb-2">Goals</h3>
+                      <p className="text-sm text-muted-foreground flex-grow">Achievements and what I'm chasing next</p>
                     </CardContent>
                   </Card>
                 </div>

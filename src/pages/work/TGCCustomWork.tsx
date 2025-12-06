@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 import tgcLogo from "@/assets/tgc-logo.png";
 import dunwoodyPlanner from "@/assets/tgc-dunwoody-planner.jpg";
 import dunwoodyTennessee from "@/assets/tgc-dunwoody-tennessee.jpg";
+import dunwoodyGameday1 from "@/assets/tgc-dunwoody-gameday-1.jpg";
+import dunwoodyGameday2 from "@/assets/tgc-dunwoody-gameday-2.jpg";
+import dunwoodySwimState from "@/assets/tgc-dunwoody-swim-state.png";
+import dunwoodyStateChampions from "@/assets/tgc-dunwoody-state-champions.jpg";
 import logoNflFacts from "@/assets/tgc-logo-nfl-facts.jpg";
 import logoPacers from "@/assets/tgc-logo-pacers.jpg";
 import logoLonzopage from "@/assets/tgc-logo-lonzopage.jpg";
@@ -24,8 +28,15 @@ import beastmodeLogo from "@/assets/tgc-beastmode-logo.jpg";
 const TGCCustomWork = () => {
   const navigate = useNavigate();
 
-  const dunwoodyWork = [
-    { src: dunwoodyPlanner, title: "Soar Into Success Student Planner" },
+  const logos = [
+    { src: templateItsOver, title: "It's Over Logo" },
+    { src: logoNflFacts, title: "NFL Facts Now Logo" },
+    { src: logoPacers, title: "Indiana Pacers Logo Concept" },
+    { src: logoLonzopage, title: "Lonzopage Watermark" },
+    { src: logoGatorsallday, title: "GatorsAllDay Logo" },
+    { src: lionsLogo, title: "DetLionsDrive Logo" },
+    { src: branchesLogo, title: "The Branches Club Logo" },
+    { src: beastmodeLogo, title: "Beastmode YT Logo" },
   ];
 
   const templates = [
@@ -39,15 +50,12 @@ const TGCCustomWork = () => {
     { src: burrowStory, title: "BurrowsBackup Story Update Template" },
   ];
 
-  const logos = [
-    { src: templateItsOver, title: "It's Over Logo" },
-    { src: logoNflFacts, title: "NFL Facts Now Logo" },
-    { src: logoPacers, title: "Indiana Pacers Logo Concept" },
-    { src: logoLonzopage, title: "Lonzopage Watermark" },
-    { src: logoGatorsallday, title: "GatorsAllDay Logo" },
-    { src: lionsLogo, title: "DetLionsDrive Logo" },
-    { src: branchesLogo, title: "The Branches Club Logo" },
-    { src: beastmodeLogo, title: "Beastmode YT Logo" },
+  const dunwoodyWork = [
+    { src: dunwoodyPlanner, title: "Soar Into Success Student Planner" },
+    { src: dunwoodyGameday1, title: "Tennis Gameday vs Saint Pius" },
+    { src: dunwoodyGameday2, title: "Tennis Gameday vs South Cobb" },
+    { src: dunwoodySwimState, title: "Swimming & Diving State Team 2024" },
+    { src: dunwoodyStateChampions, title: "6A State Champions Graphic" },
   ];
 
   return (
@@ -70,11 +78,11 @@ const TGCCustomWork = () => {
             <p className="text-xl text-muted-foreground">One-off commissioned pieces for teams, athletes, and creators</p>
           </div>
 
-          {/* Dunwoody High School Section */}
+          {/* Logos Section */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-gold">Dunwoody High School</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gold">Logos</h2>
             <div className="columns-1 md:columns-2 gap-4 space-y-4">
-              {dunwoodyWork.map((item, index) => (
+              {logos.map((item, index) => (
                 <div 
                   key={index}
                   className="break-inside-avoid rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"
@@ -108,11 +116,11 @@ const TGCCustomWork = () => {
             </div>
           </div>
 
-          {/* Logos Section */}
+          {/* Dunwoody High School Section */}
           <div>
-            <h2 className="text-2xl font-bold mb-6 text-gold">Logos</h2>
+            <h2 className="text-2xl font-bold mb-6 text-gold">Dunwoody High School</h2>
             <div className="columns-1 md:columns-2 gap-4 space-y-4">
-              {logos.map((item, index) => (
+              {dunwoodyWork.map((item, index) => (
                 <div 
                   key={index}
                   className="break-inside-avoid rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"

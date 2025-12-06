@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import tgcLogo from "@/assets/tgc-logo.png";
+import dunwoodyPlanner from "@/assets/tgc-dunwoody-planner.jpg";
 import dunwoodyTennessee from "@/assets/tgc-dunwoody-tennessee.jpg";
 import logoNflFacts from "@/assets/tgc-logo-nfl-facts.jpg";
 import logoPacers from "@/assets/tgc-logo-pacers.jpg";
@@ -11,25 +12,42 @@ import logoGatorsallday from "@/assets/tgc-logo-gatorsallday.jpg";
 import templateLonzopage from "@/assets/tgc-template-lonzopage-quote.jpg";
 import templateItsOver from "@/assets/tgc-template-its-over.png";
 import templateGatorsBreaking from "@/assets/tgc-template-gators-breaking.jpg";
+import floridaGameday from "@/assets/tgc-florida-gameday.jpg";
+import dfaRebrand from "@/assets/tgc-dfa-rebrand.jpg";
+import lionsLogo from "@/assets/tgc-lions-logo.jpg";
+import lionsDiscussion from "@/assets/tgc-lions-discussion.jpg";
+import lionsBreaking from "@/assets/tgc-lions-breaking.jpg";
+import burrowStory from "@/assets/tgc-burrow-story.jpg";
+import branchesLogo from "@/assets/tgc-branches-logo.jpg";
+import beastmodeLogo from "@/assets/tgc-beastmode-logo.jpg";
 
 const TGCCustomWork = () => {
   const navigate = useNavigate();
 
   const dunwoodyWork = [
-    { src: dunwoodyTennessee, title: "Tennessee Breaking News Template" },
+    { src: dunwoodyPlanner, title: "Soar Into Success Student Planner" },
   ];
 
   const templates = [
+    { src: dunwoodyTennessee, title: "Tennessee Breaking News Template" },
     { src: templateLonzopage, title: "Lonzopage Quote Template" },
-    { src: templateItsOver, title: "It's Over Template" },
     { src: templateGatorsBreaking, title: "Gators Breaking News Template" },
+    { src: floridaGameday, title: "Florida Gators Gameday Template" },
+    { src: dfaRebrand, title: "DFA Basketball Rebrand Announcement" },
+    { src: lionsDiscussion, title: "DetLionsDrive Discussion Template" },
+    { src: lionsBreaking, title: "DetLionsDrive Breaking News Template" },
+    { src: burrowStory, title: "BurrowsBackup Story Update Template" },
   ];
 
   const logos = [
+    { src: templateItsOver, title: "It's Over Logo" },
     { src: logoNflFacts, title: "NFL Facts Now Logo" },
     { src: logoPacers, title: "Indiana Pacers Logo Concept" },
     { src: logoLonzopage, title: "Lonzopage Watermark" },
     { src: logoGatorsallday, title: "GatorsAllDay Logo" },
+    { src: lionsLogo, title: "DetLionsDrive Logo" },
+    { src: branchesLogo, title: "The Branches Club Logo" },
+    { src: beastmodeLogo, title: "Beastmode YT Logo" },
   ];
 
   return (

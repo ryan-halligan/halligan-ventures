@@ -90,8 +90,8 @@ const Personal = () => {
                         style={{ backgroundImage: `url(${samHartmanBg})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
-                        <h3 className="text-xl font-semibold mb-2">Posters</h3>
-                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Inspirational & artistic poster designs</p>
+                        <h3 className="text-xl font-semibold mb-2">Projects</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Extended creative projects & collaborations</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>

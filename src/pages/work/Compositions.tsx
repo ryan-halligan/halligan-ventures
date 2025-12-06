@@ -9,6 +9,12 @@ import rhxSteelers from "@/assets/rhxvisuals-steelers.jpg";
 import rhxHalloween from "@/assets/rhxvisuals-halloween.jpg";
 import rhxShelton from "@/assets/rhxvisuals-shelton.jpg";
 import rhxTexans from "@/assets/rhxvisuals-texans.jpg";
+import rhxLebron from "@/assets/rhxvisuals-lebron.jpg";
+import rhxSaintJoseph from "@/assets/rhxvisuals-saint-joseph.jpg";
+import rhxSamHartman from "@/assets/rhxvisuals-sam-hartman.jpg";
+import rhxScottRigsby from "@/assets/rhxvisuals-scott-rigsby.jpg";
+import rhxKrips from "@/assets/rhxvisuals-krips.jpg";
+import rhxBijan from "@/assets/rhxvisuals-bijan.jpg";
 import rhLogo from "@/assets/rh-logo-main.png";
 
 interface Design {
@@ -27,6 +33,12 @@ const Compositions = () => {
     { src: rhxHalloween, alt: "Halloween themed sports design", description: "Halloween themed sports composition" },
     { src: rhxShelton, alt: "Ben Shelton tennis design", description: "Ben Shelton 'Dialed In' tennis composition" },
     { src: rhxTexans, alt: "JJ Watt Houston Texans design", description: "JJ Watt Houston Texans composition design" },
+    { src: rhxLebron, alt: "LeBron James Lakers poster", description: "'Gimme A Bang' LeBron James Lakers poster design" },
+    { src: rhxSaintJoseph, alt: "Saint Joseph of Cupertino", description: "Saint Joseph of Cupertino inspirational poster" },
+    { src: rhxSamHartman, alt: "Sam Hartman Notre Dame poster", description: "Sam Hartman Notre Dame quarterback poster design" },
+    { src: rhxScottRigsby, alt: "Scott Rigsby Ironman poster", description: "'Do The Unthinkable' Scott Rigsby Ironman inspirational poster" },
+    { src: rhxKrips, alt: "KRIPS basketball gameday poster", description: "KRIPS vs Steele gameday basketball poster" },
+    { src: rhxBijan, alt: "Bijan Robinson poster", description: "Bijan Robinson artistic poster design" },
   ];
 
   return (

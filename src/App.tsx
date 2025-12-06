@@ -19,6 +19,7 @@ import Posters from "./pages/work/Posters";
 import TGCGraphicsPacks from "./pages/work/TGCGraphicsPacks";
 import TGCGiveaways from "./pages/work/TGCGiveaways";
 import TGCCustomWork from "./pages/work/TGCCustomWork";
+import RHxVisualsProjects from "./pages/work/RHxVisualsProjects";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/work/tgc-graphics-packs" element={<TGCGraphicsPacks />} />
           <Route path="/work/tgc-giveaways" element={<TGCGiveaways />} />
           <Route path="/work/tgc-custom-work" element={<TGCCustomWork />} />
+          <Route path="/work/rhxvisuals-projects" element={<RHxVisualsProjects />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

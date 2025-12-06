@@ -6,14 +6,14 @@ import { useNavigate, Link } from "react-router-dom";
 import rhLogo from "@/assets/rh-logo-main.png";
 import jerseySwapsBg from "@/assets/jersey-swaps-bg.jpg";
 import benSheltonBg from "@/assets/rhxvisuals-shelton.jpg";
-import samHartmanBg from "@/assets/rhxvisuals-sam-hartman.jpg";
+import omariOwlBg from "@/assets/omaha-owls-omari.png";
 import afcLogo from "@/assets/afc-logo.jpg";
 import tgcLogo from "@/assets/tgc-logo.png";
 import gridiron from "@/assets/gridiron-drive-logo.jpg";
 import ironmanLogo from "@/assets/ironman-logo.png";
 import tgcUltimatePack from "@/assets/tgc-ultimate-pack.jpg";
 import tgcGiveawayV7 from "@/assets/tgc-giveaway-v7.png";
-import tgcTemplateLonzopage from "@/assets/tgc-template-lonzopage-quote.jpg";
+import tgcLionsLogo from "@/assets/tgc-lions-logo.jpg";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -83,11 +83,11 @@ const Personal = () => {
                     </Card>
                   </Link>
                   
-                  <Link to="/work/posters">
+                  <Link to="/work/rhxvisuals-projects">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${samHartmanBg})` }}
+                        style={{ backgroundImage: `url(${omariOwlBg})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Projects</h3>
@@ -160,7 +160,7 @@ const Personal = () => {
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${tgcTemplateLonzopage})` }}
+                        style={{ backgroundImage: `url(${tgcLionsLogo})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Custom Work</h3>

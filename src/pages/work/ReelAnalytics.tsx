@@ -81,7 +81,7 @@ const ReelAnalytics = () => {
                       alt="NFL Draft Player Card" 
                       className="w-full h-auto object-contain"
                     />
-                    <p className="text-center text-sm text-muted-foreground py-2">NFL Draft Guide</p>
+                    <p className="text-center text-sm text-muted-foreground py-2">NFL Draft Guide (Example)</p>
                   </div>
                   <a 
                     href="/documents/colorado-scouting-report.pdf" 
@@ -94,7 +94,7 @@ const ReelAnalytics = () => {
                       alt="Advanced Scouting Report Preview" 
                       className="w-full h-auto object-contain"
                     />
-                    <p className="text-center text-sm text-muted-foreground py-2">Advanced Scouting Report</p>
+                    <p className="text-center text-sm text-muted-foreground py-2">Advanced Scouting Report (Click to View)</p>
                   </a>
                 </div>
               </div>

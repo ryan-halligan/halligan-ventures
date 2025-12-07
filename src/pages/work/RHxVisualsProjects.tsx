@@ -12,6 +12,15 @@ import omahaOwlsOmari from "@/assets/omaha-owls-omari.png";
 import omahaOwlsMahomes from "@/assets/omaha-owls-mahomes.png";
 import omahaOwlsUniforms from "@/assets/omaha-owls-uniforms.png";
 import omahaOwlsIntro from "@/assets/omaha-owls-intro.png";
+import fitbowlLogo from "@/assets/fitbowl-logo.jpg";
+import fitbowlMenuFront from "@/assets/fitbowl-menu-front.jpg";
+import fitbowlMenuBack from "@/assets/fitbowl-menu-back.jpg";
+import xstrikeLogo from "@/assets/xstrike-logo.jpg";
+import xstrikeStarlink from "@/assets/xstrike-starlink.jpg";
+import xstrikeMilitary from "@/assets/xstrike-military.jpg";
+import xstrikeBudget from "@/assets/xstrike-budget.jpg";
+import xstrikeSatellite from "@/assets/xstrike-satellite.jpg";
+import xstrikeShield from "@/assets/xstrike-shield.jpg";
 
 const RHxVisualsProjects = () => {
   const navigate = useNavigate();
@@ -84,10 +93,25 @@ const RHxVisualsProjects = () => {
           <div className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-gold">Fitbowl</h2>
             <p className="text-muted-foreground mb-6">
-              Coming soon - fitness and sports content collaboration.
+              Menu design and branding for a local healthy food restaurant.
             </p>
-            <div className="border border-dashed border-border rounded-lg p-8 text-center text-muted-foreground">
-              Content coming soon
+            <div className="columns-1 md:columns-2 gap-4 space-y-4">
+              {[
+                { src: fitbowlLogo, title: "Fitbowl Logo" },
+                { src: fitbowlMenuFront, title: "Menu Front" },
+                { src: fitbowlMenuBack, title: "Menu Back" },
+              ].map((item, index) => (
+                <div 
+                  key={index}
+                  className="break-inside-avoid rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"
+                >
+                  <img 
+                    src={item.src} 
+                    alt={item.title}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -95,10 +119,28 @@ const RHxVisualsProjects = () => {
           <div>
             <h2 className="text-2xl font-bold mb-6 text-gold">X Strike</h2>
             <p className="text-muted-foreground mb-6">
-              Coming soon - collaborative design project.
+              Branding and infographic design for defense and aerospace concepts.
             </p>
-            <div className="border border-dashed border-border rounded-lg p-8 text-center text-muted-foreground">
-              Content coming soon
+            <div className="columns-1 md:columns-2 gap-4 space-y-4">
+              {[
+                { src: xstrikeLogo, title: "X Strike Logo" },
+                { src: xstrikeSatellite, title: "X Strike Satellite" },
+                { src: xstrikeShield, title: "X Shield" },
+                { src: xstrikeStarlink, title: "Starlink Graphic" },
+                { src: xstrikeMilitary, title: "Military Spending Infographic" },
+                { src: xstrikeBudget, title: "Space Force Budget" },
+              ].map((item, index) => (
+                <div 
+                  key={index}
+                  className="break-inside-avoid rounded-lg overflow-hidden border border-border hover:border-gold transition-colors"
+                >
+                  <img 
+                    src={item.src} 
+                    alt={item.title}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -58,6 +58,25 @@ const VIP = () => {
               </CardContent>
             </Card>
 
+            <Card className="border-border mb-8">
+              <CardHeader>
+                <CardTitle className="text-2xl">Research Paper (Click to View)</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <a 
+                  href="/documents/big-east-revenue-sharing.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-90 transition-opacity"
+                >
+                  <div className="bg-muted/30 p-6 rounded-lg border border-border hover:border-gold transition-colors text-center">
+                    <p className="text-lg font-medium mb-2">Big East Revenue Sharing & Player Acquisition</p>
+                    <p className="text-muted-foreground text-sm">Click to view full research paper</p>
+                  </div>
+                </a>
+              </CardContent>
+            </Card>
+
             <Card className="border-border">
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">

@@ -15,6 +15,7 @@ import rhxSamHartman from "@/assets/rhxvisuals-sam-hartman.jpg";
 import rhxScottRigsby from "@/assets/rhxvisuals-scott-rigsby.jpg";
 import rhxKrips from "@/assets/rhxvisuals-krips.jpg";
 import rhxBijan from "@/assets/rhxvisuals-bijan.jpg";
+import rhxLastDance from "@/assets/rhxvisuals-last-dance.jpg";
 import rhLogo from "@/assets/rh-logo-main.png";
 
 interface Design {
@@ -39,6 +40,7 @@ const Compositions = () => {
     { src: rhxScottRigsby, alt: "Scott Rigsby Ironman poster", description: "'Do The Unthinkable' Scott Rigsby Ironman inspirational poster" },
     { src: rhxKrips, alt: "KRIPS basketball gameday poster", description: "KRIPS vs Steele gameday basketball poster" },
     { src: rhxBijan, alt: "Bijan Robinson poster", description: "Bijan Robinson artistic poster design" },
+    { src: rhxLastDance, alt: "The Last Dance - KRIPS Revenge Tour", description: "The Last Dance - KRIPS Revenge Tour basketball composition" },
   ];
 
   return (

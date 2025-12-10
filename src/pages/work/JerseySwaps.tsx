@@ -8,6 +8,7 @@ import rhxOssai from "@/assets/rhxvisuals-ossai.jpg";
 import rhxBulls from "@/assets/rhxvisuals-bulls.jpg";
 import rhxTimberwolves from "@/assets/rhxvisuals-timberwolves.jpg";
 import rhxDadSuperbowl from "@/assets/rhxvisuals-dad-superbowl.jpg";
+import rhxAjcTshirt from "@/assets/rhxvisuals-ajc-tshirt.jpg";
 import rhLogo from "@/assets/rh-logo-main.png";
 
 interface Design {
@@ -25,6 +26,7 @@ const JerseySwaps = () => {
     { src: rhxBulls, alt: "Obi Toppin Bulls jersey swap", description: "Obi Toppin Chicago Bulls jersey swap design" },
     { src: rhxTimberwolves, alt: "Anthony Edwards Timberwolves jersey swap", description: "Anthony Edwards Minnesota Timberwolves jersey swap design" },
     { src: rhxDadSuperbowl, alt: "Dad Super Bowl trophy", description: "Custom Super Bowl champion celebration design" },
+    { src: rhxAjcTshirt, alt: "AJC Peachtree Road Race T-Shirt", description: "Custom AJC Peachtree Road Race t-shirt design for Atlanta, GA July 4, 2024" },
   ];
 
   return (

@@ -30,7 +30,7 @@ const Education = () => {
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="text-xl font-semibold mb-2">Bachelor of Science in Business Administration</h3>
-                  <p className="text-muted-foreground">June 2024 – Present | Class of 2028</p>
+                  <p className="text-muted-foreground">June 2024 – Present</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">

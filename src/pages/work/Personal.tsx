@@ -14,6 +14,8 @@ import ironmanLogo from "@/assets/ironman-logo.png";
 import tgcUltimatePack from "@/assets/tgc-ultimate-pack.jpg";
 import tgcGiveawayV7 from "@/assets/tgc-giveaway-v7.png";
 import tgcLionsLogo from "@/assets/tgc-lions-logo.jpg";
+import afcFalconsWin from "@/assets/afc-falcons-win.jpg";
+import afcDeboDesign from "@/assets/afc-debo-design.jpg";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -200,18 +202,29 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">News</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Coverage of roster moves, injuries, and game recaps</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/afc-news">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${afcFalconsWin})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">News</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Coverage of roster moves, injuries, and game recaps</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Link to="/work/afc-designs">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${afcDeboDesign})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Designs</h3>
-                        <p className="text-sm text-muted-foreground flex-grow">Graphics and visuals to elevate team storytelling</p>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Graphics and visuals to elevate team storytelling</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>

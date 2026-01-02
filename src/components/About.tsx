@@ -16,9 +16,9 @@ const About = () => {
         <div className="prose prose-lg max-w-none">
           <p className="text-lg leading-relaxed text-foreground">
             I'm a Business Administration student at the Georgia Institute of Technology's 
-            Scheller College of Business (Class of 2028), concentrating in Information Technology 
+            Scheller College of Business, concentrating in Information Technology 
             Management with a minor in Business of Sport and Entertainment. I'm competitive, 
-            hard-working, and passionate about sports and efficiency. I currently work as a 
+            hard-working, and passionate about sports and efficiency. I currently work as a
             Scouting & Analytics Intern at Reel Analytics and as a Student Equipment Manager 
             for Georgia Tech Football, combining my love for sports with data analysis and 
             operational excellence.

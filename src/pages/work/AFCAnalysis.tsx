@@ -5,16 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import afcLogo from "@/assets/afc-logo.jpg";
-import afcBates from "@/assets/afc-bates.jpg";
-import afcDeboDesign from "@/assets/afc-debo-design.jpg";
-import afcDeboWallpaper from "@/assets/afc-debo-wallpaper.jpg";
-import afcJulio from "@/assets/afc-julio.jpg";
-import afcMadden from "@/assets/afc-madden.jpg";
-import afcGamedayChargers from "@/assets/afc-gameday-chargers.jpg";
-import afcGamedayBucs from "@/assets/afc-gameday-bucs.jpg";
-import afcVictoryMonday from "@/assets/afc-victory-monday.jpg";
-import afcBijan from "@/assets/afc-bijan.jpg";
-import afcSuperbowlAjc from "@/assets/afc-superbowl-ajc.jpg";
+import afcAnalysisAwards from "@/assets/afc-analysis-awards.jpg";
+import afcAnalysisRidley from "@/assets/afc-analysis-ridley.jpg";
+import afcAnalysisQuote from "@/assets/afc-analysis-quote.jpg";
+import afcAnalysisMattryan from "@/assets/afc-analysis-mattryan.jpg";
+import afcAnalysisQbs from "@/assets/afc-analysis-qbs.jpg";
+import afcAnalysisPredictions from "@/assets/afc-analysis-predictions.jpg";
+import afcAnalysisMadden from "@/assets/afc-analysis-madden.jpg";
+import afcAnalysisPreview from "@/assets/afc-analysis-preview.jpg";
 
 interface Design {
   src: string;
@@ -22,21 +20,19 @@ interface Design {
   description: string;
 }
 
-const AFCDesigns = () => {
+const AFCAnalysis = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<Design | null>(null);
 
-  const designs: Design[] = [
-    { src: afcBijan, alt: "Bijan Robinson", description: "Bijan Robinson 'BIJAN' stylized player design" },
-    { src: afcSuperbowlAjc, alt: "AJC Super Bowl Champions", description: "Atlanta Journal-Constitution Super Bowl Champions newspaper design" },
-    { src: afcBates, alt: "Jessie Bates Just Believe", description: "Jessie Bates 'Just Believe' Atlanta Falcons wallpaper design" },
-    { src: afcDeboDesign, alt: "Deion Jones DEBO", description: "Deion Jones 'DEBO' linebacker #45 player spotlight" },
-    { src: afcDeboWallpaper, alt: "Deion Jones Wallpaper", description: "Deion Jones linebacker #45 phone wallpaper design" },
-    { src: afcJulio, alt: "Julio Jones", description: "Julio Jones Falcons Media player design" },
-    { src: afcMadden, alt: "Julio Jones Madden 96 Overall", description: "Julio Jones 96 Overall Madden ratings graphic" },
-    { src: afcGamedayChargers, alt: "Falcons vs Chargers Gameday", description: "Falcons vs Chargers gameday graphic on FOX" },
-    { src: afcGamedayBucs, alt: "Falcons vs Buccaneers Gameday", description: "Falcons vs Buccaneers gameday graphic at Mercedes-Benz Stadium" },
-    { src: afcVictoryMonday, alt: "Victory Monday Raiders", description: "Victory Monday graphic - Beat the Raiders 43-6" },
+  const analysisDesigns: Design[] = [
+    { src: afcAnalysisAwards, alt: "NFL Award Predictions", description: "NFL Award Predictions including MVP, OPOY, DPOY, COY, and more" },
+    { src: afcAnalysisRidley, alt: "Calvin Ridley Breakout", description: "Calvin Ridley 'Breakout Already?' analysis and discussion" },
+    { src: afcAnalysisQuote, alt: "Julio Jones Quote", description: "Julio Jones quote graphic after Week 1 loss to the Seahawks" },
+    { src: afcAnalysisMattryan, alt: "Matt Ryan Stats", description: "Matt Ryan 'Fastest, Most, Only' career statistics breakdown" },
+    { src: afcAnalysisQbs, alt: "Favorite Falcons QB Poll", description: "Who is your favorite Falcons quarterback? Matt Ryan vs Michael Vick poll" },
+    { src: afcAnalysisPredictions, alt: "Week 1 Game Predictions", description: "Week 1 Game Predictions results - 10-6 record" },
+    { src: afcAnalysisMadden, alt: "Falcons Madden 21 Ratings", description: "Falcons Madden 21 Ratings - Julio Jones, Grady Jarrett, Alex Mack, Matt Ryan" },
+    { src: afcAnalysisPreview, alt: "Falcons vs Packers Preview", description: "Atlanta Falcons vs Green Bay Packers game preview with stats comparison" },
   ];
 
   return (
@@ -57,20 +53,20 @@ const AFCDesigns = () => {
             <img src={afcLogo} alt="ATLFalconsCountry Logo" className="h-16 w-auto" />
             <div className="w-px h-16 bg-gold"></div>
             <div>
-              <h1 className="text-4xl font-bold">ATLFalconsCountry Designs</h1>
-              <p className="text-muted-foreground">Graphics and visuals for the Atlanta Falcons fan page</p>
+              <h1 className="text-4xl font-bold">ATLFalconsCountry Analysis</h1>
+              <p className="text-muted-foreground">Polls, predictions, and interactive content</p>
             </div>
           </div>
           
           <div className="h-1 w-24 bg-gold mb-8"></div>
 
           <p className="text-lg text-muted-foreground mb-8">
-            Custom graphics created for ATLFalconsCountry, featuring player spotlights, gameday graphics, 
-            and victory celebrations for Atlanta Falcons content.
+            Analysis graphics featuring player breakdowns, award predictions, game previews, 
+            and interactive polls for Atlanta Falcons fans.
           </p>
 
           <div className="columns-2 md:columns-3 gap-4 space-y-4">
-            {designs.map((design, index) => (
+            {analysisDesigns.map((design, index) => (
               <div 
                 key={index}
                 className="break-inside-avoid cursor-pointer hover:opacity-90 transition-opacity"
@@ -118,4 +114,4 @@ const AFCDesigns = () => {
   );
 };
 
-export default AFCDesigns;
+export default AFCAnalysis;

@@ -22,6 +22,7 @@ import TGCCustomWork from "./pages/work/TGCCustomWork";
 import RHxVisualsProjects from "./pages/work/RHxVisualsProjects";
 import AFCDesigns from "./pages/work/AFCDesigns";
 import AFCNews from "./pages/work/AFCNews";
+import AFCAnalysis from "./pages/work/AFCAnalysis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/work/rhxvisuals-projects" element={<RHxVisualsProjects />} />
           <Route path="/work/afc-designs" element={<AFCDesigns />} />
           <Route path="/work/afc-news" element={<AFCNews />} />
+          <Route path="/work/afc-analysis" element={<AFCAnalysis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

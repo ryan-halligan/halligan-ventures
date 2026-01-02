@@ -16,6 +16,7 @@ import tgcGiveawayV7 from "@/assets/tgc-giveaway-v7.png";
 import tgcLionsLogo from "@/assets/tgc-lions-logo.jpg";
 import afcFalconsWin from "@/assets/afc-falcons-win.jpg";
 import afcDeboDesign from "@/assets/afc-debo-design.jpg";
+import afcAnalysisAwards from "@/assets/afc-analysis-awards.jpg";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -230,12 +231,19 @@ const Personal = () => {
                     </Card>
                   </Link>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Analysis</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Polls, predictions, and interactive content</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/afc-analysis">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${afcAnalysisAwards})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Analysis</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Polls, predictions, and interactive content</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </div>
                 
                 <a 

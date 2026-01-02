@@ -13,6 +13,8 @@ import afcMadden from "@/assets/afc-madden.jpg";
 import afcGamedayChargers from "@/assets/afc-gameday-chargers.jpg";
 import afcGamedayBucs from "@/assets/afc-gameday-bucs.jpg";
 import afcVictoryMonday from "@/assets/afc-victory-monday.jpg";
+import afcBijan from "@/assets/afc-bijan.jpg";
+import afcSuperbowlAjc from "@/assets/afc-superbowl-ajc.jpg";
 
 interface Design {
   src: string;
@@ -25,6 +27,8 @@ const AFCDesigns = () => {
   const [selectedImage, setSelectedImage] = useState<Design | null>(null);
 
   const designs: Design[] = [
+    { src: afcBijan, alt: "Bijan Robinson", description: "Bijan Robinson 'BIJAN' stylized player design" },
+    { src: afcSuperbowlAjc, alt: "AJC Super Bowl Champions", description: "Atlanta Journal-Constitution Super Bowl Champions newspaper design" },
     { src: afcBates, alt: "Jessie Bates Just Believe", description: "Jessie Bates 'Just Believe' Atlanta Falcons wallpaper design" },
     { src: afcDeboDesign, alt: "Deion Jones DEBO", description: "Deion Jones 'DEBO' linebacker #45 player spotlight" },
     { src: afcDeboWallpaper, alt: "Deion Jones Wallpaper", description: "Deion Jones linebacker #45 phone wallpaper design" },

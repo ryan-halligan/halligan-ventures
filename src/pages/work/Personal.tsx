@@ -207,16 +207,19 @@ const Personal = () => {
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Designs</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Graphics and visuals to elevate team storytelling</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/afc-designs">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Designs</h3>
+                        <p className="text-sm text-muted-foreground flex-grow">Graphics and visuals to elevate team storytelling</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
                     <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Fan Engagement</h3>
+                      <h3 className="text-xl font-semibold mb-2">Analysis</h3>
                       <p className="text-sm text-muted-foreground flex-grow">Polls, predictions, and interactive content</p>
                     </CardContent>
                   </Card>

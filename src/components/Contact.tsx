@@ -17,10 +17,13 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement email functionality with backend
+    
+    const mailtoLink = `mailto:rhalligan@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
+      title: "Opening Email Client",
+      description: "Your message is ready to send.",
     });
     setFormData({ name: "", email: "", subject: "", message: "" });
   };

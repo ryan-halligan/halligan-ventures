@@ -6,14 +6,19 @@ import { useNavigate } from "react-router-dom";
 import reelAnalyticsLogo from "@/assets/reel-analytics-logo.png";
 import nflDraftCard from "@/assets/nfl-draft-card.png";
 import scoutingReportPreview from "@/assets/scouting-report-preview.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 const ReelAnalytics = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Button 
             variant="ghost" 

@@ -16,15 +16,20 @@ import tgcGiveawayV7 from "@/assets/tgc-giveaway-v7.png";
 import tgcLionsLogo from "@/assets/tgc-lions-logo.jpg";
 import afcFalconsWin from "@/assets/afc-falcons-win.jpg";
 import afcDeboDesign from "@/assets/afc-debo-design.jpg";
-import afcAnalysisAwards from "@/assets/afc-analysis-awards.jpg";
+import afcAnalysisRisingStars from "@/assets/afc-analysis-rising-stars.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 const Personal = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Button 
             variant="ghost" 
@@ -235,7 +240,7 @@ const Personal = () => {
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
                         className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${afcAnalysisAwards})` }}
+                        style={{ backgroundImage: `url(${afcAnalysisRisingStars})` }}
                       />
                       <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Analysis</h3>

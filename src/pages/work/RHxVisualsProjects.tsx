@@ -21,6 +21,7 @@ import xstrikeMilitary from "@/assets/xstrike-military.jpg";
 import xstrikeBudget from "@/assets/xstrike-budget.jpg";
 import xstrikeSatellite from "@/assets/xstrike-satellite.jpg";
 import xstrikeShield from "@/assets/xstrike-shield.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 const RHxVisualsProjects = () => {
   const navigate = useNavigate();
@@ -38,9 +39,13 @@ const RHxVisualsProjects = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Button 
             variant="ghost" 

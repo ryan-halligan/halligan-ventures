@@ -13,6 +13,13 @@ import afcAnalysisQbs from "@/assets/afc-analysis-qbs.jpg";
 import afcAnalysisPredictions from "@/assets/afc-analysis-predictions.jpg";
 import afcAnalysisMadden from "@/assets/afc-analysis-madden.jpg";
 import afcAnalysisPreview from "@/assets/afc-analysis-preview.jpg";
+import afcAnalysisRidleyJefferson from "@/assets/afc-analysis-ridley-jefferson.jpg";
+import afcAnalysisNewEra from "@/assets/afc-analysis-new-era.jpg";
+import afcAnalysisDirk from "@/assets/afc-analysis-dirk.jpg";
+import afcAnalysisRecords from "@/assets/afc-analysis-records.jpg";
+import afcAnalysisRisingStars from "@/assets/afc-analysis-rising-stars.jpg";
+import afcAnalysisBreakout from "@/assets/afc-analysis-breakout.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 interface Design {
   src: string;
@@ -25,6 +32,12 @@ const AFCAnalysis = () => {
   const [selectedImage, setSelectedImage] = useState<Design | null>(null);
 
   const analysisDesigns: Design[] = [
+    { src: afcAnalysisRisingStars, alt: "Rising Stars", description: "Rising Stars - Mykal Walker & Jacob Tuioti-Mariner PFF grades and performance" },
+    { src: afcAnalysisRidleyJefferson, alt: "Ridley vs Jefferson Poll", description: "Who would you rather have? Calvin Ridley vs Justin Jefferson poll comparison" },
+    { src: afcAnalysisNewEra, alt: "New Era", description: "Arthur Smith and Terry Fontenot - The New Regime. The future of Atlanta Falcons football" },
+    { src: afcAnalysisDirk, alt: "Dirk Koetter Gone", description: "Falcons offensive coordinator Dirk Koetter departure announcement" },
+    { src: afcAnalysisRecords, alt: "Record Predictions", description: "NFL Record Predictions - AFC and NFC team standings breakdown" },
+    { src: afcAnalysisBreakout, alt: "Top 5 Breakout Candidates", description: "Top 5 Falcons Breakout Candidates featuring Hayden Hurst, Calvin Ridley, and more" },
     { src: afcAnalysisAwards, alt: "NFL Award Predictions", description: "NFL Award Predictions including MVP, OPOY, DPOY, COY, and more" },
     { src: afcAnalysisRidley, alt: "Calvin Ridley Breakout", description: "Calvin Ridley 'Breakout Already?' analysis and discussion" },
     { src: afcAnalysisQuote, alt: "Julio Jones Quote", description: "Julio Jones quote graphic after Week 1 loss to the Seahawks" },
@@ -36,9 +49,13 @@ const AFCAnalysis = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <Button 
             variant="ghost" 

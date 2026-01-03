@@ -17,6 +17,7 @@ import rhxKrips from "@/assets/rhxvisuals-krips.jpg";
 import rhxBijan from "@/assets/rhxvisuals-bijan.jpg";
 import rhxLastDance from "@/assets/rhxvisuals-last-dance.jpg";
 import rhLogo from "@/assets/rh-logo-main.png";
+import projectsBg from "@/assets/projects-bg.png";
 
 interface Design {
   src: string;
@@ -44,9 +45,13 @@ const Compositions = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <Button 
             variant="ghost" 

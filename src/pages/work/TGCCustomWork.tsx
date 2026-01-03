@@ -24,6 +24,7 @@ import lionsBreaking from "@/assets/tgc-lions-breaking.jpg";
 import burrowStory from "@/assets/tgc-burrow-story.jpg";
 import branchesLogo from "@/assets/tgc-branches-logo.jpg";
 import beastmodeLogo from "@/assets/tgc-beastmode-logo.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 const TGCCustomWork = () => {
   const navigate = useNavigate();
@@ -59,9 +60,13 @@ const TGCCustomWork = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Button 
             variant="ghost" 

@@ -24,6 +24,7 @@ import lionsBreaking from "@/assets/tgc-lions-breaking.jpg";
 import burrowStory from "@/assets/tgc-burrow-story.jpg";
 import branchesLogo from "@/assets/tgc-branches-logo.jpg";
 import beastmodeLogo from "@/assets/tgc-beastmode-logo.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 const TGCCustomWork = () => {
   const navigate = useNavigate();

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, MapPin, GraduationCap, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin, GraduationCap, Linkedin, Instagram, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -73,12 +73,12 @@ const Contact = () => {
                 <CardTitle>Social Links</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex space-x-4">
+                <div className="flex flex-wrap gap-4">
                   <a
                     href="https://www.linkedin.com/in/ryanhalligan"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-colors hover-scale"
+                    className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   >
                     <Linkedin className="text-primary-foreground" size={24} />
                   </a>
@@ -86,7 +86,7 @@ const Contact = () => {
                     href="https://www.instagram.com/ryan.halligan/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-colors hover-scale"
+                    className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   >
                     <Instagram className="text-primary-foreground" size={24} />
                   </a>
@@ -94,11 +94,18 @@ const Contact = () => {
                     href="https://www.strava.com/athletes/137518273"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-colors hover-scale"
+                    className="p-3 bg-navy rounded-lg hover:bg-navy-dark transition-all duration-300 hover:scale-110 hover:shadow-lg"
                   >
                     <svg className="text-primary-foreground" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"></path>
                     </svg>
+                  </a>
+                  <a
+                    href="/documents/ryan-halligan-resume.pdf"
+                    download
+                    className="p-3 bg-gold rounded-lg hover:bg-gold/80 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                  >
+                    <Download className="text-navy" size={24} />
                   </a>
                 </div>
               </CardContent>

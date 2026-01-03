@@ -13,6 +13,7 @@ import afcNewsPackers from "@/assets/afc-news-packers.jpg";
 import afcNewsGameday from "@/assets/afc-news-gameday.jpg";
 import afcFalconsWin from "@/assets/afc-falcons-win.jpg";
 import afcNewsStory from "@/assets/afc-news-story.jpg";
+import projectsBg from "@/assets/projects-bg.png";
 
 interface Design {
   src: string;
@@ -36,9 +37,13 @@ const AFCNews = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-6xl">
           <Button 
             variant="ghost" 

@@ -3,10 +3,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Award, Globe } from "lucide-react";
 import gtLogo from "@/assets/gt-logo.png";
 import dunwoodyLogo from "@/assets/dunwoody-logo.png";
+import gtAerial from "@/assets/gt-aerial-stadium.jpg";
 
 const Education = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center -z-10"
+        style={{ backgroundImage: `url(${gtAerial})`, opacity: 0.08 }}
+      />
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-5xl">

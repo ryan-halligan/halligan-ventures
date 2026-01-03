@@ -64,13 +64,13 @@ const Work = () => {
               to={org.path}
               className="group"
             >
-              <div className="bg-card rounded-lg p-6 shadow-lg hover-lift border border-border transition-all hover:border-gold">
+              <div className="bg-card rounded-lg p-6 shadow-lg border border-border transition-all duration-300 hover:border-gold hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02]">
                 <img
                   src={org.logo}
                   alt={org.name}
-                  className="w-full h-32 object-contain mb-4"
+                  className="w-full h-32 object-contain mb-4 transition-transform duration-300 group-hover:scale-105"
                 />
-                <h3 className="text-sm font-semibold text-center mb-2 group-hover:text-gold transition-colors">
+                <h3 className="text-sm font-semibold text-center mb-2 group-hover:text-gold transition-colors duration-300">
                   {org.name}
                 </h3>
                 <p className="text-xs text-muted-foreground text-center">

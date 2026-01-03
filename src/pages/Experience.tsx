@@ -9,6 +9,7 @@ import swimAtlanta from "@/assets/swim-atlanta-logo.webp";
 import saintJude from "@/assets/saint-jude-logo.png";
 import ymsl from "@/assets/ymsl-logo.png";
 import allSaints from "@/assets/all-saints-logo.png";
+import gtAerial from "@/assets/gt-aerial-stadium.jpg";
 
 const Experience = () => {
   const experiences = [
@@ -19,9 +20,9 @@ const Experience = () => {
       location: "Atlanta, GA",
       period: "July 2024 - Present",
       responsibilities: [
-        "Managing daily equipment operations for 200+ players and staff, ensuring gear is readily available for every practice and game",
-        "Collaborating with coaches during practices by managing practice setup and takedown, improving efficiency of on-field drills, spotting footballs for scripted plays, and operating the scoreboard",
-        "Supporting gameday operations as a ballboy, defensive signs operator",
+        "Managing equipment operations for 200+ players and staff, ensuring 100% gear availability for practices and games while reducing equipment-related delays",
+        "Collaborating directly with coaching staff during practices to optimize on-field drill efficiency through seamless setup, scripted play support, and real-time scoreboard management",
+        "Supporting gameday operations as a ballboy and defensive signs operator, contributing to smooth game execution",
       ],
     },
     {
@@ -31,8 +32,8 @@ const Experience = () => {
       location: "Atlanta, GA",
       period: "January 2025 - Present",
       responsibilities: [
-        "Evaluating 250+ NFL Draft prospects by analyzing HUDL film, position specific metrics, PFF Grades, and personal information to create 200+ player profiles with NFL comparisons, predictive analytics, and data visualization for an NFL Draft Guide",
-        "Supporting the University of Colorado's game planning by producing weekly, data-driven advanced scouting reports on future opponents, using Reel Analytics' IGA® score and PFF data to identify insightful player tendencies, strengths, and weaknesses",
+        "Analyzed 250+ NFL Draft prospects using HUDL film, PFF grades, and position-specific metrics to build predictive player profiles with NFL comparisons — insights used in draft planning and evaluation",
+        "Produced weekly advanced scouting reports for University of Colorado that identified opponent tendencies and weaknesses, directly influencing game planning and defensive strategy",
       ],
     },
     {
@@ -42,7 +43,7 @@ const Experience = () => {
       location: "Atlanta, GA",
       period: "June 2021 - August 2024",
       responsibilities: [
-        "Managed daily pool operations, including staff training, scheduling, and site supervision for 15+ employees",
+        "Managed daily operations and led a team of 15+ employees through training, scheduling, and supervision — maintaining safety standards across 4 consecutive summers",
       ],
     },
   ];
@@ -113,7 +114,11 @@ const Experience = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center -z-10"
+        style={{ backgroundImage: `url(${gtAerial})`, opacity: 0.08 }}
+      />
       <Navigation />
       <div className="pt-32 pb-20 px-4">
         <div className="container mx-auto max-w-5xl">

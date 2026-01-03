@@ -11,6 +11,7 @@ import tgcFreeTemplate from "@/assets/tgc-free-template.png";
 import tgcGiveawayV3 from "@/assets/tgc-giveaway-v3.png";
 import tgcPackV2 from "@/assets/tgc-pack-v2.png";
 import tgcDebutPack from "@/assets/tgc-debut-pack.png";
+import projectsBg from "@/assets/projects-bg.png";
 
 const TGCGiveaways = () => {
   const navigate = useNavigate();
@@ -27,9 +28,13 @@ const TGCGiveaways = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Button 
             variant="ghost" 

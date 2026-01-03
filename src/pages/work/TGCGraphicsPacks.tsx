@@ -7,6 +7,7 @@ import tgcUltimatePack from "@/assets/tgc-ultimate-pack.jpg";
 import tgcFanpagePack from "@/assets/tgc-fanpage-pack.png";
 import tgcDeluxeFanpage from "@/assets/tgc-deluxe-fanpage.png";
 import tgcFormatsPack from "@/assets/tgc-formats-pack.png";
+import projectsBg from "@/assets/projects-bg.png";
 
 const TGCGraphicsPacks = () => {
   const navigate = useNavigate();
@@ -19,9 +20,13 @@ const TGCGraphicsPacks = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div 
+        className="fixed inset-0 bg-cover bg-center pointer-events-none"
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+      />
       <Navigation />
-      <div className="pt-32 pb-20 px-4">
+      <div className="pt-32 pb-20 px-4 relative z-10">
         <div className="container mx-auto max-w-4xl">
           <Button 
             variant="ghost" 

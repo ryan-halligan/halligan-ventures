@@ -10,6 +10,12 @@ import projectsBg from "@/assets/projects-bg.png";
 const Work = () => {
   const organizations = [
     {
+      name: "Personal Projects",
+      logo: rhLogo,
+      path: "/work/personal",
+      description: "Design & Photography",
+    },
+    {
       name: "Georgia Tech Football",
       logo: gtFootball,
       path: "/work/gt-football",
@@ -38,12 +44,6 @@ const Work = () => {
       logo: vipLogo,
       path: "/work/vip",
       description: "Sports Valuation & Analytics Team",
-    },
-    {
-      name: "Personal Projects",
-      logo: rhLogo,
-      path: "/work/personal",
-      description: "Design & Photography",
     },
   ];
 

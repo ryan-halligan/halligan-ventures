@@ -31,11 +31,6 @@ interface Design {
   description: string;
 }
 
-interface DesignPair {
-  original: Design;
-  swap: Design;
-}
-
 const JerseySwaps = () => {
   const navigate = useNavigate();
   const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);

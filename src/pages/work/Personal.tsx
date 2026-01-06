@@ -208,6 +208,20 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <Link to="/work/afc-analysis">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${afcAnalysisRisingStars})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Analysis</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Polls, predictions, and interactive content</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
+                  
                   <Link to="/work/afc-news">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
                       <div 
@@ -231,20 +245,6 @@ const Personal = () => {
                       <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Designs</h3>
                         <p className="text-sm text-muted-foreground mb-4 flex-grow">Graphics and visuals to elevate team storytelling</p>
-                        <ChevronRight className="mx-auto text-gold" size={24} />
-                      </CardContent>
-                    </Card>
-                  </Link>
-                  
-                  <Link to="/work/afc-analysis">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
-                      <div 
-                        className="absolute inset-0 bg-cover bg-center opacity-15"
-                        style={{ backgroundImage: `url(${afcAnalysisRisingStars})` }}
-                      />
-                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
-                        <h3 className="text-xl font-semibold mb-2">Analysis</h3>
-                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Polls, predictions, and interactive content</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
                       </CardContent>
                     </Card>
@@ -282,22 +282,25 @@ const Personal = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
                     <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">News</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">College and pro football coverage and updates</p>
+                      <h3 className="text-xl font-semibold mb-2">Analysis</h3>
+                      <p className="text-sm text-muted-foreground flex-grow">Deep-dive breakdowns and player evaluations</p>
                     </CardContent>
                   </Card>
+                  
+                  <Link to="/work/gridiron-drive-news">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">News</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">College and pro football coverage and updates</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
                     <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">Designs</h3>
                       <p className="text-sm text-muted-foreground flex-grow">Graphics built to strengthen brand identity</p>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Analysis</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Deep-dive breakdowns and player evaluations</p>
                     </CardContent>
                   </Card>
                 </div>

@@ -13,7 +13,7 @@ const Work = () => {
       name: "Personal Projects",
       logo: rhLogo,
       path: "/work/personal",
-      description: "Design & Photography",
+      description: "Design & Analysis",
     },
     {
       name: "Georgia Tech Football",

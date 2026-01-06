@@ -62,8 +62,8 @@ const Index = () => {
         </div>
       </section>
       
-      <Skills />
       <Work />
+      <Skills />
       <Contact />
       
       <footer className="bg-navy py-8 text-center text-primary-foreground">

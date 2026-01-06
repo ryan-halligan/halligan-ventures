@@ -40,7 +40,7 @@ const Personal = () => {
             Back
           </Button>
           <h1 className="text-5xl font-bold mb-4">Personal Projects</h1>
-          <p className="text-xl text-muted-foreground mb-4">Design, Content Creation & Athletic Pursuits</p>
+          <p className="text-xl text-muted-foreground mb-4">Design, Analysis & Athletic Pursuits</p>
           <div className="h-1 w-24 bg-gold mb-12"></div>
 
           <div className="space-y-6">

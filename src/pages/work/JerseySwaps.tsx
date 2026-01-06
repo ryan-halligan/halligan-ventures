@@ -11,6 +11,17 @@ import rhxDadSuperbowl from "@/assets/rhxvisuals-dad-superbowl.jpg";
 import rhxAjcTshirt from "@/assets/rhxvisuals-ajc-tshirt.jpg";
 import rhLogo from "@/assets/rh-logo-main.png";
 import projectsBg from "@/assets/projects-bg.png";
+// GT Basketball Jerseys
+import gtMartaJersey from "@/assets/rhxvisuals-gt-marta-jersey.png";
+import gtOlympicsJersey from "@/assets/rhxvisuals-gt-olympics-jersey.png";
+import gtStateJersey from "@/assets/rhxvisuals-gt-state-jersey.png";
+// Original + Swap pairs
+import obiToppinOriginal from "@/assets/rhxvisuals-obi-toppin-original.jpg";
+import obiToppinSwap from "@/assets/rhxvisuals-obi-toppin-swap.jpg";
+import josephOssaiOriginal from "@/assets/rhxvisuals-joseph-ossai-original.jpg";
+import josephOssaiSwap from "@/assets/rhxvisuals-joseph-ossai-swap.jpg";
+import kylerMurrayOriginal from "@/assets/rhxvisuals-kyler-murray-original.webp";
+import kylerMurraySwap from "@/assets/rhxvisuals-kyler-murray-swap.jpg";
 
 interface Design {
   src: string;
@@ -18,16 +29,40 @@ interface Design {
   description: string;
 }
 
+interface DesignPair {
+  original: Design;
+  swap: Design;
+}
+
 const JerseySwaps = () => {
   const navigate = useNavigate();
   const [selectedDesign, setSelectedDesign] = useState<Design | null>(null);
 
   const jerseySwaps: Design[] = [
-    { src: rhxOssai, alt: "Joseph Ossai Bengals jersey swap", description: "Joseph Ossai Bengals jersey swap design" },
-    { src: rhxBulls, alt: "Obi Toppin Bulls jersey swap", description: "Obi Toppin Chicago Bulls jersey swap design" },
     { src: rhxTimberwolves, alt: "Anthony Edwards Timberwolves jersey swap", description: "Anthony Edwards Minnesota Timberwolves jersey swap design" },
     { src: rhxDadSuperbowl, alt: "Dad Super Bowl trophy", description: "Custom Super Bowl champion celebration design" },
     { src: rhxAjcTshirt, alt: "AJC Peachtree Road Race T-Shirt", description: "Custom AJC Peachtree Road Race t-shirt design for Atlanta, GA July 4, 2024" },
+  ];
+
+  const gtBasketballJerseys: Design[] = [
+    { src: gtMartaJersey, alt: "GT MARTA-Inspired Jersey", description: "Georgia Tech basketball jersey concept inspired by MARTA transit colors" },
+    { src: gtOlympicsJersey, alt: "GT Olympics-Inspired Jersey", description: "Georgia Tech basketball jersey concept inspired by the 1996 Atlanta Olympics" },
+    { src: gtStateJersey, alt: "GT State of Georgia Jersey", description: "Georgia Tech basketball jersey concept featuring the state of Georgia" },
+  ];
+
+  const swapPairs: DesignPair[] = [
+    {
+      original: { src: obiToppinOriginal, alt: "Obi Toppin at Dayton", description: "Original photo of Obi Toppin at Dayton" },
+      swap: { src: obiToppinSwap, alt: "Obi Toppin Bulls jersey swap", description: "Obi Toppin Chicago Bulls jersey swap design" }
+    },
+    {
+      original: { src: josephOssaiOriginal, alt: "Joseph Ossai at Texas", description: "Original photo of Joseph Ossai at Texas" },
+      swap: { src: josephOssaiSwap, alt: "Joseph Ossai Bengals jersey swap", description: "Joseph Ossai Cincinnati Bengals jersey swap design" }
+    },
+    {
+      original: { src: kylerMurrayOriginal, alt: "Kyler Murray at Oklahoma", description: "Original photo of Kyler Murray at Oklahoma" },
+      swap: { src: kylerMurraySwap, alt: "Kyler Murray Cardinals Super Bowl", description: "Kyler Murray Arizona Cardinals Super Bowl celebration design" }
+    },
   ];
 
   return (
@@ -55,20 +90,77 @@ const JerseySwaps = () => {
           <p className="text-xl text-muted-foreground mb-4 text-center">Professional athlete jersey swap designs</p>
           <div className="h-1 w-24 bg-gold mb-12 mx-auto"></div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {jerseySwaps.map((design, index) => (
-              <div key={index} className="group cursor-pointer" onClick={() => setSelectedDesign(design)}>
-                <img 
-                  src={design.src} 
-                  alt={design.alt} 
-                  className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
-                  loading="lazy"
-                />
-                <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
-                  {design.alt}
-                </p>
-              </div>
-            ))}
+          {/* GT Basketball Jerseys Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-gold">Georgia Tech Basketball Jersey Concepts</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {gtBasketballJerseys.map((design, index) => (
+                <div key={index} className="group cursor-pointer" onClick={() => setSelectedDesign(design)}>
+                  <img 
+                    src={design.src} 
+                    alt={design.alt} 
+                    className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                    loading="lazy"
+                  />
+                  <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                    {design.alt}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Original + Swap Pairs Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-gold">Original & Swap Comparisons</h2>
+            <div className="space-y-8">
+              {swapPairs.map((pair, index) => (
+                <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="group cursor-pointer" onClick={() => setSelectedDesign(pair.original)}>
+                    <img 
+                      src={pair.original.src} 
+                      alt={pair.original.alt} 
+                      className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                      loading="lazy"
+                    />
+                    <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                      {pair.original.alt}
+                    </p>
+                  </div>
+                  <div className="group cursor-pointer" onClick={() => setSelectedDesign(pair.swap)}>
+                    <img 
+                      src={pair.swap.src} 
+                      alt={pair.swap.alt} 
+                      className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                      loading="lazy"
+                    />
+                    <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                      {pair.swap.alt}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Other Jersey Swaps */}
+          <div>
+            <h2 className="text-2xl font-bold mb-6 text-gold">Other Designs</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {jerseySwaps.map((design, index) => (
+                <div key={index} className="group cursor-pointer" onClick={() => setSelectedDesign(design)}>
+                  <img 
+                    src={design.src} 
+                    alt={design.alt} 
+                    className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                    loading="lazy"
+                  />
+                  <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                    {design.alt}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

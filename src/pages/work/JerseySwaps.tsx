@@ -15,11 +15,13 @@ import projectsBg from "@/assets/projects-bg.png";
 import gtMartaJersey from "@/assets/rhxvisuals-gt-marta-jersey.png";
 import gtOlympicsJersey from "@/assets/rhxvisuals-gt-olympics-jersey.png";
 import gtStateJersey from "@/assets/rhxvisuals-gt-state-jersey.png";
-// Original + Swap pairs
+// Original + Swap + Design for each athlete
 import obiToppinOriginal from "@/assets/rhxvisuals-obi-toppin-original.jpg";
 import obiToppinSwap from "@/assets/rhxvisuals-obi-toppin-swap.jpg";
+import obiToppinDesign from "@/assets/rhxvisuals-obi-toppin-design.jpg";
 import josephOssaiOriginal from "@/assets/rhxvisuals-joseph-ossai-original.jpg";
 import josephOssaiSwap from "@/assets/rhxvisuals-joseph-ossai-swap.jpg";
+import josephOssaiDesign from "@/assets/rhxvisuals-joseph-ossai-design.jpg";
 import kylerMurrayOriginal from "@/assets/rhxvisuals-kyler-murray-original.webp";
 import kylerMurraySwap from "@/assets/rhxvisuals-kyler-murray-swap.jpg";
 
@@ -27,11 +29,6 @@ interface Design {
   src: string;
   alt: string;
   description: string;
-}
-
-interface DesignPair {
-  original: Design;
-  swap: Design;
 }
 
 const JerseySwaps = () => {
@@ -50,19 +47,21 @@ const JerseySwaps = () => {
     { src: gtStateJersey, alt: "GT State of Georgia Jersey", description: "Georgia Tech basketball jersey concept featuring the state of Georgia" },
   ];
 
-  const swapPairs: DesignPair[] = [
-    {
-      original: { src: obiToppinOriginal, alt: "Obi Toppin at Dayton", description: "Original photo of Obi Toppin at Dayton" },
-      swap: { src: obiToppinSwap, alt: "Obi Toppin Bulls jersey swap", description: "Obi Toppin Chicago Bulls jersey swap design" }
-    },
-    {
-      original: { src: josephOssaiOriginal, alt: "Joseph Ossai at Texas", description: "Original photo of Joseph Ossai at Texas" },
-      swap: { src: josephOssaiSwap, alt: "Joseph Ossai Bengals jersey swap", description: "Joseph Ossai Cincinnati Bengals jersey swap design" }
-    },
-    {
-      original: { src: kylerMurrayOriginal, alt: "Kyler Murray at Oklahoma", description: "Original photo of Kyler Murray at Oklahoma" },
-      swap: { src: kylerMurraySwap, alt: "Kyler Murray Cardinals Super Bowl", description: "Kyler Murray Arizona Cardinals Super Bowl celebration design" }
-    },
+  const obiToppinDesigns: Design[] = [
+    { src: obiToppinOriginal, alt: "Obi Toppin at Dayton", description: "Original photo of Obi Toppin at Dayton" },
+    { src: obiToppinSwap, alt: "Obi Toppin Knicks jersey swap", description: "Obi Toppin New York Knicks jersey swap design" },
+    { src: obiToppinDesign, alt: "Obi Toppin Bulls design", description: "Obi Toppin Chicago Bulls Round 1 Pick 4 design" },
+  ];
+
+  const josephOssaiDesigns: Design[] = [
+    { src: josephOssaiOriginal, alt: "Joseph Ossai at Texas", description: "Original photo of Joseph Ossai at Texas" },
+    { src: josephOssaiSwap, alt: "Joseph Ossai Bengals jersey swap", description: "Joseph Ossai Cincinnati Bengals jersey swap design" },
+    { src: josephOssaiDesign, alt: "Joseph Ossai fire design", description: "Joseph Ossai Cincinnati Bengals fire effect design" },
+  ];
+
+  const kylerMurrayDesigns: Design[] = [
+    { src: kylerMurrayOriginal, alt: "Kyler Murray at Oklahoma", description: "Original photo of Kyler Murray at Oklahoma" },
+    { src: kylerMurraySwap, alt: "Kyler Murray Cardinals Super Bowl", description: "Kyler Murray Arizona Cardinals Super Bowl celebration design" },
   ];
 
   return (
@@ -110,34 +109,61 @@ const JerseySwaps = () => {
             </div>
           </div>
 
-          {/* Original + Swap Pairs Section */}
+          {/* Obi Toppin Section */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold mb-6 text-gold">Original & Swap Comparisons</h2>
-            <div className="space-y-8">
-              {swapPairs.map((pair, index) => (
-                <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="group cursor-pointer" onClick={() => setSelectedDesign(pair.original)}>
-                    <img 
-                      src={pair.original.src} 
-                      alt={pair.original.alt} 
-                      className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
-                      loading="lazy"
-                    />
-                    <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
-                      {pair.original.alt}
-                    </p>
-                  </div>
-                  <div className="group cursor-pointer" onClick={() => setSelectedDesign(pair.swap)}>
-                    <img 
-                      src={pair.swap.src} 
-                      alt={pair.swap.alt} 
-                      className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
-                      loading="lazy"
-                    />
-                    <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
-                      {pair.swap.alt}
-                    </p>
-                  </div>
+            <h2 className="text-2xl font-bold mb-6 text-gold">Obi Toppin</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {obiToppinDesigns.map((design, index) => (
+                <div key={index} className="group cursor-pointer" onClick={() => setSelectedDesign(design)}>
+                  <img 
+                    src={design.src} 
+                    alt={design.alt} 
+                    className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                    loading="lazy"
+                  />
+                  <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                    {design.alt}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Joseph Ossai Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-gold">Joseph Ossai</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {josephOssaiDesigns.map((design, index) => (
+                <div key={index} className="group cursor-pointer" onClick={() => setSelectedDesign(design)}>
+                  <img 
+                    src={design.src} 
+                    alt={design.alt} 
+                    className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                    loading="lazy"
+                  />
+                  <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                    {design.alt}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Kyler Murray Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold mb-6 text-gold">Kyler Murray</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {kylerMurrayDesigns.map((design, index) => (
+                <div key={index} className="group cursor-pointer" onClick={() => setSelectedDesign(design)}>
+                  <img 
+                    src={design.src} 
+                    alt={design.alt} 
+                    className="w-full h-auto object-cover rounded-lg hover-lift shadow-lg"
+                    loading="lazy"
+                  />
+                  <p className="text-center mt-4 text-muted-foreground group-hover:text-gold transition-colors">
+                    {design.alt}
+                  </p>
                 </div>
               ))}
             </div>

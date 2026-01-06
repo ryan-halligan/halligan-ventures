@@ -287,12 +287,15 @@ const Personal = () => {
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">News</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">College and pro football coverage and updates</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/gridiron-drive-news">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">News</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">College and pro football coverage and updates</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
                     <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">

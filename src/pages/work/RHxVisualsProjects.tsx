@@ -22,6 +22,7 @@ import xstrikeBudget from "@/assets/xstrike-budget.jpg";
 import xstrikeSatellite from "@/assets/xstrike-satellite.jpg";
 import xstrikeShield from "@/assets/xstrike-shield.jpg";
 import projectsBg from "@/assets/projects-bg.png";
+// Removed xstrikeStarlink import
 
 const RHxVisualsProjects = () => {
   const navigate = useNavigate();
@@ -131,7 +132,6 @@ const RHxVisualsProjects = () => {
                 { src: xstrikeLogo, title: "X Strike Logo" },
                 { src: xstrikeSatellite, title: "X Strike Satellite" },
                 { src: xstrikeShield, title: "X Shield" },
-                { src: xstrikeStarlink, title: "Starlink Graphic" },
                 { src: xstrikeMilitary, title: "Military Spending Infographic" },
                 { src: xstrikeBudget, title: "Space Force Budget" },
               ].map((item, index) => (

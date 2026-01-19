@@ -49,7 +49,7 @@ const JerseySwaps = () => {
 
   const obiToppinDesigns: Design[] = [
     { src: obiToppinOriginal, alt: "Obi Toppin at Dayton", description: "Original photo of Obi Toppin at Dayton" },
-    { src: obiToppinSwap, alt: "Obi Toppin Knicks jersey swap", description: "Obi Toppin New York Knicks jersey swap design" },
+    { src: obiToppinSwap, alt: "Obi Toppin Bulls jersey swap", description: "Obi Toppin Chicago Bulls jersey swap design" },
     { src: obiToppinDesign, alt: "Obi Toppin Bulls design", description: "Obi Toppin Chicago Bulls Round 1 Pick 4 design" },
   ];
 

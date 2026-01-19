@@ -25,6 +25,7 @@ import AFCNews from "./pages/work/AFCNews";
 import AFCAnalysis from "./pages/work/AFCAnalysis";
 import GridironDriveNews from "./pages/work/GridironDriveNews";
 import GridironDriveDesigns from "./pages/work/GridironDriveDesigns";
+import GridironDriveAnalysis from "./pages/work/GridironDriveAnalysis";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -58,6 +59,7 @@ const App = () => (
           <Route path="/work/afc-analysis" element={<AFCAnalysis />} />
           <Route path="/work/gridiron-drive-news" element={<GridironDriveNews />} />
           <Route path="/work/gridiron-drive-designs" element={<GridironDriveDesigns />} />
+          <Route path="/work/gridiron-drive-analysis" element={<GridironDriveAnalysis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -18,6 +18,8 @@ import afcFalconsWin from "@/assets/afc-falcons-win.jpg";
 import afcDeboDesign from "@/assets/afc-debo-design.jpg";
 import afcAnalysisRisingStars from "@/assets/afc-analysis-rising-stars.jpg";
 import projectsBg from "@/assets/projects-bg.png";
+import gdZachWilson from "@/assets/gd-zach-wilson.jpg";
+import gdNewStripes from "@/assets/gd-new-stripes.jpg";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -288,8 +290,12 @@ const Personal = () => {
                   </Card>
                   
                   <Link to="/work/gridiron-drive-news">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${gdZachWilson})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">News</h3>
                         <p className="text-sm text-muted-foreground mb-4 flex-grow">College and pro football coverage and updates</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
@@ -297,12 +303,19 @@ const Personal = () => {
                     </Card>
                   </Link>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Designs</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Graphics built to strengthen brand identity</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/gridiron-drive-designs">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${gdNewStripes})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Designs</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Graphics built to strengthen brand identity</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

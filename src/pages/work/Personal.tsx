@@ -20,6 +20,7 @@ import afcAnalysisRisingStars from "@/assets/afc-analysis-rising-stars.jpg";
 import projectsBg from "@/assets/projects-bg.png";
 import gdZachWilson from "@/assets/gd-zach-wilson.jpg";
 import gdNewStripes from "@/assets/gd-new-stripes.jpg";
+import gdMockDraft from "@/assets/gd-mock-draft.jpg";
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -282,12 +283,19 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Analysis</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Deep-dive breakdowns and player evaluations</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/gridiron-drive-analysis">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${gdMockDraft})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Analysis</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Deep-dive breakdowns and player evaluations</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Link to="/work/gridiron-drive-news">
                     <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">

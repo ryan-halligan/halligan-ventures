@@ -29,7 +29,7 @@ const Personal = () => {
     <div className="min-h-screen relative">
       <div 
         className="fixed inset-0 bg-cover bg-center pointer-events-none"
-        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.30 }}
       />
       <Navigation />
       <div className="pt-32 pb-20 px-4 relative z-10">
@@ -347,12 +347,15 @@ const Personal = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
-                      <h3 className="text-xl font-semibold mb-2">Journey</h3>
-                      <p className="text-sm text-muted-foreground flex-grow">Swim background, triathlons, and Ironman story</p>
-                    </CardContent>
-                  </Card>
+                  <Link to="/work/races">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
+                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                        <h3 className="text-xl font-semibold mb-2">Races</h3>
+                        <p className="text-sm text-muted-foreground mb-4 flex-grow">Ironman 70.3, Dolomyths 22K, Peachtree Road Race, and IronKids</p>
+                        <ChevronRight className="mx-auto text-gold" size={24} />
+                      </CardContent>
+                    </Card>
+                  </Link>
                   
                   <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
                     <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">

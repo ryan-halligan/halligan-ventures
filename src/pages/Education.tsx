@@ -10,7 +10,7 @@ const Education = () => {
     <div className="min-h-screen relative">
       <div 
         className="fixed inset-0 bg-cover bg-center -z-10"
-        style={{ backgroundImage: `url(${gtAerial})`, opacity: 0.08 }}
+        style={{ backgroundImage: `url(${gtAerial})`, opacity: 0.16 }}
       />
       <Navigation />
       <div className="pt-32 pb-20 px-4">

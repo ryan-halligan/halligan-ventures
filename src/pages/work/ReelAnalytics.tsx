@@ -15,7 +15,7 @@ const ReelAnalytics = () => {
     <div className="min-h-screen relative">
       <div 
         className="fixed inset-0 bg-cover bg-center pointer-events-none"
-        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.15 }}
+        style={{ backgroundImage: `url(${projectsBg})`, opacity: 0.30 }}
       />
       <Navigation />
       <div className="pt-32 pb-20 px-4 relative z-10">

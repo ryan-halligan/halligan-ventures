@@ -23,12 +23,23 @@ import raceDolomythsValley from "@/assets/race-dolomyths-valley.jpg";
 import raceDolomythsAlpine from "@/assets/race-dolomyths-alpine.jpg";
 import raceDolomythsPack from "@/assets/race-dolomyths-pack.jpg";
 import raceDolomythsDescent from "@/assets/race-dolomyths-descent.jpg";
+import raceDolomythsRunners from "@/assets/race-dolomyths-runners.jpg";
+import raceDolomythsStart from "@/assets/race-dolomyths-start.jpg";
+// Peachtree Road Race images
+import racePeachtreeFamily from "@/assets/race-peachtree-family.jpg";
+import racePeachtreeBrothers from "@/assets/race-peachtree-brothers.jpg";
+import racePeachtreeStart from "@/assets/race-peachtree-start.jpg";
 // IronKids images
 import raceIronkidsMedals from "@/assets/race-ironkids-medals.jpg";
 import raceIronkidsFamily from "@/assets/race-ironkids-family.jpg";
 import raceIronkidsSolo from "@/assets/race-ironkids-solo.jpg";
 import raceIronkidsPrerace from "@/assets/race-ironkids-prerace.jpg";
 import raceIronkidsTeam from "@/assets/race-ironkids-team.jpg";
+// 5K Races images
+import race5kAdpi from "@/assets/race-5k-adpi.jpg";
+import race5kResults from "@/assets/race-5k-results.jpg";
+import race5kChristmas from "@/assets/race-5k-christmas.jpg";
+import race5kHotchocolate from "@/assets/race-5k-hotchocolate.jpg";
 
 interface RaceImage {
   src: string;
@@ -59,6 +70,14 @@ const Races = () => {
     { src: raceDolomythsAlpine, alt: "Alpine Meadow", description: "Pushing through the alpine meadows with dramatic Dolomite peaks rising behind" },
     { src: raceDolomythsPack, alt: "Running Pack", description: "Racing alongside fellow competitors on the mountain trails" },
     { src: raceDolomythsDescent, alt: "Rocky Descent", description: "Navigating the challenging rocky descent through the fog" },
+    { src: raceDolomythsRunners, alt: "Trail Runners", description: "Runners navigating the rocky mountain terrain with valley views below" },
+    { src: raceDolomythsStart, alt: "Race Start", description: "The start line at the Salomon-sponsored Dolomyths Skyrace with mountains in the background" },
+  ];
+
+  const peachtreeImages: RaceImage[] = [
+    { src: racePeachtreeFamily, alt: "Family Race Day", description: "Race day with the family at the AJC Peachtree Road Race on July 4th" },
+    { src: racePeachtreeBrothers, alt: "Brothers Celebrating", description: "Celebrating with my brother in the official Peachtree Road Race finisher shirts" },
+    { src: racePeachtreeStart, alt: "Race Start", description: "The iconic start of the Peachtree Road Race with American flag flying overhead" },
   ];
 
   const ironkidsImages: RaceImage[] = [
@@ -67,6 +86,13 @@ const Races = () => {
     { src: raceIronkidsSolo, alt: "Young Triathlete", description: "Proudly displaying the finisher medal at IronKids 2012" },
     { src: raceIronkidsPrerace, alt: "Pre-Race", description: "Ready to race with a friend at an IronKids triathlon" },
     { src: raceIronkidsTeam, alt: "Branches Triathlon Club", description: "The Branches Triathlon Club team at IronKids 2012" },
+  ];
+
+  const fiveKImages: RaceImage[] = [
+    { src: race5kChristmas, alt: "Christmas in July 5K", description: "Celebrating with finisher medals at the Christmas in July 5K" },
+    { src: race5kHotchocolate, alt: "Hot Chocolate 5K", description: "Pre-race at the Hot Chocolate 5K with my brother" },
+    { src: race5kAdpi, alt: "ADPI RMHC Charity 5K", description: "Running the ADPI RMHC charity 5K at Georgia Tech" },
+    { src: race5kResults, alt: "5K Results", description: "Race results showing 2nd place finish with a PR chip time of 18:26.48" },
   ];
 
   return (
@@ -148,8 +174,45 @@ const Races = () => {
             <p className="text-muted-foreground mb-6">
               10K road race • Atlanta, Georgia • July 4th tradition
             </p>
-            <div className="bg-muted/30 p-6 rounded-lg border border-border">
-              <p className="text-muted-foreground italic text-center">Photos coming soon</p>
+            <div className="columns-2 md:columns-3 gap-4 space-y-4">
+              {peachtreeImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="break-inside-avoid cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full rounded-lg shadow-lg hover-lift"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 5K Races Section */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-2 text-gold">5K Races</h2>
+            <p className="text-muted-foreground mb-6">
+              A compilation of 5Ks including Christmas in July, Hot Chocolate, and ADPI RMHC Charity • PR: 18:26.48
+            </p>
+            <div className="columns-2 md:columns-3 gap-4 space-y-4">
+              {fiveKImages.map((image, index) => (
+                <div 
+                  key={index}
+                  className="break-inside-avoid cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <img 
+                    src={image.src} 
+                    alt={image.alt}
+                    className="w-full rounded-lg shadow-lg hover-lift"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
           </div>
 

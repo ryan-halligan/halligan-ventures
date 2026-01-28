@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, ChevronRight } from "lucide-react";
+import { ArrowLeft, ExternalLink, ChevronRight, Trophy, Target, Clock } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import rhLogo from "@/assets/rh-logo-main.png";
 import jerseySwapsBg from "@/assets/jersey-swaps-bg.jpg";
 import benSheltonBg from "@/assets/rhxvisuals-shelton.jpg";
@@ -21,6 +22,27 @@ import projectsBg from "@/assets/projects-bg.png";
 import gdZachWilson from "@/assets/gd-zach-wilson.jpg";
 import gdNewStripes from "@/assets/gd-new-stripes.jpg";
 import gdMockDraft from "@/assets/gd-mock-draft.jpg";
+// Personal Athletics covers
+import raceIronmanFinish from "@/assets/race-ironman-finish.jpg";
+import raceDolomythsValley from "@/assets/race-dolomyths-valley.jpg";
+import atlantaMarathonFinish from "@/assets/atlanta-marathon-finish.jpg";
+import scottRigsby from "@/assets/rhxvisuals-scott-rigsby.jpg";
+
+interface PRRecord {
+  distance: string;
+  time: string;
+  goal: string;
+  achieved: boolean;
+}
+
+const prRecords: PRRecord[] = [
+  { distance: "5K", time: "18:26", goal: "Sub 18:00", achieved: true },
+  { distance: "10K", time: "—", goal: "Sub 40:00", achieved: false },
+  { distance: "Half Marathon", time: "—", goal: "Sub 1:45:00", achieved: false },
+  { distance: "Marathon", time: "—", goal: "Sub 4:00:00", achieved: false },
+  { distance: "Half Ironman (70.3)", time: "6:49:01", goal: "Sub 6:30:00", achieved: true },
+  { distance: "Full Ironman (140.6)", time: "—", goal: "Finish", achieved: false },
+];
 
 const Personal = () => {
   const navigate = useNavigate();
@@ -348,8 +370,12 @@ const Personal = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <Link to="/work/races">
-                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                      <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                    <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center opacity-15"
+                        style={{ backgroundImage: `url(${raceIronmanFinish})` }}
+                      />
+                      <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                         <h3 className="text-xl font-semibold mb-2">Races</h3>
                         <p className="text-sm text-muted-foreground mb-4 flex-grow">Ironman 70.3, Dolomyths 22K, Peachtree Road Race, and IronKids</p>
                         <ChevronRight className="mx-auto text-gold" size={24} />
@@ -357,29 +383,148 @@ const Personal = () => {
                     </Card>
                   </Link>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center opacity-15"
+                      style={{ backgroundImage: `url(${raceDolomythsValley})` }}
+                    />
+                    <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">Training</h3>
                       <p className="text-sm text-muted-foreground flex-grow">PRs, metrics, race results, and current focus</p>
                     </CardContent>
                   </Card>
                   
-                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold h-full">
-                    <CardContent className="p-6 text-center flex flex-col h-full min-h-[180px]">
+                  <Card className="border-border hover-lift cursor-pointer transition-all hover:border-gold relative overflow-hidden h-full">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center opacity-15"
+                      style={{ backgroundImage: `url(${atlantaMarathonFinish})` }}
+                    />
+                    <CardContent className="p-6 text-center relative z-10 flex flex-col h-full min-h-[180px]">
                       <h3 className="text-xl font-semibold mb-2">Goals</h3>
                       <p className="text-sm text-muted-foreground flex-grow">Achievements and what I'm chasing next</p>
                     </CardContent>
                   </Card>
                 </div>
-                
-                <a 
-                  href="https://docs.google.com/spreadsheets/d/1IASkJuFo7zypi9-kUkJ9ECdy_uJTtz6LSDaChbTA1_I/edit?gid=0#gid=0" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-gold hover:underline"
-                >
-                  View Training Plan <ExternalLink size={16} />
-                </a>
+
+                {/* Training Section */}
+                <div className="mb-8 p-6 bg-card/50 rounded-xl border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Clock className="h-5 w-5 text-gold" />
+                    Training
+                  </h3>
+                  
+                  <div className="mb-6">
+                    <h4 className="font-semibold mb-2 text-gold">Atlanta Publix Marathon</h4>
+                    <p className="text-muted-foreground mb-4">
+                      Training in progress for my first marathon on March 1st, 2025
+                    </p>
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold/20 text-gold font-medium text-sm">
+                      🏃 In Training
+                    </span>
+                  </div>
+                  
+                  <a 
+                    href="https://docs.google.com/spreadsheets/d/1IASkJuFo7zypi9-kUkJ9ECdy_uJTtz6LSDaChbTA1_I/edit?gid=0#gid=0" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 hover:bg-gold/20 text-gold rounded-lg transition-colors mb-6"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    View Training Plan
+                  </a>
+                  
+                  <h4 className="font-semibold mb-4 flex items-center gap-2">
+                    <Trophy className="h-4 w-4 text-gold" />
+                    Personal Records & Goals
+                  </h4>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>Distance</TableHead>
+                        <TableHead>Current PR</TableHead>
+                        <TableHead>Goal</TableHead>
+                        <TableHead className="text-center">Status</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {prRecords.map((record, index) => (
+                        <TableRow key={index}>
+                          <TableCell className="font-medium">{record.distance}</TableCell>
+                          <TableCell className={record.time !== "—" ? "text-gold font-semibold" : "text-muted-foreground"}>
+                            {record.time}
+                          </TableCell>
+                          <TableCell>{record.goal}</TableCell>
+                          <TableCell className="text-center">
+                            {record.achieved ? (
+                              <span className="inline-flex items-center px-2 py-1 rounded-full bg-green-500/20 text-green-500 text-xs font-medium">
+                                ✓ Achieved
+                              </span>
+                            ) : (
+                              <span className="inline-flex items-center px-2 py-1 rounded-full bg-muted text-muted-foreground text-xs font-medium">
+                                In Progress
+                              </span>
+                            )}
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </div>
+
+                {/* Goals Section */}
+                <div className="p-6 bg-card/50 rounded-xl border border-border">
+                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <Target className="h-5 w-5 text-gold" />
+                    Goals
+                  </h3>
+                  
+                  <h4 className="text-lg font-bold mb-2 text-gold">The Journey to Ironman</h4>
+                  <p className="text-muted-foreground mb-4">
+                    My ultimate goal is to become an Ironman — completing the full 140.6-mile triathlon consisting of a 2.4-mile swim, 
+                    112-mile bike, and 26.2-mile run. Every race is a stepping stone toward this dream.
+                  </p>
+                  
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-muted/30 rounded-lg">
+                    <img src={scottRigsby} alt="Scott Rigsby" className="h-16 w-16 rounded-full object-cover" />
+                    <div>
+                      <h5 className="font-semibold">Inspiration: Scott Rigsby</h5>
+                      <p className="text-sm text-muted-foreground">The first double amputee to complete an Ironman triathlon</p>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-muted/30 rounded-lg p-4 mb-6">
+                    <h5 className="font-semibold mb-2">Next Milestone</h5>
+                    <p className="text-gold font-medium">Atlanta Publix Marathon — March 1st, 2025</p>
+                    <p className="text-sm text-muted-foreground">My first full marathon, building endurance for the Ironman run leg</p>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h5 className="font-semibold">Race Distance Progression</h5>
+                    
+                    {prRecords.map((record, index) => (
+                      <div key={index} className="flex items-center gap-4">
+                        <div className="w-32 text-sm font-medium">{record.distance}</div>
+                        <div className="flex-1 bg-muted rounded-full h-6 overflow-hidden">
+                          <div 
+                            className={`h-full rounded-full flex items-center justify-end pr-2 text-xs font-medium ${
+                              record.achieved ? 'bg-gold text-background' : 'bg-muted-foreground/30 text-muted-foreground'
+                            }`}
+                            style={{ width: record.achieved ? '100%' : '30%' }}
+                          >
+                            {record.time !== "—" ? record.time : record.goal}
+                          </div>
+                        </div>
+                        <div className="w-20 text-right">
+                          {record.achieved ? (
+                            <span className="text-green-500 text-sm">✓</span>
+                          ) : (
+                            <span className="text-muted-foreground text-sm">→ {record.goal}</span>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </div>

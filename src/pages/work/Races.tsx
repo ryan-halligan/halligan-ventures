@@ -1,10 +1,9 @@
 import Navigation from "@/components/Navigation";
 import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ExternalLink, Target, Trophy, Clock } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import ironmanLogo from "@/assets/ironman-logo.png";
 import projectsBg from "@/assets/projects-bg.png";
 // Ironman 70.3 Augusta images
@@ -41,8 +40,6 @@ import race5kAdpi from "@/assets/race-5k-adpi.jpg";
 import race5kResults from "@/assets/race-5k-results.jpg";
 import race5kChristmas from "@/assets/race-5k-christmas.jpg";
 import race5kHotchocolate from "@/assets/race-5k-hotchocolate.jpg";
-// Goals cover
-import atlantaMarathonFinish from "@/assets/atlanta-marathon-finish.jpg";
 
 interface RaceImage {
   src: string;
@@ -50,25 +47,9 @@ interface RaceImage {
   description: string;
 }
 
-interface PRRecord {
-  distance: string;
-  time: string;
-  goal: string;
-  achieved: boolean;
-}
-
 const Races = () => {
   const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState<RaceImage | null>(null);
-
-  const prRecords: PRRecord[] = [
-    { distance: "5K", time: "18:26", goal: "Sub 18:00", achieved: true },
-    { distance: "10K", time: "—", goal: "Sub 40:00", achieved: false },
-    { distance: "Half Marathon", time: "—", goal: "Sub 1:45:00", achieved: false },
-    { distance: "Marathon", time: "—", goal: "Sub 4:00:00", achieved: false },
-    { distance: "Half Ironman (70.3)", time: "6:49:01", goal: "Sub 6:30:00", achieved: true },
-    { distance: "Full Ironman (140.6)", time: "—", goal: "Finish", achieved: false },
-  ];
 
   const ironmanImages: RaceImage[] = [
     { src: raceIronmanFinish, alt: "Ironman 70.3 Finish", description: "Crossing the finish line at Ironman 70.3 Augusta with a victorious point to the sky" },
@@ -278,26 +259,10 @@ const Races = () => {
             </div>
           </div>
 
-          {/* Training Section */}
+          {/* Atlanta Publix Marathon */}
           <div className="mb-16">
-            <div className="relative rounded-xl overflow-hidden mb-8 h-48 md:h-64">
-              <img 
-                src={raceDolomythsValley} 
-                alt="Training Cover" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-3xl font-bold text-white flex items-center gap-3">
-                  <Clock className="h-8 w-8 text-gold" />
-                  Training
-                </h2>
-              </div>
-            </div>
-
-            {/* Atlanta Publix Marathon */}
-            <div className="bg-card/50 rounded-xl p-6 border border-border mb-6">
-              <h3 className="text-xl font-bold mb-2 text-gold">Atlanta Publix Marathon</h3>
+            <div className="bg-card/50 rounded-xl p-6 border border-border">
+              <h2 className="text-2xl font-bold mb-2 text-gold">Atlanta Publix Marathon</h2>
               <p className="text-muted-foreground mb-4">
                 Training in progress for my first marathon on March 1st, 2025
               </p>
@@ -305,117 +270,6 @@ const Races = () => {
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold/20 text-gold font-medium">
                   🏃 In Training
                 </span>
-              </div>
-            </div>
-
-            {/* Training Plan Link */}
-            <a 
-              href="https://www.trainingpeaks.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gold/10 hover:bg-gold/20 text-gold rounded-lg transition-colors mb-8"
-            >
-              <ExternalLink className="h-4 w-4" />
-              View Training Plan
-            </a>
-
-            {/* PR Table */}
-            <div className="bg-card/50 rounded-xl p-6 border border-border">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <Trophy className="h-5 w-5 text-gold" />
-                Personal Records & Goals
-              </h3>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Distance</TableHead>
-                    <TableHead>Current PR</TableHead>
-                    <TableHead>Goal</TableHead>
-                    <TableHead className="text-center">Status</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {prRecords.map((record, index) => (
-                    <TableRow key={index}>
-                      <TableCell className="font-medium">{record.distance}</TableCell>
-                      <TableCell className={record.time !== "—" ? "text-gold font-semibold" : "text-muted-foreground"}>
-                        {record.time}
-                      </TableCell>
-                      <TableCell>{record.goal}</TableCell>
-                      <TableCell className="text-center">
-                        {record.achieved ? (
-                          <span className="inline-flex items-center px-2 py-1 rounded-full bg-green-500/20 text-green-500 text-xs font-medium">
-                            ✓ Achieved
-                          </span>
-                        ) : (
-                          <span className="inline-flex items-center px-2 py-1 rounded-full bg-muted text-muted-foreground text-xs font-medium">
-                            In Progress
-                          </span>
-                        )}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </div>
-
-          {/* Goals Section */}
-          <div className="mb-16">
-            <div className="relative rounded-xl overflow-hidden mb-8 h-48 md:h-64">
-              <img 
-                src={atlantaMarathonFinish} 
-                alt="Goals Cover" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <h2 className="text-3xl font-bold text-white flex items-center gap-3">
-                  <Target className="h-8 w-8 text-gold" />
-                  Goals
-                </h2>
-              </div>
-            </div>
-
-            <div className="bg-card/50 rounded-xl p-6 border border-border">
-              <h3 className="text-2xl font-bold mb-4 text-gold">The Journey to Ironman</h3>
-              <p className="text-muted-foreground mb-6">
-                My ultimate goal is to become an Ironman — completing the full 140.6-mile triathlon consisting of a 2.4-mile swim, 
-                112-mile bike, and 26.2-mile run. Every race is a stepping stone toward this dream.
-              </p>
-              
-              <div className="bg-muted/30 rounded-lg p-4 mb-6">
-                <h4 className="font-semibold mb-2">Next Milestone</h4>
-                <p className="text-gold font-medium">Atlanta Publix Marathon — March 1st, 2025</p>
-                <p className="text-sm text-muted-foreground">My first full marathon, building endurance for the Ironman run leg</p>
-              </div>
-
-              {/* Visual Progress Graphic */}
-              <div className="space-y-4">
-                <h4 className="font-semibold mb-4">Race Distance Progression</h4>
-                
-                {prRecords.map((record, index) => (
-                  <div key={index} className="flex items-center gap-4">
-                    <div className="w-32 text-sm font-medium">{record.distance}</div>
-                    <div className="flex-1 bg-muted rounded-full h-6 overflow-hidden">
-                      <div 
-                        className={`h-full rounded-full flex items-center justify-end pr-2 text-xs font-medium ${
-                          record.achieved ? 'bg-gold text-background' : 'bg-muted-foreground/30 text-muted-foreground'
-                        }`}
-                        style={{ width: record.achieved ? '100%' : '30%' }}
-                      >
-                        {record.time !== "—" ? record.time : record.goal}
-                      </div>
-                    </div>
-                    <div className="w-20 text-right">
-                      {record.achieved ? (
-                        <span className="text-green-500 text-sm">✓</span>
-                      ) : (
-                        <span className="text-muted-foreground text-sm">→ {record.goal}</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

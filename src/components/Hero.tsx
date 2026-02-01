@@ -28,10 +28,8 @@ const Hero = () => {
               Business Administration Student at Georgia Tech
             </p>
             <p className="text-lg text-muted-foreground max-w-xl">
-              Trusted by programs and organizations that value excellence: Georgia Tech Football, 
-              Reel Analytics, Georgia Tech Sports Business Club, and the Atlanta Hawks. 
-              Consistent, detail-oriented, and thriving in fast-paced, competitive environments 
-              where data improves outcomes.
+              Focused on solving complex problems at the intersection of analytics, technology, and operations. 
+              Driven by fast-paced environments where data, systems, and people come together to enable disciplined execution.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button 

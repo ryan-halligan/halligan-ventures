@@ -27,6 +27,8 @@ import GridironDriveNews from "./pages/work/GridironDriveNews";
 import GridironDriveDesigns from "./pages/work/GridironDriveDesigns";
 import GridironDriveAnalysis from "./pages/work/GridironDriveAnalysis";
 import Races from "./pages/work/Races";
+import Training from "./pages/work/Training";
+import Goals from "./pages/work/Goals";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -62,6 +64,8 @@ const App = () => (
           <Route path="/work/gridiron-drive-designs" element={<GridironDriveDesigns />} />
           <Route path="/work/gridiron-drive-analysis" element={<GridironDriveAnalysis />} />
           <Route path="/work/races" element={<Races />} />
+          <Route path="/work/training" element={<Training />} />
+          <Route path="/work/goals" element={<Goals />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

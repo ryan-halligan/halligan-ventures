@@ -7,13 +7,37 @@ import rhLogo from "@/assets/rh-logo.png";
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      
+      // Only track sections on the home page
+      if (location.pathname === "/") {
+        const sections = ["about", "projects", "contact"];
+        const scrollPosition = window.scrollY + 150; // Offset for navbar height
+        
+        let currentSection = "";
+        
+        for (const section of sections) {
+          const element = document.getElementById(section);
+          if (element) {
+            const { offsetTop, offsetHeight } = element;
+            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+              currentSection = section;
+              break;
+            }
+          }
+        }
+        
+        setActiveSection(currentSection);
+      }
     };
+    
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
     
     // Check if we need to scroll to a section after navigation
     const sectionToScroll = sessionStorage.getItem('scrollToSection');
@@ -72,18 +96,25 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={(e) => handleNavClick(link.path, e)}
-                className={`text-sm font-medium transition-colors hover:text-gold ${
-                  location.pathname === link.path ? "text-gold" : "text-foreground"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.path.startsWith("/#") 
+                ? activeSection === link.path.substring(2) && location.pathname === "/"
+                : location.pathname === link.path && !activeSection;
+              const isHome = link.path === "/" && location.pathname === "/" && !activeSection;
+              
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={(e) => handleNavClick(link.path, e)}
+                  className={`text-sm font-medium transition-colors hover:text-gold ${
+                    isActive || isHome ? "text-gold" : "text-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,18 +131,25 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-gradient-to-b from-background via-background to-background/95">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={(e) => handleNavClick(link.path, e)}
-                className={`block py-2 text-sm font-medium transition-colors hover:text-gold ${
-                  location.pathname === link.path ? "text-gold" : "text-foreground"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.path.startsWith("/#") 
+                ? activeSection === link.path.substring(2) && location.pathname === "/"
+                : location.pathname === link.path && !activeSection;
+              const isHome = link.path === "/" && location.pathname === "/" && !activeSection;
+              
+              return (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={(e) => handleNavClick(link.path, e)}
+                  className={`block py-2 text-sm font-medium transition-colors hover:text-gold ${
+                    isActive || isHome ? "text-gold" : "text-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </div>
         )}
       </div>

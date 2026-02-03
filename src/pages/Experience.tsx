@@ -14,15 +14,25 @@ import gtAerial from "@/assets/gt-aerial-stadium.jpg";
 const Experience = () => {
   const experiences = [
     {
+      title: "Player Personnel Intern",
+      organization: "Georgia Tech Football Team",
+      logo: gtFootball,
+      location: "Atlanta, GA",
+      period: "January 2026 - Present",
+      responsibilities: [
+        "Streamlining recruiting event logistics and leveraging specialized scouting systems to enhance data accuracy and workflow efficiency",
+      ],
+    },
+    {
       title: "Student Equipment Manager",
       organization: "Georgia Tech Football Team",
       logo: gtFootball,
       location: "Atlanta, GA",
-      period: "July 2024 - Present",
+      period: "July 2024 - December 2025",
       responsibilities: [
-        "Managing equipment operations for 200+ players and staff, ensuring 100% gear availability for practices and games while reducing equipment-related delays",
-        "Collaborating directly with coaching staff during practices to optimize on-field drill efficiency through seamless setup, scripted play support, and real-time scoreboard management",
-        "Supporting gameday operations as a ballboy and defensive signs operator, contributing to smooth game execution",
+        "Managed equipment operations for 200+ players and staff, ensuring 100% gear availability for practices and games while reducing equipment-related delays",
+        "Collaborated directly with coaching staff during practices to optimize on-field drill efficiency through seamless setup, scripted play support, and real-time scoreboard management",
+        "Supported gameday operations as a ballboy and defensive signs operator, contributing to smooth game execution",
       ],
     },
     {

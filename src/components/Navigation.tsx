@@ -16,18 +16,18 @@ const Navigation = () => {
       
       // Only track sections on the home page
       if (location.pathname === "/") {
-        const sections = ["about", "projects", "contact"];
+        const sections = ["about", "exp-edu", "projects", "contact"];
         const scrollPosition = window.scrollY + 150; // Offset for navbar height
         
         let currentSection = "";
         
+        // Find which section we're currently in
         for (const section of sections) {
           const element = document.getElementById(section);
           if (element) {
-            const { offsetTop, offsetHeight } = element;
-            if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            const { offsetTop } = element;
+            if (scrollPosition >= offsetTop) {
               currentSection = section;
-              break;
             }
           }
         }
@@ -97,9 +97,10 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => {
+              const isExpEdu = activeSection === "exp-edu" && (link.path === "/experience" || link.path === "/education");
               const isActive = link.path.startsWith("/#") 
                 ? activeSection === link.path.substring(2) && location.pathname === "/"
-                : location.pathname === link.path && !activeSection;
+                : (location.pathname === link.path && !activeSection) || isExpEdu;
               const isHome = link.path === "/" && location.pathname === "/" && !activeSection;
               
               return (
@@ -132,9 +133,10 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-gradient-to-b from-background via-background to-background/95">
             {navLinks.map((link) => {
+              const isExpEdu = activeSection === "exp-edu" && (link.path === "/experience" || link.path === "/education");
               const isActive = link.path.startsWith("/#") 
                 ? activeSection === link.path.substring(2) && location.pathname === "/"
-                : location.pathname === link.path && !activeSection;
+                : (location.pathname === link.path && !activeSection) || isExpEdu;
               const isHome = link.path === "/" && location.pathname === "/" && !activeSection;
               
               return (

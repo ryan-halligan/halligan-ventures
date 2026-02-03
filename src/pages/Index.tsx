@@ -18,7 +18,7 @@ const Index = () => {
       <About />
       
       {/* Experience & Education Navigation */}
-      <section className="py-16 px-4 bg-background">
+      <section id="exp-edu" className="py-16 px-4 bg-background">
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-6">
             <Link to="/experience" className="group">

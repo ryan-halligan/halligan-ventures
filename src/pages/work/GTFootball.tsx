@@ -35,48 +35,70 @@ const GTFootball = () => {
             <img src={gtFootballLogo} alt="Georgia Tech Football" className="w-48 h-48 object-contain mx-auto mb-6" />
             <h1 className="text-5xl font-bold mb-4">Georgia Tech Football</h1>
             <div className="h-1 w-24 bg-gold mx-auto mb-4"></div>
-            <p className="text-xl text-muted-foreground">Student Equipment Manager</p>
+            <p className="text-xl text-muted-foreground">Player Personnel Intern • Student Equipment Manager</p>
           </div>
 
           <Card className="border-border mb-8">
             <CardHeader>
-              <CardTitle className="text-2xl">Role Overview</CardTitle>
-              <CardDescription>July 2024 - Present</CardDescription>
+              <CardTitle className="text-2xl">Player Personnel Intern</CardTitle>
+              <CardDescription>January 2026 - Present</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-lg">
-                As a Student Equipment Manager for Georgia Tech Football, I play a critical role in the 
-                daily operations that keep the team running smoothly. Managing equipment for over 200 
-                players and staff requires precision, organization, and the ability to thrive under pressure.
+                As a Player Personnel Intern, I support the recruiting and scouting operations that are essential 
+                to building competitive rosters. This role leverages my analytical background and attention to detail 
+                in a fast-paced, data-driven environment.
               </p>
+              <ul className="space-y-3 mt-4">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                  <div>
+                    <p className="font-semibold">Recruiting Event Logistics</p>
+                    <p className="text-muted-foreground">Streamlining recruiting event logistics to ensure seamless execution of visits and evaluations</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                  <div>
+                    <p className="font-semibold">Scouting Systems & Data Accuracy</p>
+                    <p className="text-muted-foreground">Leveraging specialized scouting systems to enhance data accuracy and workflow efficiency</p>
+                  </div>
+                </li>
+              </ul>
             </CardContent>
           </Card>
 
           <Card className="border-border mb-8">
             <CardHeader>
-              <CardTitle className="text-2xl">Key Responsibilities</CardTitle>
+              <CardTitle className="text-2xl">Student Equipment Manager</CardTitle>
+              <CardDescription>July 2024 - December 2025</CardDescription>
             </CardHeader>
-            <CardContent>
-              <ul className="space-y-3">
+            <CardContent className="space-y-4">
+              <p className="text-lg">
+                As a Student Equipment Manager, I played a critical role in the daily operations that keep 
+                the team running smoothly. Managing equipment for over 200 players and staff required precision, 
+                organization, and the ability to thrive under pressure.
+              </p>
+              <ul className="space-y-3 mt-4">
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                   <div>
                     <p className="font-semibold">Equipment Operations Management</p>
-                    <p className="text-muted-foreground">Ensure all gear is readily available and properly maintained for every practice and game day</p>
+                    <p className="text-muted-foreground">Ensured all gear was readily available and properly maintained for every practice and game day</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                   <div>
                     <p className="font-semibold">Practice Support</p>
-                    <p className="text-muted-foreground">Collaborate with coaches to manage practice setup and takedown, spot footballs for scripted plays, and operate the scoreboard</p>
+                    <p className="text-muted-foreground">Collaborated with coaches to manage practice setup and takedown, spot footballs for scripted plays, and operate the scoreboard</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                   <div>
                     <p className="font-semibold">Game Day Operations</p>
-                    <p className="text-muted-foreground">Support game day as a ballboy and defensive signs operator, contributing to the team's success</p>
+                    <p className="text-muted-foreground">Supported game day as a ballboy and defensive signs operator, contributing to the team's success</p>
                   </div>
                 </li>
               </ul>

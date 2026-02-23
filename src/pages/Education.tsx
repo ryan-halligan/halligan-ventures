@@ -52,6 +52,10 @@ const Education = () => {
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                        <span>Minor: Computing & Business</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                         <span>GPA: 4.0</span>
                       </li>
                     </ul>
@@ -63,6 +67,10 @@ const Education = () => {
                       Honors & Awards
                     </h4>
                     <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                        <span>Dow Chemical – P.C. McCutcheon Prize for Outstanding Achievement in Business</span>
+                      </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                         <span>Zell Miller Scholarship (full tuition, merit-based)</span>
@@ -78,6 +86,10 @@ const Education = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-2">Special Programs</h4>
                   <ul className="space-y-2">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
+                      <span>Denning Technology & Management Program</span>
+                    </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                       <span>Vertically Integrated Projects: Sports Valuation & Analytics Team</span>

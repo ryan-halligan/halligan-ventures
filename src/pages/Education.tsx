@@ -48,11 +48,11 @@ const Education = () => {
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
-                        <span>Minor: Business of Sport and Entertainment</span>
+                        <span>Minor: Computing & Business (Denning T&M Program)</span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
-                        <span>Minor: Computing & Business</span>
+                        <span>Minor: Business of Sport & Entertainment</span>
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>

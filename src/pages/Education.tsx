@@ -149,10 +149,6 @@ const Education = () => {
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
-                        <span>Engineering Pathway</span>
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-gold rounded-full mr-3 mt-2"></span>
                         <span>Fernbank Science Center: Scientific Tools & Techniques Program</span>
                       </li>
                     </ul>

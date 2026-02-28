@@ -38,12 +38,12 @@ const ReelAnalytics = () => {
           <Card className="border-border mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Role Overview</CardTitle>
-              <CardDescription>January 2025 - Present</CardDescription>
+              <CardDescription>January 2025 - December 2025</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-lg">
-                At Reel Analytics, I combine my passion for sports with advanced data analytics to 
-                evaluate talent and support game planning. This role allows me to work at the intersection 
+                At Reel Analytics, I combined my passion for sports with advanced data analytics to 
+                evaluate talent and support game planning. This role allowed me to work at the intersection 
                 of sports and technology, using data to drive strategic decisions.
               </p>
             </CardContent>
@@ -112,8 +112,8 @@ const ReelAnalytics = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-4">
-                This role has deepened my expertise in sports analytics, player evaluation, and 
-                data visualization. I've developed proficiency in using industry-standard tools and 
+                This role deepened my expertise in sports analytics, player evaluation, and 
+                data visualization. I developed proficiency in using industry-standard tools and 
                 methodologies to extract actionable insights from complex datasets.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">

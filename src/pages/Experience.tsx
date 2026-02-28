@@ -40,10 +40,10 @@ const Experience = () => {
       organization: "Reel Analytics",
       logo: reelAnalytics,
       location: "Atlanta, GA",
-      period: "January 2025 - Present",
+      period: "January 2025 - December 2025",
       responsibilities: [
         "Analyzed 250+ NFL Draft prospects using HUDL film, PFF grades, and position-specific metrics to build predictive player profiles with NFL comparisons — insights used in draft planning and evaluation",
-        "Produced weekly advanced scouting reports for University of Colorado that identified opponent tendencies and weaknesses, directly influencing game planning and defensive strategy",
+        "Produced weekly advanced scouting reports for University of Colorado that identified opponent tendencies and weaknesses, directly informing game planning and defensive strategy",
       ],
     },
     {

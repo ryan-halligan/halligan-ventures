@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import ryanProfessional from "@/assets/ryan-professional.jpg.asset.json";
+import ryanProfessional from "@/assets/ryan-professional.jpg";
 import atlantaSkyline from "@/assets/atlanta-skyline.jpeg";
 
 const Hero = () => {
@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gold/20 rounded-lg transform rotate-3"></div>
               <img
-                src={ryanProfessional.url}
+                src={ryanProfessional}
                 alt="Ryan Halligan"
                 className="relative rounded-lg shadow-2xl w-full max-w-md object-cover hover-lift"
               />

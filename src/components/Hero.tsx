@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import ryanProfessional from "@/assets/ryan-professional.jpg";
+import ryanProfessional from "@/assets/ryan-professional.jpg.asset.json";
 import atlantaSkyline from "@/assets/atlanta-skyline.jpeg";
 
 const Hero = () => {

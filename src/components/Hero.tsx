@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gold/20 rounded-lg transform rotate-3"></div>
               <img
-                src={ryanProfessional}
+                src={ryanProfessional.url}
                 alt="Ryan Halligan"
                 className="relative rounded-lg shadow-2xl w-full max-w-md object-cover hover-lift"
               />

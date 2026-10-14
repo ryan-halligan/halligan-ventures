@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/lib/mcp/tools/get-profile.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 var get_profile_default = defineTool({
   name: "get_profile",
   title: "Get profile",
@@ -32,7 +32,7 @@ var get_profile_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-experience.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var get_experience_default = defineTool2({
   name: "get_experience",
   title: "Get experience",
@@ -78,7 +78,7 @@ var get_experience_default = defineTool2({
 });
 
 // src/lib/mcp/tools/get-projects.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var get_projects_default = defineTool3({
   name: "get_projects",
   title: "Get projects",
@@ -103,7 +103,7 @@ var get_projects_default = defineTool3({
 });
 
 // src/lib/mcp/tools/get-education.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var get_education_default = defineTool4({
   name: "get_education",
   title: "Get education",
@@ -137,5 +137,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));

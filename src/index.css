@@ -1,84 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* Design system: charcoal, warm off-white, restrained gold. All colors HSL. */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 100% 12%;
-    
-    --navy: 210 100% 17%;
-    --navy-dark: 210 100% 12%;
-    --gold: 45 45% 60%;
-    --gold-light: 45 60% 75%;
+    --background: 40 20% 97%;
+    --foreground: 220 13% 11%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 100% 12%;
+    --card: 40 25% 99%;
+    --card-foreground: 220 13% 11%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 220 13% 11%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 100% 12%;
+    --primary: 220 13% 11%;
+    --primary-foreground: 40 20% 96%;
 
-    --primary: 210 100% 17%;
-    --primary-foreground: 0 0% 100%;
+    --secondary: 40 14% 92%;
+    --secondary-foreground: 220 13% 11%;
 
-    --secondary: 45 45% 60%;
-    --secondary-foreground: 210 100% 12%;
+    --muted: 40 12% 92%;
+    --muted-foreground: 220 8% 40%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 45%;
+    --accent: 40 52% 52%;
+    --accent-foreground: 220 13% 11%;
 
-    --accent: 45 45% 60%;
-    --accent-foreground: 210 100% 12%;
+    --ink: 220 13% 9%;
+    --ink-foreground: 40 20% 94%;
+    --ink-muted: 220 8% 62%;
 
-    --destructive: 0 84.2% 60.2%;
+    --navy: 220 13% 11%;
+    --navy-dark: 220 13% 9%;
+    --gold: 40 52% 52%;
+    --gold-light: 40 55% 70%;
+
+    --destructive: 0 72% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 17%;
+    --border: 40 10% 86%;
+    --input: 40 10% 86%;
+    --ring: 40 52% 52%;
 
-    --radius: 0.5rem;
-    
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .dark {
-    --background: 210 100% 12%;
-    --foreground: 0 0% 98%;
-    
-    --navy: 210 100% 17%;
-    --navy-dark: 210 100% 12%;
-    --gold: 45 45% 60%;
-    --gold-light: 45 60% 75%;
-
-    --card: 210 100% 15%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 210 100% 15%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 45 45% 60%;
-    --primary-foreground: 210 100% 12%;
-
-    --secondary: 210 100% 20%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 210 50% 20%;
-    --muted-foreground: 210 20% 70%;
-
-    --accent: 45 45% 60%;
-    --accent-foreground: 210 100% 12%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 210 50% 25%;
-    --input: 210 50% 25%;
-    --ring: 45 45% 60%;
+    --radius: 0.375rem;
   }
 }
 
@@ -86,22 +51,26 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased font-sans;
   }
-  
+  h1, h2, h3 {
+    @apply font-display tracking-tight;
+  }
   html {
     scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
   }
 }
 
 @layer utilities {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.18em];
+  }
   .hover-lift {
     @apply transition-transform duration-300 hover:-translate-y-1;
-  }
-  
-  .hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
   }
 }

@@ -2,36 +2,33 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
-import Index from "./pages/Index";
-import Experience from "./pages/Experience";
-import Education from "./pages/Education";
-import GTFootball from "./pages/work/GTFootball";
-import ReelAnalytics from "./pages/work/ReelAnalytics";
-import SBC from "./pages/work/SBC";
-import SigmaNu from "./pages/work/SigmaNu";
-import VIP from "./pages/work/VIP";
-import Personal from "./pages/work/Personal";
-import JerseySwaps from "./pages/work/JerseySwaps";
-import Compositions from "./pages/work/Compositions";
-import Posters from "./pages/work/Posters";
-import TGCGraphicsPacks from "./pages/work/TGCGraphicsPacks";
-import TGCGiveaways from "./pages/work/TGCGiveaways";
-import TGCCustomWork from "./pages/work/TGCCustomWork";
-import RHxVisualsProjects from "./pages/work/RHxVisualsProjects";
-import AFCDesigns from "./pages/work/AFCDesigns";
-import AFCNews from "./pages/work/AFCNews";
-import AFCAnalysis from "./pages/work/AFCAnalysis";
-import GridironDriveNews from "./pages/work/GridironDriveNews";
-import GridironDriveDesigns from "./pages/work/GridironDriveDesigns";
-import GridironDriveAnalysis from "./pages/work/GridironDriveAnalysis";
-import Races from "./pages/work/Races";
-import Training from "./pages/work/Training";
-import Goals from "./pages/work/Goals";
+import Home from "./pages/Home";
+import Engineering from "./pages/Engineering";
+import RyanOS from "./pages/RyanOS";
+import Analytics from "./pages/Analytics";
+import Design from "./pages/Design";
+import ExperiencePage from "./pages/ExperiencePage";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
+
+// Old V1 URLs → new homes, so existing links keep working.
+const legacy: Record<string, string> = {
+  "/education": "/experience",
+  "/work/gt-football": "/experience",
+  "/work/reel-analytics": "/analytics",
+  "/work/sbc": "/experience",
+  "/work/sigma-nu": "/experience",
+  "/work/vip": "/analytics",
+  "/work/personal": "/about",
+  "/work/races": "/about",
+  "/work/training": "/about",
+  "/work/goals": "/about",
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -41,32 +38,18 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/work/gt-football" element={<GTFootball />} />
-          <Route path="/work/reel-analytics" element={<ReelAnalytics />} />
-          <Route path="/work/sbc" element={<SBC />} />
-          <Route path="/work/sigma-nu" element={<SigmaNu />} />
-          <Route path="/work/vip" element={<VIP />} />
-          <Route path="/work/personal" element={<Personal />} />
-          <Route path="/work/jersey-swaps" element={<JerseySwaps />} />
-          <Route path="/work/compositions" element={<Compositions />} />
-          <Route path="/work/posters" element={<Posters />} />
-          <Route path="/work/tgc-graphics-packs" element={<TGCGraphicsPacks />} />
-          <Route path="/work/tgc-giveaways" element={<TGCGiveaways />} />
-          <Route path="/work/tgc-custom-work" element={<TGCCustomWork />} />
-          <Route path="/work/rhxvisuals-projects" element={<RHxVisualsProjects />} />
-          <Route path="/work/afc-designs" element={<AFCDesigns />} />
-          <Route path="/work/afc-news" element={<AFCNews />} />
-          <Route path="/work/afc-analysis" element={<AFCAnalysis />} />
-          <Route path="/work/gridiron-drive-news" element={<GridironDriveNews />} />
-          <Route path="/work/gridiron-drive-designs" element={<GridironDriveDesigns />} />
-          <Route path="/work/gridiron-drive-analysis" element={<GridironDriveAnalysis />} />
-          <Route path="/work/races" element={<Races />} />
-          <Route path="/work/training" element={<Training />} />
-          <Route path="/work/goals" element={<Goals />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/" element={<Home />} />
+          <Route path="/engineering" element={<Engineering />} />
+          <Route path="/engineering/ryan-os" element={<RyanOS />} />
+          <Route path="/analytics" element={<Analytics />} />
+          <Route path="/design" element={<Design />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          {Object.entries(legacy).map(([from, to]) => (
+            <Route key={from} path={from} element={<Navigate to={to} replace />} />
+          ))}
+          <Route path="/work/*" element={<Navigate to="/design" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

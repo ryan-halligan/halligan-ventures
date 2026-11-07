@@ -27,8 +27,8 @@ const RyanOS = () => {
       <article>
         <header className="border-b">
           <div className="mx-auto max-w-4xl px-5 pb-12 pt-10">
-            <Link to="/engineering" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
-              <ArrowLeft className="h-4 w-4" /> Back to Engineering
+            <Link to="/ai" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground">
+              <ArrowLeft className="h-4 w-4" /> Back to AI
             </Link>
             <p className="eyebrow mt-10 text-accent">Flagship case study · Personal project</p>
             <h1 className="mt-4 text-6xl md:text-8xl leading-none">Ryan-OS</h1>

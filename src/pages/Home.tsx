@@ -7,10 +7,11 @@ import { featured, projects } from "@/content/projects";
 import { gallery } from "@/content/gallery";
 import { asset } from "@/lib/assets";
 import headshot from "@/assets/ryan-professional.jpg";
+import stadium from "@/assets/projects-bg.png"; // alt: gt-aerial-stadium.jpg
 
 const pillars = [
-  { to: "/engineering", label: "Engineering & AI", text: "Systems that pair language models with deterministic, testable code." },
   { to: "/analytics", label: "Data & Analytics", text: "SQL, Snowflake, and Power BI work that supports business decisions." },
+  { to: "/ai", label: "AI", text: "Systems that pair language models with deterministic, testable code." },
   { to: "/design", label: "Creative & Design", text: "Original sports graphics, branding, and visual storytelling." },
 ];
 
@@ -27,7 +28,7 @@ const Home = () => {
             <p className="mt-6 max-w-xl text-lg text-ink-muted">{site.intro}</p>
             <p className="mt-6 font-mono text-xs text-ink-muted">{site.school} · {site.location}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link to="/engineering" className="inline-flex items-center gap-2 rounded bg-accent px-5 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5">
+              <Link to="/projects" className="inline-flex items-center gap-2 rounded bg-accent px-5 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5">
                 Explore my work <ArrowRight className="h-4 w-4" />
               </Link>
               <a href={site.resume} target="_blank" rel="noreferrer" className="rounded border border-ink-muted/50 px-5 py-3 text-sm font-medium hover:border-ink-foreground">
@@ -44,7 +45,7 @@ const Home = () => {
       <section className="mx-auto max-w-6xl px-5 py-20">
         <div className="grid gap-px overflow-hidden rounded-md border bg-border md:grid-cols-3">
           {pillars.map((p, i) => (
-            <Link key={p.to} to={p.to} className="group bg-card p-8 transition-colors hover:bg-secondary">
+            <Link key={p.to} to={p.to} className="group border-t-2 border-transparent bg-card p-8 transition-colors hover:border-accent hover:bg-secondary">
               <span className="font-mono text-xs text-accent">0{i + 1}</span>
               <h2 className="mt-4 text-3xl">{p.label}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{p.text}</p>
@@ -54,11 +55,20 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 pb-20">
-        <p className="eyebrow text-accent">Selected work</p>
-        <h2 className="mt-3 text-5xl">Featured projects</h2>
+      <section className="relative overflow-hidden">
+        <img src={stadium} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background" />
+        <div className="relative mx-auto max-w-6xl px-5 py-20">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow text-accent">Selected work</p>
+            <h2 className="mt-3 text-5xl">Featured projects</h2>
+          </div>
+          <Link to="/projects" className="text-sm font-medium hover:text-accent">All projects →</Link>
+        </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {items.map((p) => <ProjectCard key={p.slug} project={p} />)}
+        </div>
         </div>
       </section>
 

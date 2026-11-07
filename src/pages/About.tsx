@@ -1,5 +1,7 @@
 import Layout, { PageHeader } from "@/components/Layout";
+import { Link } from "react-router-dom";
 import ironman from "@/assets/ryan-ironman.jpg";
+import { site } from "@/content/site";
 
 const About = () => (
   <Layout>
@@ -19,6 +21,30 @@ const About = () => (
         <p>
           Outside of work I train for endurance races; I finished an Ironman 70.3 in 6:49.
         </p>
+      </div>
+    </section>
+    <section className="border-t bg-secondary">
+      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 md:grid-cols-3">
+        <div>
+          <p className="eyebrow text-accent">Endurance</p>
+          <h2 className="mt-3 text-3xl">Ironman 70.3</h2>
+          <p className="mt-2 text-sm text-muted-foreground">Finished in 6:49. Long-course racing taught me patience, planning, and how to keep going when a plan meets reality.</p>
+        </div>
+        <div>
+          <p className="eyebrow text-accent">Interests</p>
+          <h2 className="mt-3 text-3xl">Off the clock</h2>
+          <p className="mt-2 text-sm text-muted-foreground">Football, triathlon, building personal tools, and following how technology changes the business of sport.</p>
+        </div>
+        <div>
+          <p className="eyebrow text-accent">Creative projects</p>
+          <h2 className="mt-3 text-3xl">Made by me</h2>
+          <ul className="mt-2 space-y-1 text-sm">
+            {site.instagram.map((i) => (
+              <li key={i.href}><a href={i.href} target="_blank" rel="noreferrer" className="hover:text-accent">@{i.href.split("/").filter(Boolean).pop()} <span className="text-muted-foreground">· {i.label}</span></a></li>
+            ))}
+            <li><Link to="/design" className="text-accent">See the gallery →</Link></li>
+          </ul>
+        </div>
       </div>
     </section>
   </Layout>

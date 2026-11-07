@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Home from "./pages/Home";
-import Engineering from "./pages/Engineering";
+import AI from "./pages/AI";
+import Projects from "./pages/Projects";
 import RyanOS from "./pages/RyanOS";
 import Analytics from "./pages/Analytics";
 import Design from "./pages/Design";
@@ -18,6 +19,8 @@ const queryClient = new QueryClient();
 
 // Old V1 URLs → new homes, so existing links keep working.
 const legacy: Record<string, string> = {
+  "/engineering": "/ai",
+  "/engineering/ryan-os": "/ai/ryan-os",
   "/education": "/experience",
   "/work/gt-football": "/experience",
   "/work/reel-analytics": "/analytics",
@@ -39,8 +42,9 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/engineering" element={<Engineering />} />
-          <Route path="/engineering/ryan-os" element={<RyanOS />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/ai" element={<AI />} />
+          <Route path="/ai/ryan-os" element={<RyanOS />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/design" element={<Design />} />
           <Route path="/experience" element={<ExperiencePage />} />
@@ -49,7 +53,7 @@ const App = () => (
           {Object.entries(legacy).map(([from, to]) => (
             <Route key={from} path={from} element={<Navigate to={to} replace />} />
           ))}
-          <Route path="/work/*" element={<Navigate to="/design" replace />} />
+          <Route path="/work/*" element={<Navigate to="/projects" replace />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

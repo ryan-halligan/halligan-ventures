@@ -56,8 +56,8 @@ const Home = () => {
       </section>
 
       <section className="relative overflow-hidden">
-        <img src={stadium} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-15" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/70 to-background" />
+        <img src={stadium} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
         <div className="flex items-end justify-between gap-4">
           <div>

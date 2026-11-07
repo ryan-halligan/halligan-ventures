@@ -3,3 +3,6 @@
 - Editable portfolio content (profile, projects, experience, gallery) lives in `src/content/*.ts`; pages only render it. Why: Ryan updates content without touching layout.
 - Gallery/project images are referenced by filename and resolved through `src/lib/assets.ts`. Why: adding art means dropping a file in `src/assets` and one content line.
 - Never place confidential documents in `public/`; anything there is publicly downloadable even if unlinked.
+
+- Analytics page content (featured work, approach, toolkit, case studies) lives in `src/content/analytics.ts`; entries with no real content stay hidden. Why: no fabricated case studies.
+- Project pillars are Analytics, AI, Design (display labels in `pillarLabel`); `/engineering*` redirects to `/ai*`. Why: preserve old links.

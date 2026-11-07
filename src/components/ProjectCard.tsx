@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
-import type { Project } from "@/content/projects";
+import { pillarLabel, type Project } from "@/content/projects";
 import { asset } from "@/lib/assets";
 import { Tag } from "./Layout";
 
@@ -9,7 +9,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const soon = project.status === "Coming Soon";
   return (
     <Link
-      to={project.to ?? "/"}
+      to={project.to ?? "/projects"}
       className="group flex flex-col overflow-hidden rounded-md border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
     >
       {img ? (
@@ -23,7 +23,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       )}
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-center justify-between">
-          <span className="eyebrow text-muted-foreground">{project.pillar}</span>
+          <span className="eyebrow text-muted-foreground">{pillarLabel[project.pillar]}</span>
           <span className={soon ? "eyebrow rounded bg-accent px-2 py-0.5 text-accent-foreground" : "eyebrow text-accent"}>
             {project.status}
           </span>

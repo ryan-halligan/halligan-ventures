@@ -17,8 +17,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <img src={img} alt={`${project.name} preview`} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
         </div>
       ) : (
-        <div className="flex aspect-[16/10] items-end bg-ink p-6 text-ink-foreground">
-          <span className="font-display text-5xl leading-none">{project.name}</span>
+        <div className="flex aspect-[16/10] flex-col justify-center gap-2 bg-ink p-6 text-ink-foreground">
+          <span className="eyebrow text-accent">{pillarLabel[project.pillar]}</span>
+          <span className="font-display text-2xl leading-snug md:text-3xl">{project.name}</span>
         </div>
       )}
       <div className="flex flex-1 flex-col p-6">

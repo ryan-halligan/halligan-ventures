@@ -34,12 +34,12 @@ export const RYAN_OS_DEMO_IMAGE =
 const all: Project[] = [
   {
     slug: "pga-bi",
-    name: "Customer & Sales Intelligence",
+    name: "PGA TOUR Superstore — Business Intelligence",
     pillar: "Analytics",
     status: "Completed",
-    summary: "Business intelligence internship at PGA TOUR Superstore: customer segmentation, store assignment modeling, and sales reporting.",
+    summary: "Business intelligence internship: customer segmentation, store assignment modeling, and sales reporting.",
     tags: ["SQL", "Snowflake", "Data modeling", "Power BI"],
-    to: "/analytics",
+    to: "/analytics#pga-tour-superstore",
     date: "2026-06",
   },
   {
@@ -60,7 +60,7 @@ const all: Project[] = [
     status: "Completed",
     summary: "Prospect research, comparative evaluation, and data-quality work at Reel Analytics.",
     tags: ["Research", "Data quality", "Data visualization"],
-    to: "/analytics",
+    to: "/analytics#reel-analytics",
     image: "reel-analytics-logo.png",
     date: "2025-01",
   },
@@ -71,17 +71,26 @@ const all: Project[] = [
     status: "Completed",
     summary: "Original sports graphics, jersey concepts, and editorial compositions.",
     tags: ["Photoshop", "Sports graphics", "Branding"],
-    to: "/design",
+    to: "/design/rhxvisuals",
     image: "rhxvisuals-bijan.jpg",
+  },
+  {
+    slug: "thegrfxcommittee",
+    name: "TheGRFXCommittee",
+    pillar: "Design",
+    status: "Completed",
+    summary: "A design collective I ran with other creators — client logos, commissioned templates, graphics packs, and giveaways.",
+    tags: ["Client work", "Graphics packs", "Branding"],
+    to: "/design/thegrfxcommittee",
+    image: "tgc-logo.png",
   },
   {
     slug: "box-score",
     name: "Box Score",
     pillar: "Design",
     status: "Coming Soon",
-    summary:
-      "An emerging sports media and creative project combining visual storytelling, football coverage, and experimentation with data-driven content.",
-    tags: ["Sports media", "Visual storytelling", "Data-driven content"],
+    summary: "A sports media project I'm developing around football coverage and original graphics.",
+    tags: ["Sports media", "Visual storytelling", "Original graphics"],
     to: "/design#box-score",
   },
   {
@@ -91,7 +100,7 @@ const all: Project[] = [
     status: "Completed",
     summary: "Fan-account graphics, gameday content, and breaking-news templates for Atlanta Falcons coverage.",
     tags: ["Social media", "Templates", "Sports graphics"],
-    to: "/design",
+    to: "/design/atlfalconscountry",
     image: "afc-debo-design.jpg",
   },
   {
@@ -101,7 +110,7 @@ const all: Project[] = [
     status: "Completed",
     summary: "Brand identity and NFL social content, from QB rankings to draft coverage.",
     tags: ["Branding", "Social media"],
-    to: "/design",
+    to: "/design/gridiron-drive",
     image: "gd-qb-rankings.jpg",
   },
 ];

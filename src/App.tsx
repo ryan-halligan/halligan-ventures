@@ -10,6 +10,9 @@ import Projects from "./pages/Projects";
 import RyanOS from "./pages/RyanOS";
 import Analytics from "./pages/Analytics";
 import Design from "./pages/Design";
+import DesignCollection from "./pages/DesignCollection";
+import DesignFolder from "./pages/DesignFolder";
+import DesignGallery from "./pages/DesignGallery";
 import ExperiencePage from "./pages/ExperiencePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -47,6 +50,9 @@ const App = () => (
           <Route path="/ai/ryan-os" element={<RyanOS />} />
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/design" element={<Design />} />
+          <Route path="/design/gallery" element={<DesignGallery />} />
+          <Route path="/design/:collection/:folder" element={<DesignFolder />} />
+          <Route path="/design/:collection" element={<DesignCollection />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

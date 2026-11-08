@@ -1,60 +1,53 @@
-import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import Layout, { PageHeader } from "@/components/Layout";
-import Gallery from "@/components/Gallery";
 import BoxScoreCard from "@/components/BoxScoreCard";
-import { gallery, galleryCategories, galleryCollections } from "@/content/gallery";
-import { cn } from "@/lib/utils";
+import { designCollections } from "@/content/design";
+import { gallery } from "@/content/gallery";
+import { asset } from "@/lib/assets";
 
-const Design = () => {
-  const [cat, setCat] = useState<string>("All");
-  const [col, setCol] = useState<string>("All");
-  const cats = ["All", ...galleryCategories.filter((c) => gallery.some((g) => g.category === c))];
-  const cols = ["All", ...galleryCollections.filter((c) => gallery.some((g) => g.collection === c))];
-  const items = useMemo(
-    () => gallery.filter((g) => (cat === "All" || g.category === cat) && (col === "All" || g.collection === col)),
-    [cat, col],
-  );
-  const chip = (on: boolean) =>
-    cn("rounded-full border px-4 py-1.5 text-sm transition-colors", on ? "border-primary bg-primary text-primary-foreground" : "hover:border-foreground");
+const Design = () => (
+  <Layout>
+    <PageHeader eyebrow="03 — Creative & Design" title="Original work, made by hand.">
+      Sports graphics, logos, templates, and client work from RHxVisuals, TheGRFXCommittee, and my other creative projects.
+    </PageHeader>
 
-  return (
-    <Layout>
-      <PageHeader eyebrow="03 — Creative & Design" title="Original work, made by hand.">
-        RHxVisuals and years of sports graphics, branding, and social content — every piece below is my own design.
-      </PageHeader>
+    <section className="mx-auto max-w-6xl px-5 pt-12">
+      <BoxScoreCard />
+    </section>
 
-      <section className="mx-auto max-w-6xl px-5 pt-12">
-        <BoxScoreCard />
-      </section>
-
-      <section className="mx-auto max-w-6xl px-5 py-12">
-        <p className="eyebrow mb-2 text-muted-foreground">Collection</p>
-        <div role="group" aria-label="Filter by collection" className="mb-5 flex flex-wrap gap-2">
-          {cols.map((c) => (
-            <button key={c} aria-pressed={col === c} onClick={() => setCol(c)} className={chip(col === c)}>{c}</button>
-          ))}
-        </div>
-        <p className="eyebrow mb-2 text-muted-foreground">Category</p>
-        <div role="tablist" aria-label="Filter designs" className="mb-8 flex flex-wrap gap-2">
-          {cats.map((c) => (
-            <button
-              key={c}
-              role="tab"
-              aria-selected={cat === c}
-              onClick={() => setCat(c)}
-              className={cn(
-                "rounded-full border px-4 py-1.5 text-sm transition-colors",
-                cat === c ? "border-primary bg-primary text-primary-foreground" : "hover:border-foreground",
-              )}
+    <section className="mx-auto max-w-6xl px-5 py-12">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {designCollections.map((c) => {
+          const count = gallery.filter((g) => g.collection === c.name).length;
+          return (
+            <Link
+              key={c.slug}
+              to={`/design/${c.slug}`}
+              className="group flex flex-col overflow-hidden rounded-md border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              {c}
-            </button>
-          ))}
-        </div>
-        {items.length ? <Gallery key={cat + col} items={items} /> : <p className="text-muted-foreground">No pieces match both filters.</p>}
-      </section>
-    </Layout>
-  );
-};
+              <div className="aspect-[16/10] overflow-hidden bg-muted">
+                <img src={asset(c.cover)} alt={`${c.name} artwork`} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="flex items-center gap-2 text-2xl">
+                  {c.name}
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </h2>
+                <p className="mt-2 flex-1 text-sm text-muted-foreground">{c.description}</p>
+                <p className="mt-4 font-mono text-xs text-muted-foreground">{count} pieces</p>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+      <div className="mt-10 text-center">
+        <Link to="/design/gallery" className="inline-flex items-center gap-2 rounded border px-5 py-3 text-sm font-medium transition-colors hover:bg-secondary">
+          Browse all artwork <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
+    </section>
+  </Layout>
+);
 
 export default Design;

@@ -37,14 +37,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 {n.label}
               </NavLink>
             ))}
-            <a
-              href={site.resume}
-              target="_blank"
-              rel="noreferrer"
-              className="ml-2 rounded border border-foreground px-3 py-1.5 text-sm font-medium transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              Resume
-            </a>
           </nav>
           <button
             className="lg:hidden p-2"
@@ -69,9 +61,6 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 {n.label}
               </NavLink>
             ))}
-            <a href={site.resume} target="_blank" rel="noreferrer" className="mt-4 inline-block eyebrow text-accent">
-              Download resume →
-            </a>
           </nav>
         )}
       </header>

@@ -22,7 +22,7 @@ const Analytics = () => {
           <p className="eyebrow text-accent">01 — Data & Analytics</p>
           <h1 className="mt-4 max-w-4xl text-5xl leading-[1.02] md:text-7xl">Turning complex data into better decisions.</h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-muted">
-            From customer intelligence and business reporting to research and player evaluation, I focus on transforming raw information into reliable insights that support real decisions.
+            My analytics experience includes customer segmentation, business reporting, player evaluation, and college sports research. I use SQL, Snowflake, Power BI, and Excel across that work.
           </p>
         </div>
       </section>
@@ -31,7 +31,7 @@ const Analytics = () => {
         <p className="eyebrow text-accent">Featured analytics work</p>
         <div className="mt-6 grid gap-6 lg:grid-cols-3">
           {[...featuredWork, ...indie].map((w) => (
-            <article key={w.org} className="flex flex-col rounded-md border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg motion-reduce:transform-none">
+            <article key={w.org} id={w.org.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")} className="flex scroll-mt-24 flex-col rounded-md border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg motion-reduce:transform-none">
               <div className="flex items-center justify-between">
                 <span className="eyebrow text-muted-foreground">{w.kind}</span>
                 <span className="eyebrow text-accent">{w.dates}</span>
@@ -88,7 +88,7 @@ const Analytics = () => {
           </dl>
         </div>
         <div>
-          <p className="eyebrow text-accent">Visual proof</p>
+          <p className="eyebrow text-accent">Example visualization</p>
           <h2 className="mt-3 text-4xl">How I present a segmentation.</h2>
           <SyntheticSegmentChart />
         </div>

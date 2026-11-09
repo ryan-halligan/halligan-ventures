@@ -32,7 +32,7 @@ const RyanOS = () => {
             </Link>
             <p className="eyebrow mt-10 text-accent">Flagship case study · Personal project</p>
             <h1 className="mt-4 text-6xl md:text-8xl leading-none">Ryan-OS</h1>
-            <p className="mt-6 text-xl text-muted-foreground">From scattered commitments to a daily organizer — an applied ML case study.</p>
+            <p className="mt-6 text-xl text-muted-foreground">From scattered commitments to a daily organizer — an AI application case study.</p>
             <div className="mt-6 flex flex-wrap gap-1.5">{p.tags.map((t) => <Tag key={t}>{t}</Tag>)}</div>
             <a href={RYAN_OS_REPO} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:-translate-y-0.5 transition-transform">
               <Github className="h-4 w-4" /> Public case study on GitHub

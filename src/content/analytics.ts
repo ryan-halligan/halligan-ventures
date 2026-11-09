@@ -66,7 +66,7 @@ export const approach = [
 
 export const toolkit: { group: string; tools: { name: string; where?: string }[] }[] = [
   { group: "Data querying", tools: [{ name: "SQL", where: "PGA TOUR Superstore" }, { name: "Snowflake", where: "PGA TOUR Superstore" }] },
-  { group: "Programming & analysis", tools: [{ name: "Python" }, { name: "TypeScript", where: "Ryan-OS" }] },
+  { group: "Programming & analysis", tools: [{ name: "TypeScript", where: "Ryan-OS" }] },
   { group: "Business intelligence", tools: [{ name: "Power BI", where: "PGA TOUR Superstore" }, { name: "Excel", where: "Reel Analytics" }] },
   { group: "Statistics & modeling", tools: [{ name: "Regression", where: "VIP Research" }, { name: "Segmentation & scoring", where: "PGA TOUR Superstore" }] },
   { group: "Data systems", tools: [{ name: "Postgres", where: "Ryan-OS" }, { name: "Data validation", where: "GT Football" }, { name: "Transformations", where: "PGA TOUR Superstore" }] },

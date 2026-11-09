@@ -18,9 +18,6 @@ const About = () => (
         <p>
           Design came first. Long before analytics, I was making sports graphics, logos, and templates under RHxVisuals — and that eye for clear communication shapes how I build dashboards and interfaces today.
         </p>
-        <p>
-          Outside of work I train for endurance races; I finished an Ironman 70.3 in 6:49.
-        </p>
       </div>
     </section>
     <section className="border-t bg-secondary">
@@ -28,7 +25,7 @@ const About = () => (
         <div>
           <p className="eyebrow text-accent">Endurance</p>
           <h2 className="mt-3 text-3xl">Ironman 70.3</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Finished in 6:49. Long-course racing taught me patience, planning, and how to keep going when a plan meets reality.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Finished in 6:49.</p>
         </div>
         <div>
           <p className="eyebrow text-accent">Interests</p>

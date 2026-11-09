@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { site } from "@/content/site";
 import { featured, projects } from "@/content/projects";
 import { gallery } from "@/content/gallery";
+import { designCollections } from "@/content/design";
 import { asset } from "@/lib/assets";
 import headshot from "@/assets/ryan-professional.jpg";
 import stadium from "@/assets/projects-bg.png"; // alt: gt-aerial-stadium.jpg
@@ -25,15 +26,14 @@ const Home = () => {
           <div>
             <p className="eyebrow text-accent">{site.identity.join(" • ")}</p>
             <h1 className="mt-6 text-5xl leading-[1.02] md:text-7xl">{site.headline}</h1>
-            <p className="mt-6 max-w-xl text-lg text-ink-muted">{site.intro}</p>
+            <p className="mt-6 max-w-xl text-lg text-ink-muted">
+              I'm a Georgia Tech business student focused on information technology management. I've worked on customer analytics in Snowflake and Power BI, built Ryan-OS to organize my own work, and created sports graphics through RHxVisuals and TheGRFXCommittee.
+            </p>
             <p className="mt-6 font-mono text-xs text-ink-muted">{site.school} · {site.location}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link to="/projects" className="inline-flex items-center gap-2 rounded bg-accent px-5 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5">
                 Explore my work <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href={site.resume} target="_blank" rel="noreferrer" className="rounded border border-ink-muted/50 px-5 py-3 text-sm font-medium hover:border-ink-foreground">
-                View resume
-              </a>
               <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="p-3 hover:text-accent"><Github className="h-5 w-5" /></a>
               <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="p-3 hover:text-accent"><Linkedin className="h-5 w-5" /></a>
             </div>
@@ -56,8 +56,8 @@ const Home = () => {
       </section>
 
       <section className="relative overflow-hidden">
-        <img src={stadium} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background via-background/40 to-background" />
+        <img src={stadium} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-background/80" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
         <div className="flex items-end justify-between gap-4">
           <div>
@@ -83,7 +83,7 @@ const Home = () => {
           </div>
           <div className="mt-10 columns-2 gap-4 md:columns-3">
             {designs.map((d) => (
-              <Link key={d.file} to="/design" className="mb-4 block overflow-hidden rounded-md">
+              <Link key={d.file} to={`/design/${designCollections.find((c) => c.name === d.collection)?.slug ?? "gallery"}`} className="mb-4 block overflow-hidden rounded-md">
                 <img src={asset(d.file)} alt={d.title} loading="lazy" className="w-full h-auto transition-transform duration-500 hover:scale-[1.02]" />
               </Link>
             ))}

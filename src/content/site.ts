@@ -3,12 +3,9 @@ export const site = {
   name: "Ryan Halligan",
   headline: "Building intelligent systems that turn data into decisions.",
   identity: ["Analytics", "AI", "Creative"],
-  intro:
-    "I work where data, applied AI, business, and design meet — from customer analytics in Snowflake to a personal operating system powered by language models and original creative work.",
   location: "Atlanta, GA",
   school: "Georgia Tech",
   email: "rhalligan@gmail.com",
-  resume: "/documents/ryan-halligan-resume.pdf",
   github: "https://github.com/ryan-halligan",
   linkedin: "https://www.linkedin.com/in/ryanhalligan",
   url: "https://halligan-ventures.lovable.app",

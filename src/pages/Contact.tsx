@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import Layout, { PageHeader } from "@/components/Layout";
 import { site } from "@/content/site";
 
@@ -6,7 +6,6 @@ const links = [
   { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
   { icon: Linkedin, label: "LinkedIn", value: "in/ryanhalligan", href: site.linkedin },
   { icon: Github, label: "GitHub", value: "ryan-halligan", href: site.github },
-  { icon: FileText, label: "Resume", value: "Download PDF", href: site.resume },
 ];
 
 const Contact = () => (

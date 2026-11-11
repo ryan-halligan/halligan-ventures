@@ -11,7 +11,7 @@ const ProjectCard = ({ project, flushLogo = false, directory = false }: { projec
   return (
     <Link
       to={project.to ?? "/projects"}
-      className="group flex flex-col overflow-hidden rounded-md border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+      className="group flex flex-col overflow-hidden rounded-md border bg-card text-card-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
     >
       {project.logo ? (
         <LogoCover file={project.logo} alt={`${project.name} logo`} settings={project.logoSettings} flush={flushLogo} scaleOverride={directory && project.slug === "pga-bi" ? 1.08 : undefined} />

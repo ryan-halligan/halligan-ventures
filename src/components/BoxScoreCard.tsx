@@ -4,7 +4,7 @@ import LogoCover from "./LogoCover";
 const BoxScoreCard = () => {
   const p = projects.find((x) => x.slug === "box-score")!;
   return (
-    <div id="box-score" className="scroll-mt-24 overflow-hidden rounded-md border border-dashed sm:flex sm:items-center">
+    <div id="box-score" className="scroll-mt-24 overflow-hidden rounded-md border border-dashed bg-card text-card-foreground sm:flex sm:items-center">
       <div className="sm:w-56">
         <LogoCover file="box-score-a-boxed-profile-1080.png" alt="Box Score logo" settings={{ logoScale: 1.35, backgroundColor: "#000000" }} />
       </div>

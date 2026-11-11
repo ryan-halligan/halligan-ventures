@@ -29,7 +29,7 @@ const DesignCollection = () => {
             <span className="text-foreground">{col.name}</span>
           </nav>
           <div className="mt-10 flex items-center gap-6">
-            {logo && <img src={logo} alt={`${col.name} logo`} className="h-16 w-16 rounded object-contain md:h-20 md:w-20" />}
+            {logo && <img src={logo} alt={`${col.name} logo`} className={`h-16 w-16 rounded object-contain md:h-20 md:w-20 ${col.name === "TheGRFXCommittee" ? "-translate-y-1 scale-110" : ""}`} />}
             <div>
               <h1 className="text-4xl md:text-6xl leading-none">{col.name}</h1>
               <p className="mt-3 max-w-2xl text-muted-foreground">{col.description}</p>

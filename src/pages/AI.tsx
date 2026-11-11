@@ -14,13 +14,13 @@ const strengths = [
 
 const AI = () => (
   <Layout>
-    <PageHeader eyebrow="02 — AI" title="AI">
+    <PageHeader eyebrow="02: AI" title="AI">
       I build tools where language models interpret messy input and deterministic code handles what must be exact: IDs, dates, persistence, and tests.
     </PageHeader>
     <section className="mx-auto max-w-6xl px-5 py-16">
-      <div className="mb-10 flex flex-wrap gap-2">
+      <div className="mb-10 flex min-w-0 flex-nowrap gap-1.5 overflow-x-auto pb-2 lg:gap-2">
         {strengths.map((s) => (
-          <span key={s} className="rounded-full border border-accent/50 px-3 py-1 text-sm">{s}</span>
+          <span key={s} className="shrink-0 whitespace-nowrap rounded-full border border-accent/50 px-3 py-1 text-sm">{s}</span>
         ))}
       </div>
       <div className="grid gap-6 md:grid-cols-2">

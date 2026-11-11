@@ -9,6 +9,7 @@ import AI from "./pages/AI";
 import Projects from "./pages/Projects";
 import RyanOS from "./pages/RyanOS";
 import Analytics from "./pages/Analytics";
+import AnalyticsCaseStudyPage from "./pages/AnalyticsCaseStudyPage";
 import Design from "./pages/Design";
 import DesignCollection from "./pages/DesignCollection";
 import DesignFolder from "./pages/DesignFolder";
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/ai" element={<AI />} />
           <Route path="/ai/ryan-os" element={<RyanOS />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/analytics/:slug" element={<AnalyticsCaseStudyPage />} />
           <Route path="/design" element={<Design />} />
           <Route path="/design/gallery" element={<DesignGallery />} />
           <Route path="/design/:collection/:folder" element={<DesignFolder />} />

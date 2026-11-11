@@ -44,7 +44,7 @@ const Projects = () => {
         </div>
         {sort === "Newest" && <p className="mb-6 text-xs text-muted-foreground">Projects without a verified date appear last.</p>}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {items.map((p) => <ProjectCard key={p.slug} project={p} />)}
+          {items.map((p) => <ProjectCard key={p.slug} project={p} flushLogo directory />)}
         </div>
       </section>
     </Layout>

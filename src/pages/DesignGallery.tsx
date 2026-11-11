@@ -3,18 +3,21 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Layout from "@/components/Layout";
 import Gallery from "@/components/Gallery";
-import { gallery, galleryCategories, galleryCollections } from "@/content/gallery";
+import { allArtworkPriority, gallery, galleryCollections } from "@/content/gallery";
 import { cn } from "@/lib/utils";
 
-/** Combined gallery of every piece, with collection and category filters. */
+/** Combined gallery of every piece, with collection filtering. */
 const DesignGallery = () => {
-  const [cat, setCat] = useState<string>("All");
   const [col, setCol] = useState<string>("All");
-  const cats = ["All", ...galleryCategories.filter((c) => gallery.some((g) => g.category === c))];
   const cols = ["All", ...galleryCollections.filter((c) => gallery.some((g) => g.collection === c))];
+  const priority = useMemo(() => new Map(allArtworkPriority.map((title, index) => [title, index])), []);
   const items = useMemo(
-    () => gallery.filter((g) => (cat === "All" || g.category === cat) && (col === "All" || g.collection === col)),
-    [cat, col],
+    () => gallery
+      .filter((g) => col === "All" || g.collection === col)
+      .map((item, index) => ({ item, index }))
+      .sort((a, b) => (priority.get(a.item.title) ?? allArtworkPriority.length + a.index) - (priority.get(b.item.title) ?? allArtworkPriority.length + b.index))
+      .map(({ item }) => item),
+    [col, priority],
   );
   const chip = (on: boolean) =>
     cn("rounded-full border px-4 py-1.5 text-sm transition-colors", on ? "border-primary bg-primary text-primary-foreground" : "hover:border-foreground");
@@ -41,24 +44,7 @@ const DesignGallery = () => {
             <button key={c} aria-pressed={col === c} onClick={() => setCol(c)} className={chip(col === c)}>{c}</button>
           ))}
         </div>
-        <p className="eyebrow mb-2 text-muted-foreground">Category</p>
-        <div role="tablist" aria-label="Filter designs" className="mb-8 flex flex-wrap gap-2">
-          {cats.map((c) => (
-            <button
-              key={c}
-              role="tab"
-              aria-selected={cat === c}
-              onClick={() => setCat(c)}
-              className={cn(
-                "rounded-full border px-4 py-1.5 text-sm transition-colors",
-                cat === c ? "border-primary bg-primary text-primary-foreground" : "hover:border-foreground",
-              )}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-        {items.length ? <Gallery key={cat + col} items={items} /> : <p className="text-muted-foreground">No pieces match both filters.</p>}
+        {items.length ? <Gallery key={col} items={items} /> : <p className="text-muted-foreground">No pieces match this collection.</p>}
       </section>
     </Layout>
   );

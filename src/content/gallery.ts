@@ -9,9 +9,20 @@ export const galleryCollections = ["RHxVisuals", "TheGRFXCommittee", "ATLFalcons
 
 export const galleryCategories: GalleryCategory[] = ["Sports Graphics", "Branding & Identity", "Social Media & Content", "Digital Design", "Data Visualization"];
 
+export const allArtworkPriority = [
+  "Shelton",
+  "Bijan",
+  "Rising Stars",
+  "Super Bowl AJC",
+  "Kyler Murray Swap",
+  "New Stripes",
+  "LeBron",
+  "Joseph Ossai Design",
+];
+
 export const gallery: GalleryItem[] = [
   { file: "rhxvisuals-ajc-tshirt.jpg", title: "AJC T-Shirt", category: "Sports Graphics", collection: "RHxVisuals" },
-  { file: "rhxvisuals-bijan.jpg", title: "Bijan", category: "Sports Graphics", collection: "RHxVisuals", featured: true },
+  { file: "rhxvisuals-bijan.jpg", title: "Bijan", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-bulls.jpg", title: "Bulls", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-dad-superbowl.jpg", title: "Dad Super Bowl", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-falcons.jpg", title: "Falcons", category: "Sports Graphics", collection: "RHxVisuals" },
@@ -23,8 +34,8 @@ export const gallery: GalleryItem[] = [
   { file: "rhxvisuals-joseph-ossai-swap.jpg", title: "Joseph Ossai Swap", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-krips.jpg", title: "Krips", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-kyler-murray-swap.jpg", title: "Kyler Murray Swap", category: "Sports Graphics", collection: "RHxVisuals" },
-  { file: "rhxvisuals-last-dance.jpg", title: "Last Dance", category: "Sports Graphics", collection: "RHxVisuals", featured: true },
-  { file: "rhxvisuals-lebron.jpg", title: "LeBron", category: "Sports Graphics", collection: "RHxVisuals", featured: true },
+  { file: "rhxvisuals-last-dance.jpg", title: "Last Dance", category: "Sports Graphics", collection: "RHxVisuals" },
+  { file: "rhxvisuals-lebron.jpg", title: "LeBron", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-logo.png", title: "RHxVisuals Logo", category: "Branding & Identity", collection: "RHxVisuals" },
   { file: "rhxvisuals-obi-toppin-design.jpg", title: "Obi Toppin Design", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-obi-toppin-swap.jpg", title: "Obi Toppin Swap", category: "Sports Graphics", collection: "RHxVisuals" },
@@ -32,7 +43,7 @@ export const gallery: GalleryItem[] = [
   { file: "rhxvisuals-saint-joseph.jpg", title: "Saint Joseph", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-sam-hartman.jpg", title: "Sam Hartman", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-scott-rigsby.jpg", title: "Scott Rigsby", category: "Sports Graphics", collection: "RHxVisuals" },
-  { file: "rhxvisuals-shelton.jpg", title: "Shelton", category: "Sports Graphics", collection: "RHxVisuals", featured: true },
+  { file: "rhxvisuals-shelton.jpg", title: "Shelton", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-steelers.jpg", title: "Steelers", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-texans.jpg", title: "Texans", category: "Sports Graphics", collection: "RHxVisuals" },
   { file: "rhxvisuals-timberwolves.jpg", title: "Timberwolves", category: "Sports Graphics", collection: "RHxVisuals" },
@@ -47,10 +58,10 @@ export const gallery: GalleryItem[] = [
   { file: "afc-analysis-records.jpg", title: "Analysis Records", category: "Data Visualization", collection: "ATLFalconsCountry" },
   { file: "afc-analysis-ridley-jefferson.jpg", title: "Analysis Ridley Jefferson", category: "Social Media & Content", collection: "ATLFalconsCountry" },
   { file: "afc-analysis-ridley.jpg", title: "Analysis Ridley", category: "Social Media & Content", collection: "ATLFalconsCountry" },
-  { file: "afc-analysis-rising-stars.jpg", title: "Analysis Rising Stars", category: "Social Media & Content", collection: "ATLFalconsCountry" },
+  { file: "afc-analysis-rising-stars.jpg", title: "Rising Stars", category: "Social Media & Content", collection: "ATLFalconsCountry" },
   { file: "afc-bates.jpg", title: "Bates", category: "Sports Graphics", collection: "ATLFalconsCountry" },
   { file: "afc-bijan.jpg", title: "Bijan", category: "Sports Graphics", collection: "ATLFalconsCountry" },
-  { file: "afc-debo-design.jpg", title: "Debo Design", category: "Sports Graphics", collection: "ATLFalconsCountry", featured: true },
+  { file: "afc-debo-design.jpg", title: "Debo Design", category: "Sports Graphics", collection: "ATLFalconsCountry" },
   { file: "afc-debo-wallpaper.jpg", title: "Debo Wallpaper", category: "Sports Graphics", collection: "ATLFalconsCountry" },
   { file: "afc-falcons-win.jpg", title: "Falcons Win", category: "Social Media & Content", collection: "ATLFalconsCountry" },
   { file: "afc-gameday-bucs.jpg", title: "Gameday Bucs", category: "Social Media & Content", collection: "ATLFalconsCountry" },
@@ -82,7 +93,7 @@ export const gallery: GalleryItem[] = [
   { file: "gd-fa-winners.jpg", title: "FA Winners", category: "Social Media & Content", collection: "Gridiron Drive" },
   { file: "gd-franchise-tagged.jpg", title: "Franchise Tagged", category: "Social Media & Content", collection: "Gridiron Drive" },
   { file: "gd-justin-fields.jpg", title: "Justin Fields", category: "Social Media & Content", collection: "Gridiron Drive" },
-  { file: "gd-kyler-superbowl.jpg", title: "Kyler Super Bowl", category: "Sports Graphics", collection: "Gridiron Drive", featured: true },
+  { file: "gd-kyler-superbowl.jpg", title: "Kyler Super Bowl", category: "Sports Graphics", collection: "Gridiron Drive" },
   { file: "gd-logo-design.jpg", title: "Logo Design", category: "Branding & Identity", collection: "Gridiron Drive" },
   { file: "gd-logo-split.jpg", title: "Logo Split", category: "Branding & Identity", collection: "Gridiron Drive" },
   { file: "gd-mock-draft.jpg", title: "Mock Draft", category: "Social Media & Content", collection: "Gridiron Drive" },

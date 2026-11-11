@@ -1,7 +1,7 @@
 import Layout, { Tag } from "@/components/Layout";
+import { Link } from "react-router-dom";
 import { featuredWork, independentProjects, approach, toolkit, caseStudies } from "@/content/analytics";
-import AnalyticsCaseStudy from "@/components/AnalyticsCaseStudy";
-import SyntheticSegmentChart from "@/components/SyntheticSegmentChart";
+import { asset } from "@/lib/assets";
 
 const FlowMotif = () => (
   <svg aria-hidden viewBox="0 0 600 300" className="pointer-events-none absolute inset-y-0 right-0 h-full w-2/3 opacity-30" fill="none">
@@ -19,7 +19,7 @@ const Analytics = () => {
       <section className="relative overflow-hidden border-b bg-ink text-ink-foreground">
         <FlowMotif />
         <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-16 md:pt-24">
-          <p className="eyebrow text-accent">01 — Data & Analytics</p>
+          <p className="eyebrow text-accent">01: Data & Analytics</p>
           <h1 className="mt-4 max-w-4xl text-5xl leading-[1.02] md:text-7xl">Turning complex data into better decisions.</h1>
           <p className="mt-6 max-w-2xl text-lg text-ink-muted">
             My analytics experience includes customer segmentation, business reporting, player evaluation, and college sports research. I use SQL, Snowflake, Power BI, and Excel across that work.
@@ -31,8 +31,9 @@ const Analytics = () => {
         <p className="eyebrow text-accent">Featured analytics work</p>
         <div className="mt-6 grid gap-6 lg:grid-cols-3">
           {[...featuredWork, ...indie].map((w) => (
-            <article key={w.org} id={w.org.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")} className="flex scroll-mt-24 flex-col rounded-md border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg motion-reduce:transform-none">
-              <div className="flex items-center justify-between">
+            <Link key={w.org} to={w.caseStudySlug ? `/analytics/${w.caseStudySlug}` : "/analytics"} id={w.caseStudySlug ?? w.org.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")} className="flex flex-col rounded-md border bg-card p-6 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent motion-reduce:transform-none">
+              <div className="flex items-start justify-between gap-4">
+                {w.logo && <img src={asset(w.logo)} alt={`${w.org} logo`} className="h-12 max-w-36 object-contain object-left" />}
                 <span className="eyebrow text-muted-foreground">{w.kind}</span>
                 <span className="eyebrow text-accent">{w.dates}</span>
               </div>
@@ -43,7 +44,8 @@ const Analytics = () => {
                 {w.responsibilities.map((r) => <li key={r} className="border-l-2 border-accent pl-3">{r}</li>)}
               </ul>
               <div className="mt-5 flex flex-wrap gap-1.5">{w.tools.map((t) => <Tag key={t}>{t}</Tag>)}</div>
-            </article>
+              {w.caseStudySlug && <span className="mt-5 text-sm font-medium text-accent">Read case study →</span>}
+            </Link>
           ))}
         </div>
         <p className="mt-4 text-xs text-muted-foreground">Employer data, internal methods, metrics, and deliverables are confidential and intentionally not shown.</p>
@@ -67,7 +69,7 @@ const Analytics = () => {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-12 px-5 py-16 lg:grid-cols-[1.2fr_1fr]">
+      <section className="mx-auto max-w-6xl px-5 py-16">
         <div>
           <p className="eyebrow text-accent">Technical toolkit</p>
           <h2 className="mt-3 text-4xl">Tools, and where I've used them.</h2>
@@ -79,7 +81,7 @@ const Analytics = () => {
                   {g.tools.map((t) => (
                     <span key={t.name}>
                       <span className="font-medium">{t.name}</span>
-                      {t.where && <span className="text-muted-foreground"> — {t.where}</span>}
+                      {t.where && <span className="text-muted-foreground">, {t.where}</span>}
                     </span>
                   ))}
                 </dd>
@@ -87,19 +89,14 @@ const Analytics = () => {
             ))}
           </dl>
         </div>
-        <div>
-          <p className="eyebrow text-accent">Example visualization</p>
-          <h2 className="mt-3 text-4xl">How I present a segmentation.</h2>
-          <SyntheticSegmentChart />
-        </div>
       </section>
 
-      {caseStudies.length > 0 && (
-        <section className="mx-auto max-w-6xl space-y-10 px-5 pb-16">
-          <p className="eyebrow text-accent">Case studies</p>
-          {caseStudies.map((c) => <AnalyticsCaseStudy key={c.slug} study={c} />)}
-        </section>
-      )}
+      <section className="mx-auto max-w-6xl px-5 pb-16">
+        <p className="eyebrow text-accent">Case studies</p>
+        <div className="mt-6 grid gap-3 sm:grid-cols-3">
+          {caseStudies.map((c) => <Link key={c.slug} to={`/analytics/${c.slug}`} className="rounded border bg-card p-4 text-sm hover:border-accent">{c.title}</Link>)}
+        </div>
+      </section>
     </Layout>
   );
 };

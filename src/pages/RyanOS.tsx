@@ -14,8 +14,8 @@ const flow = [
 
 const sections: [string, string][] = [
   ["The problem", "Capturing something and deciding what to do with it are different problems. A voice note is easy to record but can disappear into unstructured text, and keyword search doesn't answer “what can I finish in the next 30 minutes?” I wanted to learn whether an LLM could help with both steps while keeping saved data and task selections verifiable."],
-  ["Why this approach", "The language model handles language: what kind of capture this is and what a request means. Deterministic code handles what must be exact — IDs, dates, duplicate prevention, and persistence. For a personal list capped at 300 active tasks, sending explicitly selected task fields gives the ranker enough context without building a separate ranking model. Page loads read cached data; model calls happen only on an explicit action or scheduled job."],
-  ["Reliability & validation", "The calendar acceptance suite was rerun for the case study: 41 checks passed, using an in-memory database and stubbed fetches. The task-selection guards have a separate offline test suite. Historical capture checks exercised concurrent confirmation, repeated confirmation, a capture just before ET midnight, and a missing-name fallback. These checks establish specific software properties — they do not measure classification accuracy, ranking quality, or time saved."],
+  ["Why this approach", "The language model handles language: what kind of capture this is and what a request means. Deterministic code handles what must be exact, including IDs, dates, duplicate prevention, and persistence. For a personal list capped at 300 active tasks, sending explicitly selected task fields gives the ranker enough context without building a separate ranking model. Page loads read cached data; model calls happen only on an explicit action or scheduled job."],
+  ["Reliability & validation", "The calendar acceptance suite was rerun for the case study: 41 checks passed, using an in-memory database and stubbed fetches. The task-selection guards have a separate offline test suite. Historical capture checks exercised concurrent confirmation, repeated confirmation, a capture just before ET midnight, and a missing-name fallback. These checks establish specific software properties. They do not measure classification accuracy, ranking quality, or time saved."],
   ["Broader workspace", "Beyond the organizer, the private app includes a CRM, job tracking with tailored resumes, notes with offline sync, training plans from Coros data, and a read-only investment portfolio view. The public repository previews these with invented data only."],
   ["Results & limits", "I'm the only user, so broader usefulness and any time saved remain unmeasured. The next step is a labeled evaluation of capture classification and task ranking, followed by a small comparison against keyword search."],
 ];
@@ -32,7 +32,7 @@ const RyanOS = () => {
             </Link>
             <p className="eyebrow mt-10 text-accent">Flagship case study · Personal project</p>
             <h1 className="mt-4 text-6xl md:text-8xl leading-none">Ryan-OS</h1>
-            <p className="mt-6 text-xl text-muted-foreground">From scattered commitments to a daily organizer — an AI application case study.</p>
+            <p className="mt-6 text-xl text-muted-foreground">From scattered commitments to a daily organizer. An AI application case study.</p>
             <div className="mt-6 flex flex-wrap gap-1.5">{p.tags.map((t) => <Tag key={t}>{t}</Tag>)}</div>
             <a href={RYAN_OS_REPO} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:-translate-y-0.5 transition-transform">
               <Github className="h-4 w-4" /> Public case study on GitHub

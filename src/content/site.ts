@@ -1,7 +1,7 @@
 // Site-wide profile, links, and navigation. Edit here to update the whole site.
 export const site = {
   name: "Ryan Halligan",
-  headline: "Building intelligent systems that turn data into decisions.",
+  headline: "Data & analytics, AI, and design.",
   identity: ["Analytics", "AI", "Creative"],
   location: "Atlanta, GA",
   school: "Georgia Tech",

@@ -5,6 +5,7 @@ export interface Role {
   title: string;
   dates: string;
   current?: boolean;
+  status?: "Incoming";
   logo?: string; // file in src/assets
   summary: string;
   points: string[];
@@ -13,9 +14,19 @@ export interface Role {
 
 export const roles: Role[] = [
   {
+    org: "PwC",
+    title: "Incoming Diligence Analytics Intern",
+    dates: "Summer 2027",
+    status: "Incoming",
+    logo: "pwc-logo-transparent.png",
+    summary: "Incoming internship with PwC Deals.",
+    points: [],
+  },
+  {
     org: "PGA TOUR Superstore",
     title: "Business Intelligence Intern",
     dates: "Summer 2026",
+    logo: "pga_logo_white_stacked.webp",
     summary: "Customer and sales analytics for a national golf and tennis retailer.",
     points: [
       "Designed the framework for a customer scoring model in Snowflake, using SQL to build segmented customer insights.",
@@ -41,7 +52,7 @@ export const roles: Role[] = [
     org: "Reel Analytics",
     title: "Scouting & Data Analytics Intern",
     dates: "January 2025 – December 2025",
-    logo: "reel-analytics-logo.png",
+    logo: "reel-analytics-logo-transparent.png",
     summary: "Football scouting and analytics for a sports-technology company.",
     points: [
       "Evaluated NFL Draft prospects using film, position-specific metrics, and public grading data to build player profiles.",
@@ -63,7 +74,7 @@ export const roles: Role[] = [
 
 export const leadership: Role[] = [
   {
-    org: "Georgia Tech VIP — Sports Valuation & Analytics",
+    org: "Georgia Tech VIP: Sports Valuation & Analytics",
     title: "Undergraduate Researcher",
     dates: "Georgia Tech",
     logo: "vip-logo.png",
@@ -79,17 +90,17 @@ export const leadership: Role[] = [
     points: [],
   },
   {
-    org: "Sigma Nu Fraternity — Gamma Alpha",
+    org: "Sigma Nu Fraternity: Gamma Alpha",
     title: "Rush Chairman, Athletics Chairman",
     dates: "July 2024 – Present",
-    logo: "sigma-nu-logo.png",
+    logo: "sigma-nu-logo-transparent.png",
     summary: "Recruited 36 new members and managed 15+ intramural teams.",
     points: [],
   },
 ];
 
 export const education = {
-  school: "Georgia Institute of Technology — Scheller College of Business",
+  school: "Georgia Institute of Technology: Scheller College of Business",
   degree: "B.S. Business Administration, Information Technology Management",
   dates: "2024 – Present",
   minors: ["Computing & Business (Denning T&M Program)", "Business of Sport & Entertainment"],

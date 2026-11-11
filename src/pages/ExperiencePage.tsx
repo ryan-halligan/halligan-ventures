@@ -4,13 +4,14 @@ import { asset } from "@/lib/assets";
 
 const RoleRow = ({ r }: { r: Role }) => (
   <li className="grid gap-4 border-t py-8 md:grid-cols-[200px_1fr]">
-    <div className="flex items-start gap-3 md:block">
+    <div className="flex flex-col items-center gap-2 text-center md:gap-3">
       <p className="font-mono text-xs text-muted-foreground">{r.dates}</p>
-      {r.current && <span className="eyebrow text-accent md:mt-1 md:block">Current</span>}
+      {r.current && <span className="eyebrow text-accent">Current</span>}
+      {r.status && <span className="eyebrow text-accent">{r.status}</span>}
+      {r.logo && <img src={asset(r.logo)} alt="" className="mt-1 h-20 w-32 object-contain md:h-24 md:w-36" />}
     </div>
     <div>
       <div className="flex items-center gap-3">
-        {r.logo && <img src={asset(r.logo)} alt="" className="h-8 w-8 object-contain" />}
         <div>
           <h3 className="font-sans text-lg font-semibold">{r.title}</h3>
           <p className="text-sm text-muted-foreground">{r.org}</p>

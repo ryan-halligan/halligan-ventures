@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Github, Instagram, Linkedin } from "lucide-react";
 import Layout from "@/components/Layout";
 import ProjectCard from "@/components/ProjectCard";
 import { site } from "@/content/site";
@@ -7,8 +7,8 @@ import { featured, projects } from "@/content/projects";
 import { gallery } from "@/content/gallery";
 import { designCollections } from "@/content/design";
 import { asset } from "@/lib/assets";
-import headshot from "@/assets/ryan-professional.jpg";
-import stadium from "@/assets/projects-bg.png"; // alt: gt-aerial-stadium.jpg
+import rhLogo from "@/assets/rh-logo.png";
+import stadium from "@/assets/Gc3GS0oaYAANSDt.jpeg";
 
 const pillars = [
   { to: "/analytics", label: "Data & Analytics", text: "SQL, Snowflake, and Power BI work that supports business decisions." },
@@ -16,18 +16,37 @@ const pillars = [
   { to: "/design", label: "Creative & Design", text: "Original sports graphics, branding, and visual storytelling." },
 ];
 
+const featuredStudioTitles = [
+  "Shelton",
+  "Bijan",
+  "Rising Stars",
+  "Super Bowl AJC",
+  "Kyler Murray Swap",
+  "New Stripes",
+  "LeBron",
+  "Joseph Ossai Design",
+];
+
 const Home = () => {
   const items = featured.map((s) => projects.find((p) => p.slug === s)!).filter(Boolean);
-  const designs = gallery.filter((g) => g.featured).slice(0, 6);
+  const designs = featuredStudioTitles
+    .map((title) => gallery.find((g) => g.title === title))
+    .filter((g): g is (typeof gallery)[number] => Boolean(g));
   return (
     <Layout>
-      <section className="bg-ink text-ink-foreground">
-        <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[1.4fr_1fr] md:py-28">
-          <div>
-            <p className="eyebrow text-accent">{site.identity.join(" • ")}</p>
-            <h1 className="mt-6 text-5xl leading-[1.02] md:text-7xl">{site.headline}</h1>
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <img src={stadium} alt="" aria-hidden loading="lazy" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-20 md:object-[center_52%]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-ink/80" />
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-6 px-5 py-10 md:grid-cols-2 md:gap-4 md:py-20">
+          <div className="w-full min-w-0 max-w-2xl md:translate-x-3">
+            <p className="eyebrow text-accent"><strong>RYAN HALLIGAN</strong> · ANALYTICS · AI · CREATIVE</p>
+            <div className="mt-4 flex items-center gap-3 md:hidden">
+              <p className="min-w-0 flex-1 text-3xl leading-[1.05]">{site.name}</p>
+              <img src={rhLogo} alt="RH logo" className="h-[4.5rem] w-[4.5rem] shrink-0 object-contain md:hidden" />
+            </div>
+            <h1 className="mt-5 text-4xl leading-[1.05] md:mt-6 md:text-6xl">Building intelligent systems that turn data into decisions.</h1>
             <p className="mt-6 max-w-xl text-lg text-ink-muted">
-              I'm a Georgia Tech business student focused on information technology management. I've worked on customer analytics in Snowflake and Power BI, built Ryan-OS to organize my own work, and created sports graphics through RHxVisuals and TheGRFXCommittee.
+              I'm a Georgia Tech business student concentrating in information technology management. My work spans data analytics, software, AI, and creative design.
             </p>
             <p className="mt-6 font-mono text-xs text-ink-muted">{site.school} · {site.location}</p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -36,9 +55,12 @@ const Home = () => {
               </Link>
               <a href={site.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="p-3 hover:text-accent"><Github className="h-5 w-5" /></a>
               <a href={site.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="p-3 hover:text-accent"><Linkedin className="h-5 w-5" /></a>
+              <a href={site.instagram[0].href} target="_blank" rel="noreferrer" aria-label="Instagram" className="p-3 hover:text-accent"><Instagram className="h-5 w-5" /></a>
             </div>
           </div>
-          <img src={headshot} alt="Ryan Halligan" className="mx-auto w-full max-w-sm rounded-md" />
+          <div className="hidden min-h-72 min-w-0 items-center justify-center md:flex">
+            <img src={rhLogo} alt="RH logo" className="h-[26rem] w-[26rem] max-w-full scale-[1.15] object-contain lg:h-[32rem] lg:w-[32rem]" />
+          </div>
         </div>
       </section>
 
@@ -56,8 +78,8 @@ const Home = () => {
       </section>
 
       <section className="relative overflow-hidden">
-        <img src={stadium} alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-background/70 via-background/30 to-background/80" />
+        <img src={stadium} alt="" aria-hidden loading="lazy" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-10 md:object-[center_52%]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/95 via-ink/90 to-background/95" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
         <div className="flex items-end justify-between gap-4">
           <div>
@@ -87,6 +109,11 @@ const Home = () => {
                 <img src={asset(d.file)} alt={d.title} loading="lazy" className="w-full h-auto transition-transform duration-500 hover:scale-[1.02]" />
               </Link>
             ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link to="/design/gallery" className="inline-flex items-center gap-2 rounded bg-accent px-5 py-3 text-sm font-medium text-accent-foreground transition-transform hover:-translate-y-0.5">
+              Browse All Artwork
+            </Link>
           </div>
         </div>
       </section>

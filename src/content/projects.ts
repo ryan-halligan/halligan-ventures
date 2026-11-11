@@ -3,6 +3,8 @@
 // status: "Completed" | "In progress" | "Coming Soon"
 // date: ISO "YYYY-MM" only when verified (used by "Newest" sort).
 // published: false hides a project everywhere until it has real, approved content.
+import type { LogoCoverSettings } from "@/lib/logo";
+
 export type Pillar = "Analytics" | "AI" | "Design";
 export type Status = "Completed" | "In progress" | "Coming Soon";
 
@@ -23,6 +25,8 @@ export interface Project {
   to?: string; // internal route
   href?: string; // external link
   image?: string;
+  logo?: string;
+  logoSettings?: LogoCoverSettings;
   date?: string;
   published?: boolean;
 }
@@ -34,12 +38,14 @@ export const RYAN_OS_DEMO_IMAGE =
 const all: Project[] = [
   {
     slug: "pga-bi",
-    name: "PGA TOUR Superstore — Business Intelligence",
+    name: "PGA TOUR Superstore: Business Intelligence",
     pillar: "Analytics",
     status: "Completed",
     summary: "Business intelligence internship: customer segmentation, store assignment modeling, and sales reporting.",
     tags: ["SQL", "Snowflake", "Data modeling", "Power BI"],
-    to: "/analytics#pga-tour-superstore",
+    to: "/analytics/pga-tour-superstore",
+    logo: "pga_logo_white_stacked.webp",
+    logoSettings: { logoScale: 1.18, backgroundColor: "#0b4a86" },
     date: "2026-06",
   },
   {
@@ -60,8 +66,9 @@ const all: Project[] = [
     status: "Completed",
     summary: "Prospect research, comparative evaluation, and data-quality work at Reel Analytics.",
     tags: ["Research", "Data quality", "Data visualization"],
-    to: "/analytics#reel-analytics",
-    image: "reel-analytics-logo.png",
+    to: "/analytics/reel-analytics",
+    logo: "reel-analytics-logo.png",
+    logoSettings: { logoScale: 1.05, backgroundColor: "#f8f8f8" },
     date: "2025-01",
   },
   {
@@ -72,17 +79,19 @@ const all: Project[] = [
     summary: "Original sports graphics, jersey concepts, and editorial compositions.",
     tags: ["Photoshop", "Sports graphics", "Branding"],
     to: "/design/rhxvisuals",
-    image: "rhxvisuals-bijan.jpg",
+    logo: "rhxvisuals-logo.png",
+    logoSettings: { logoScale: 1.65, backgroundColor: "#000000" },
   },
   {
     slug: "thegrfxcommittee",
     name: "TheGRFXCommittee",
     pillar: "Design",
     status: "Completed",
-    summary: "A design collective I ran with other creators — client logos, commissioned templates, graphics packs, and giveaways.",
+    summary: "A design collective I ran with other creators: client logos, commissioned templates, graphics packs, and giveaways.",
     tags: ["Client work", "Graphics packs", "Branding"],
     to: "/design/thegrfxcommittee",
-    image: "tgc-logo.png",
+    logo: "tgc-logo-cropped.png",
+    logoSettings: { logoScale: 1.08, offsetY: "-2%", backgroundColor: "#171717" },
   },
   {
     slug: "box-score",
@@ -92,6 +101,8 @@ const all: Project[] = [
     summary: "A sports media project I'm developing around football coverage and original graphics.",
     tags: ["Sports media", "Visual storytelling", "Original graphics"],
     to: "/design#box-score",
+    logo: "box-score-a-boxed-profile-1080.png",
+    logoSettings: { logoScale: 1.35, backgroundColor: "#000000" },
   },
   {
     slug: "falcons-country",
@@ -101,7 +112,8 @@ const all: Project[] = [
     summary: "Fan-account graphics, gameday content, and breaking-news templates for Atlanta Falcons coverage.",
     tags: ["Social media", "Templates", "Sports graphics"],
     to: "/design/atlfalconscountry",
-    image: "afc-debo-design.jpg",
+    logo: "afc-logo.jpg",
+    logoSettings: { logoScale: 1, backgroundColor: "#260000" },
   },
   {
     slug: "gridiron-drive",
@@ -111,7 +123,8 @@ const all: Project[] = [
     summary: "Brand identity and NFL social content, from QB rankings to draft coverage.",
     tags: ["Branding", "Social media"],
     to: "/design/gridiron-drive",
-    image: "gd-qb-rankings.jpg",
+    logo: "gridiron-drive-logo.jpg",
+    logoSettings: { logoScale: 0.9, objectFit: "contain", backgroundColor: "#173a78" },
   },
 ];
 

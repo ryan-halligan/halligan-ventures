@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { pillarLabel, type Project } from "@/content/projects";
 import { asset } from "@/lib/assets";
+import LogoCover from "./LogoCover";
 import { Tag } from "./Layout";
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({ project, flushLogo = false, directory = false }: { project: Project; flushLogo?: boolean; directory?: boolean }) => {
   const img = asset(project.image);
   const soon = project.status === "Coming Soon";
   return (
@@ -12,7 +13,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
       to={project.to ?? "/projects"}
       className="group flex flex-col overflow-hidden rounded-md border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
     >
-      {img ? (
+      {project.logo ? (
+        <LogoCover file={project.logo} alt={`${project.name} logo`} settings={project.logoSettings} flush={flushLogo} scaleOverride={directory && project.slug === "pga-bi" ? 1.08 : undefined} />
+      ) : img ? (
         <div className="aspect-[16/10] overflow-hidden bg-muted">
           <img src={img} alt={`${project.name} preview`} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
         </div>

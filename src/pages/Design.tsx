@@ -5,10 +5,11 @@ import BoxScoreCard from "@/components/BoxScoreCard";
 import { designCollections } from "@/content/design";
 import { gallery } from "@/content/gallery";
 import { asset } from "@/lib/assets";
+import LogoCover from "@/components/LogoCover";
 
 const Design = () => (
   <Layout>
-    <PageHeader eyebrow="03 — Creative & Design" title="Original work, made by hand.">
+    <PageHeader eyebrow="03: Creative & Design" title="Original work, made by hand.">
       Sports graphics, logos, templates, and client work from RHxVisuals, TheGRFXCommittee, and my other creative projects.
     </PageHeader>
 
@@ -26,9 +27,11 @@ const Design = () => (
               to={`/design/${c.slug}`}
               className="group flex flex-col overflow-hidden rounded-md border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-muted">
+              {c.logo ? (
+                <LogoCover file={c.logo} alt={`${c.name} logo`} settings={c.logoSettings} flush={c.name !== "Fit Bowl Diner"} />
+              ) : <div className="aspect-[16/10] overflow-hidden bg-muted">
                 <img src={asset(c.cover)} alt={`${c.name} artwork`} loading="lazy" className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
-              </div>
+              </div>}
               <div className="flex flex-1 flex-col p-6">
                 <h2 className="flex items-center gap-2 text-2xl">
                   {c.name}

@@ -77,16 +77,16 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="relative overflow-hidden">
-        <img src={stadium} alt="" aria-hidden loading="lazy" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-10 md:object-[center_52%]" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/95 via-ink/90 to-background/95" />
+      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+        <img src={stadium} alt="" aria-hidden loading="eager" decoding="async" className="pointer-events-none absolute inset-0 h-full w-full object-cover object-center opacity-15 grayscale md:object-[center_52%]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/65 to-ink/80" />
         <div className="relative mx-auto max-w-6xl px-5 py-20">
         <div className="flex items-end justify-between gap-4">
           <div>
             <p className="eyebrow text-accent">Selected work</p>
             <h2 className="mt-3 text-5xl">Featured projects</h2>
           </div>
-          <Link to="/projects" className="text-sm font-medium hover:text-accent">All projects →</Link>
+          <Link to="/projects" className="text-sm font-medium text-ink-foreground hover:text-accent">All projects →</Link>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {items.map((p) => <ProjectCard key={p.slug} project={p} />)}

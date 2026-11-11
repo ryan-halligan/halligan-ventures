@@ -27,10 +27,15 @@ jobs:
           node-version: '20'
       
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       
       - name: Build
         run: npm run build
+
+      # GitHub Pages serves this SPA fallback with HTTP 404 status on direct
+      # deep links; the browser still loads the React route from index.html.
+      - name: Create SPA fallback
+        run: cp dist/index.html dist/404.html
       
       - name: Setup Pages
         uses: actions/configure-pages@v4

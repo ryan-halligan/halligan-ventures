@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 import { asset } from "@/lib/assets";
 
 const plaid = asset("IMG_7033.JPG");
-const award = asset("recieving award with dean.JPG");
+const award = asset("award-with-dean-optimized.jpg");
 const finish = asset("me finishing half ironman.JPG");
 
 const About = () => (

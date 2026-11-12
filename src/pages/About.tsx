@@ -1,12 +1,13 @@
 import Layout, { PageHeader } from "@/components/Layout";
 import { Link } from "react-router-dom";
 import personal from "@/assets/ryan-casual.png";
-import ironman from "@/assets/ryan-ironman.jpg";
 import europe from "@/assets/ryan-europe.jpg";
 import { site } from "@/content/site";
 import { asset } from "@/lib/assets";
 
 const plaid = asset("IMG_7033.JPG");
+const award = asset("recieving award with dean.JPG");
+const finish = asset("me finishing half ironman.JPG");
 
 const About = () => (
   <Layout>
@@ -54,10 +55,11 @@ const About = () => (
     </section>
     <section className="mx-auto max-w-6xl px-5 py-16">
       <p className="eyebrow text-accent">Personal</p>
-      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-3">
-        <img src={ironman} alt="Ryan Halligan at an Ironman 70.3" className="aspect-[4/3] w-full rounded-md object-cover" />
+      <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <img src={finish} alt="Ryan Halligan finishing an Ironman 70.3" className="aspect-[4/3] w-full rounded-md object-cover object-[center_58%]" />
         <img src={europe} alt="Ryan Halligan in Europe" className="aspect-[4/3] w-full rounded-md object-cover object-[center_65%]" />
         <img src={plaid} alt="Ryan Halligan in a plaid shirt" className="aspect-[4/3] w-full rounded-md object-cover object-center" />
+        <img src={award} alt="Ryan Halligan receiving the P.C. McCutcheon award at Georgia Tech" className="aspect-[4/3] w-full rounded-md object-cover object-[center_45%]" />
       </div>
     </section>
   </Layout>
